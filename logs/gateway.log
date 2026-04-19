@@ -1,0 +1,45 @@
+2026-04-19 20:26:42 - mcp_hub - INFO - ============================================================
+2026-04-19 20:26:42 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-19 20:26:42 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-19 20:26:42 - mcp_hub - INFO - ============================================================
+2026-04-19 20:26:42 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-19 20:26:42 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-19 20:26:44 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 87749, Port: 51236)
+2026-04-19 20:26:44 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-19 20:26:44 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-19 20:26:44 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-19 20:26:44 - mcp_hub - INFO - 
+2026-04-19 20:26:44 - mcp_hub - INFO - 服务器管理API:
+2026-04-19 20:26:44 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-19 20:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-19 20:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-19 20:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-19 20:26:44 - mcp_hub - INFO - 
+INFO:     Started server process [87748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:51234 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62648 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62654 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62661 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62661 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62661 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62690 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62690 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     10.0.0.32:62781 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.0.0.32:62788 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63107 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63107 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63107 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63765 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63766 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63767 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63776 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63777 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63778 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63986 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63988 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64054 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64347 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50540 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51515 - "GET /api/v1/servers/pdf_extractor/status HTTP/1.1" 200 OK

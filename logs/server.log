@@ -1,0 +1,14 @@
+2026-04-19 20:01:36 - mcp_hub - INFO - ============================================================
+2026-04-19 20:01:36 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-19 20:01:36 - mcp_hub - INFO - ============================================================
+2026-04-19 20:01:36 - mcp_hub - INFO - 开始加载MCP服务器，共 1 个已启用
+2026-04-19 20:01:36 - mcp_hub - INFO - ✅ 成功加载MCP服务器: pdf_extractor (mcp_servers.pdf_extractor.server) - 前缀: /pdf
+2026-04-19 20:01:36 - mcp_hub - INFO - MCP服务器加载完成: 1/1 成功
+2026-04-19 20:01:36 - mcp_hub - INFO - 服务器将在 0.0.0.0:51234 启动
+2026-04-19 20:01:36 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/api/v1/docs
+INFO:     Started server process [66111]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 51234): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
