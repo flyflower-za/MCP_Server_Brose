@@ -246,8 +246,8 @@ async def restart_server(server_id: str):
     )
 
 
-# 获取所有服务器状态
-@app.get("/api/v1/servers/statuses", dependencies=[Depends(verify_auth)])
+# 获取所有服务器状态（无需认证，方便监控）
+@app.get("/api/v1/servers/statuses")
 async def get_all_server_statuses():
     """获取所有服务器的状态"""
     return process_manager.get_all_statuses()
