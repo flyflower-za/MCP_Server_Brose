@@ -590,3 +590,462 @@
 2026-04-20 23:51:41 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
 2026-04-20 23:51:41 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
 2026-04-20 23:51:41 - mcp_hub - INFO - 
+2026-04-20 23:54:28 - mcp_hub - INFO - ============================================================
+2026-04-20 23:54:28 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-20 23:54:28 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-20 23:54:28 - mcp_hub - INFO - ============================================================
+2026-04-20 23:54:28 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-20 23:54:28 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-20 23:54:29 - mcp_hub - INFO - ============================================================
+2026-04-20 23:54:29 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-20 23:54:29 - mcp_hub - INFO - ============================================================
+2026-04-20 23:54:29 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-20 23:54:29 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-20 23:54:29 - mcp_hub - INFO - 
+2026-04-20 23:54:29 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-20 23:54:30 - mcp_hub - ERROR - 进程启动失败，退出码: 1
+2026-04-20 23:54:30 - mcp_hub - INFO - MCP服务器启动完成: 0/1 成功
+2026-04-20 23:54:30 - mcp_hub - WARNING - 启动失败的服务器: pdf_extractor
+2026-04-20 23:54:30 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-20 23:54:30 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-20 23:54:30 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-20 23:54:30 - mcp_hub - INFO - 
+2026-04-20 23:54:30 - mcp_hub - INFO - 服务器管理API:
+2026-04-20 23:54:30 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-20 23:54:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-20 23:54:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-20 23:54:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-20 23:54:30 - mcp_hub - INFO - 
+2026-04-21 00:01:09 - mcp_hub - INFO - ============================================================
+2026-04-21 00:01:09 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:01:09 - mcp_hub - INFO - ============================================================
+2026-04-21 00:01:09 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:01:09 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:01:09 - mcp_hub - INFO - 
+2026-04-21 00:01:09 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:01:10 - mcp_hub - ERROR - 进程启动失败，退出码: 1
+2026-04-21 00:14:28 - mcp_hub - INFO - ============================================================
+2026-04-21 00:14:28 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:14:28 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:14:28 - mcp_hub - INFO - ============================================================
+2026-04-21 00:14:28 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:14:28 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:14:28 - mcp_hub - INFO - ============================================================
+2026-04-21 00:14:28 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:14:28 - mcp_hub - INFO - ============================================================
+2026-04-21 00:14:28 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:14:28 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:14:28 - mcp_hub - INFO - 
+2026-04-21 00:14:29 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:14:30 - mcp_hub - ERROR - 进程启动失败，退出码: 1
+2026-04-21 00:14:30 - mcp_hub - INFO - MCP服务器启动完成: 0/1 成功
+2026-04-21 00:14:30 - mcp_hub - WARNING - 启动失败的服务器: pdf_extractor
+2026-04-21 00:14:30 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:14:30 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:14:30 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:14:30 - mcp_hub - INFO - 
+2026-04-21 00:14:30 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:14:30 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:14:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:14:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:14:30 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:14:30 - mcp_hub - INFO - 
+2026-04-21 00:15:19 - mcp_hub - INFO - 🔧 服务器 pdf_extractor 固定端口已设置为 51238
+2026-04-21 00:15:24 - mcp_hub - INFO - ============================================================
+2026-04-21 00:15:24 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:15:24 - mcp_hub - INFO - ============================================================
+2026-04-21 00:15:24 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:15:24 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:15:24 - mcp_hub - INFO - 
+2026-04-21 00:15:24 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:15:26 - mcp_hub - ERROR - 进程启动失败，退出码: 1
+2026-04-21 00:19:27 - mcp_hub - INFO - ============================================================
+2026-04-21 00:19:27 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:19:27 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:19:27 - mcp_hub - INFO - ============================================================
+2026-04-21 00:19:27 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:19:27 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:19:27 - mcp_hub - INFO - ============================================================
+2026-04-21 00:19:27 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:19:27 - mcp_hub - INFO - ============================================================
+2026-04-21 00:19:27 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:19:27 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:19:27 - mcp_hub - INFO - 
+2026-04-21 00:19:27 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:19:29 - mcp_hub - ERROR - 进程启动失败，退出码: 1
+2026-04-21 00:19:29 - mcp_hub - INFO - MCP服务器启动完成: 0/1 成功
+2026-04-21 00:19:29 - mcp_hub - WARNING - 启动失败的服务器: pdf_extractor
+2026-04-21 00:19:29 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:19:29 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:19:29 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:19:29 - mcp_hub - INFO - 
+2026-04-21 00:19:29 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:19:29 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:19:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:19:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:19:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:19:29 - mcp_hub - INFO - 
+2026-04-21 00:20:21 - mcp_hub - INFO - ============================================================
+2026-04-21 00:20:21 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:20:21 - mcp_hub - INFO - ============================================================
+2026-04-21 00:20:21 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:20:21 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:20:21 - mcp_hub - INFO - 
+2026-04-21 00:20:22 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:21:15 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:15 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:21:15 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:21:15 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:15 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:21:15 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:21:15 - mcp_hub - ERROR - 启动进程失败: name 'settings' is not defined
+2026-04-21 00:21:15 - mcp_hub - INFO - MCP服务器启动完成: 0/1 成功
+2026-04-21 00:21:15 - mcp_hub - WARNING - 启动失败的服务器: pdf_extractor
+2026-04-21 00:21:15 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:21:15 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:21:15 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:21:15 - mcp_hub - INFO - 
+2026-04-21 00:21:15 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:21:15 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:21:15 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:21:15 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:21:15 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:21:15 - mcp_hub - INFO - 
+2026-04-21 00:21:39 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:39 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:21:39 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:21:39 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:39 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:21:39 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:21:39 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:39 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:21:39 - mcp_hub - INFO - ============================================================
+2026-04-21 00:21:39 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:21:39 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:21:39 - mcp_hub - INFO - 
+2026-04-21 00:21:39 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:21:41 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:21:41 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 76698, Port: 51238)
+2026-04-21 00:21:41 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:21:41 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:21:41 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:21:41 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:21:41 - mcp_hub - INFO - 
+2026-04-21 00:21:41 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:21:41 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:21:41 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:21:41 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:21:41 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:21:41 - mcp_hub - INFO - 
+2026-04-21 00:23:52 - mcp_hub - INFO - ============================================================
+2026-04-21 00:23:52 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:23:52 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:23:52 - mcp_hub - INFO - ============================================================
+2026-04-21 00:23:52 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:23:52 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:23:53 - mcp_hub - INFO - ============================================================
+2026-04-21 00:23:53 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:23:53 - mcp_hub - INFO - ============================================================
+2026-04-21 00:23:53 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:23:53 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:23:53 - mcp_hub - INFO - 
+2026-04-21 00:23:53 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:23:54 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:23:54 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 78327, Port: 51238)
+2026-04-21 00:23:54 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:23:54 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:23:54 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:23:54 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:23:54 - mcp_hub - INFO - 
+2026-04-21 00:23:54 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:23:54 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:23:54 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:23:54 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:23:54 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:23:54 - mcp_hub - INFO - 
+2026-04-21 00:25:16 - mcp_hub - INFO - 开始提取PDF: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+2026-04-21 00:25:16 - mcp_hub - INFO - Fetching URL: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+2026-04-21 00:25:49 - mcp_hub - ERROR - Timeout fetching URL: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+2026-04-21 00:25:49 - mcp_hub - ERROR - 下载PDF失败: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf, 错误: HTTPSConnectionPool(host='www.w3.org', port=443): Read timed out. (read timeout=30)
+2026-04-21 00:26:42 - mcp_hub - INFO - ============================================================
+2026-04-21 00:26:42 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:26:42 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:26:42 - mcp_hub - INFO - ============================================================
+2026-04-21 00:26:42 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:26:42 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:26:42 - mcp_hub - INFO - ============================================================
+2026-04-21 00:26:42 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:26:42 - mcp_hub - INFO - ============================================================
+2026-04-21 00:26:42 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:26:42 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:26:42 - mcp_hub - INFO - 
+2026-04-21 00:26:42 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:26:44 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:26:44 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 79847, Port: 51238)
+2026-04-21 00:26:44 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:26:44 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:26:44 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:26:44 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:26:44 - mcp_hub - INFO - 
+2026-04-21 00:26:44 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:26:44 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:26:44 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:26:44 - mcp_hub - INFO - 
+2026-04-21 00:26:46 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (GET)
+2026-04-21 00:26:46 - mcp_hub - INFO - ⏭️  跳过转发: /pdf/extract
+2026-04-21 00:26:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:26:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:26:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:26:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:26:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:26:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:26:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:26:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:27:11 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:11 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:27:11 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:27:11 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:11 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:27:11 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:27:11 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:11 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:27:11 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:11 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:27:11 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:27:11 - mcp_hub - INFO - 
+2026-04-21 00:27:11 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:27:13 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:27:13 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 80376, Port: 51238)
+2026-04-21 00:27:13 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:27:13 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:27:13 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:27:13 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:27:13 - mcp_hub - INFO - 
+2026-04-21 00:27:13 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:27:13 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:27:13 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:27:13 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:27:13 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:27:13 - mcp_hub - INFO - 
+2026-04-21 00:27:14 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:27:14 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:27:21 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:27:21 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:27:23 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:27:23 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:27:23 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:27:23 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:27:23 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:27:23 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:27:23 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:27:23 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:27:45 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:45 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:27:45 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:27:45 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:45 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:27:45 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:27:45 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:45 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:27:45 - mcp_hub - INFO - ============================================================
+2026-04-21 00:27:45 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:27:45 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:27:45 - mcp_hub - INFO - 
+2026-04-21 00:27:45 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:27:47 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:27:47 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 80948, Port: 51238)
+2026-04-21 00:27:47 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:27:47 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:27:47 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:27:47 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:27:47 - mcp_hub - INFO - 
+2026-04-21 00:27:47 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:27:47 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:27:47 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:27:47 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:27:47 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:27:47 - mcp_hub - INFO - 
+2026-04-21 00:27:49 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:27:49 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:27:49 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:27:49 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:27:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:27:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:27:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:27:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:27:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:27:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:27:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:27:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:27:57 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:27:57 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:28:03 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:28:03 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:28:37 - mcp_hub - INFO - ============================================================
+2026-04-21 00:28:37 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:28:37 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:28:37 - mcp_hub - INFO - ============================================================
+2026-04-21 00:28:37 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:28:37 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:28:37 - mcp_hub - INFO - ============================================================
+2026-04-21 00:28:37 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:28:37 - mcp_hub - INFO - ============================================================
+2026-04-21 00:28:37 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:28:37 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:28:37 - mcp_hub - INFO - 
+2026-04-21 00:28:37 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:28:39 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:28:39 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 81992, Port: 51238)
+2026-04-21 00:28:39 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:28:39 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:28:39 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:28:39 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:28:39 - mcp_hub - INFO - 
+2026-04-21 00:28:39 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:28:39 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:28:39 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:28:39 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:28:39 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:28:39 - mcp_hub - INFO - 
+2026-04-21 00:28:40 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:28:40 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:28:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:28:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:28:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:28:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:28:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:28:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:28:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:28:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:29:03 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:03 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:29:03 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:29:03 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:03 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:29:03 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:29:03 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:03 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:29:03 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:03 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:29:03 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:29:03 - mcp_hub - INFO - 
+2026-04-21 00:29:03 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:29:05 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:29:05 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 82521, Port: 51238)
+2026-04-21 00:29:05 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:29:05 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:29:05 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:29:05 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:29:05 - mcp_hub - INFO - 
+2026-04-21 00:29:05 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:29:05 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:29:05 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:29:05 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:29:05 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:29:05 - mcp_hub - INFO - 
+2026-04-21 00:29:06 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:29:06 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:29:06 - mcp_hub - INFO - ✅ 找到服务器: pdf_extractor
+2026-04-21 00:29:06 - mcp_hub - INFO - 🔄 转发请求到: http://127.0.0.1:51238/extract
+2026-04-21 00:29:06 - mcp_hub - INFO - 开始提取PDF: https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf
+2026-04-21 00:29:06 - mcp_hub - INFO - Fetching URL: https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf
+2026-04-21 00:29:08 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:29:08 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:29:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:29:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:29:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:29:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:29:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:29:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:29:09 - mcp_hub - INFO - PDF提取成功: https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf, 页数: 1
+2026-04-21 00:29:09 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:29:09 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:29:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:29:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:29:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:29:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:29:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:29:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:29:33 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:33 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-21 00:29:33 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-21 00:29:33 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:33 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-21 00:29:33 - mcp_hub - INFO - 开始启动MCP服务器，共 1 个已启用
+2026-04-21 00:29:33 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:33 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-21 00:29:33 - mcp_hub - INFO - ============================================================
+2026-04-21 00:29:33 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:29:33 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-21 00:29:33 - mcp_hub - INFO - 
+2026-04-21 00:29:33 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-21 00:29:35 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-21 00:29:35 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 83094, Port: 51238)
+2026-04-21 00:29:35 - mcp_hub - INFO - MCP服务器启动完成: 1/1 成功
+2026-04-21 00:29:35 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-21 00:29:35 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-21 00:29:35 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-21 00:29:35 - mcp_hub - INFO - 
+2026-04-21 00:29:35 - mcp_hub - INFO - 服务器管理API:
+2026-04-21 00:29:35 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-21 00:29:35 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-21 00:29:35 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-21 00:29:35 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-21 00:29:35 - mcp_hub - INFO - 
+2026-04-21 00:29:37 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-21 00:29:37 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-21 00:29:37 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-21 00:29:37 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-21 00:29:37 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-21 00:29:37 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-21 00:29:43 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-21 00:29:43 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-21 00:29:45 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:29:45 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:29:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:29:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:29:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:29:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:29:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:29:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:29:52 - mcp_hub - INFO - 📨 代理收到请求: /pdf/extract (POST)
+2026-04-21 00:29:52 - mcp_hub - INFO - 🔍 解析路径: /pdf/extract -> 前缀: /pdf
+2026-04-21 00:29:52 - mcp_hub - INFO - ✅ 找到服务器: pdf_extractor
+2026-04-21 00:29:52 - mcp_hub - INFO - 🔄 转发请求到: http://127.0.0.1:51238/extract
+2026-04-21 00:29:52 - mcp_hub - INFO - 开始提取PDF: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+2026-04-21 00:29:52 - mcp_hub - INFO - Fetching URL: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+2026-04-21 00:29:53 - mcp_hub - INFO - PDF提取成功: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf, 页数: 1
+2026-04-21 00:30:01 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:30:01 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:30:01 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:30:01 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:30:01 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:30:01 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:30:01 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:30:01 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:30:16 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:30:16 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:30:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:30:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:30:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:30:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:30:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:30:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:30:31 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:30:31 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:30:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:30:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:30:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:30:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:30:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:30:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-21 00:30:46 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-21 00:30:46 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-21 00:30:46 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-21 00:30:46 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-21 00:30:46 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-21 00:30:46 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-21 00:30:46 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-21 00:30:46 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs

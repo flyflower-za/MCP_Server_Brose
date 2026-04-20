@@ -52,6 +52,7 @@ python main.py
 - **[快速配置](docs/QUICK_START.md)** - 端口配置快速指南
 - **[启动指南](docs/STARTUP_GUIDE.md)** - 详细的启动步骤和故障排除
 - **[端口管理](docs/PORT_MANAGEMENT.md)** - 端口配置和管理完全指南
+- **[故障排除](docs/TROUBLESHOOTING.md)** - ⭐ 常见问题解决方案
 
 ### 🏗️ **系统理解**
 - **[架构详解](docs/ARCHITECTURE.md)** - 系统架构和设计原理
@@ -140,6 +141,33 @@ open http://localhost:8000/docs
 - [架构文档](docs/ARCHITECTURE.md) - 系统架构详解
 - [端口管理](docs/PORT_MANAGEMENT.md) - 端口配置指南
 - [项目分析](docs/PROJECT_ANALYSIS.md) - 技术深度分析
+
+## 🆘 故障排除
+
+遇到问题？查看 **[故障排除指南](docs/TROUBLESHOOTING.md)**
+
+### 常见问题快速修复
+
+**问题：服务器启动失败**
+```bash
+# 快速修复
+bash stop.sh && ./start_safe.sh
+```
+
+**问题：端口被占用**
+```bash
+# 彻底清理
+bash stop.sh
+```
+
+**问题：依赖缺失**
+```bash
+# 重新安装
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
 
 ## 🔮 开发计划
 

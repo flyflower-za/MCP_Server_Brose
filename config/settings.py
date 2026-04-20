@@ -59,6 +59,10 @@ class Settings:
     PROCESS_START_TIMEOUT: int = int(os.getenv("PROCESS_START_TIMEOUT", "10"))  # 进程启动超时(秒)
     PROCESS_STOP_TIMEOUT: int = int(os.getenv("PROCESS_STOP_TIMEOUT", "10"))  # 进程停止超时(秒)
 
+    # Dashboard 安全配置
+    DASHBOARD_USERNAME: str = os.getenv("DASHBOARD_USERNAME", "admin")
+    DASHBOARD_PASSWORD: str = os.getenv("DASHBOARD_PASSWORD", "brose123")  # 建议在.env中修改
+
     @classmethod
     def setup(cls):
         """初始化配置"""

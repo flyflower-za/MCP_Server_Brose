@@ -4,10 +4,12 @@ MCP服务器管理系统 - 主入口（进程隔离架构）
 """
 from typing import Dict
 
+import secrets
 import uvicorn
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
 
 from config import settings, get_enabled_servers
@@ -43,6 +45,22 @@ app.add_middleware(ProxyMiddleware)
 process_manager = get_process_manager()
 
 
+# 安全认证
+security = HTTPBasic()
+
+def verify_auth(credentials: HTTPBasicCredentials = Depends(security)):
+    """基础身份验证"""
+    correct_username = secrets.compare_digest(credentials.username, settings.DASHBOARD_USERNAME)
+    correct_password = secrets.compare_digest(credentials.password, settings.DASHBOARD_PASSWORD)
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
+
+
 # API模型
 class ServerActionResponse(BaseModel):
     """服务器操作响应"""
@@ -76,7 +94,7 @@ def start_all_servers():
 
 
 # Dashboard 控制台
-@app.get("/dashboard")
+@app.get("/dashboard", dependencies=[Depends(verify_auth)])
 async def dashboard():
     """管理控制台可视化界面"""
     from pathlib import Path
@@ -135,7 +153,7 @@ async def health_check():
 
 
 # 服务器列表
-@app.get("/api/v1/servers")
+@app.get("/api/v1/servers", dependencies=[Depends(verify_auth)])
 async def list_servers():
     """列出所有MCP服务器"""
     enabled_servers = get_enabled_servers()
@@ -157,7 +175,7 @@ async def list_servers():
 
 
 # 获取单个服务器状态
-@app.get("/api/v1/servers/{server_id}/status")
+@app.get("/api/v1/servers/{server_id}/status", dependencies=[Depends(verify_auth)])
 async def get_server_status(server_id: str):
     """获取单个服务器的详细状态"""
     enabled_servers = get_enabled_servers()
@@ -170,7 +188,7 @@ async def get_server_status(server_id: str):
 
 
 # 启动单个服务器
-@app.post("/api/v1/servers/{server_id}/start", response_model=ServerActionResponse)
+@app.post("/api/v1/servers/{server_id}/start", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
 async def start_server(server_id: str):
     """启动单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -190,7 +208,7 @@ async def start_server(server_id: str):
 
 
 # 停止单个服务器
-@app.post("/api/v1/servers/{server_id}/stop", response_model=ServerActionResponse)
+@app.post("/api/v1/servers/{server_id}/stop", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
 async def stop_server(server_id: str):
     """停止单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -209,7 +227,7 @@ async def stop_server(server_id: str):
 
 
 # 重启单个服务器
-@app.post("/api/v1/servers/{server_id}/restart", response_model=ServerActionResponse)
+@app.post("/api/v1/servers/{server_id}/restart", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
 async def restart_server(server_id: str):
     """重启单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -229,14 +247,14 @@ async def restart_server(server_id: str):
 
 
 # 获取所有服务器状态
-@app.get("/api/v1/servers/statuses")
+@app.get("/api/v1/servers/statuses", dependencies=[Depends(verify_auth)])
 async def get_all_server_statuses():
     """获取所有服务器的状态"""
     return process_manager.get_all_statuses()
 
 
 # 启动所有服务器
-@app.post("/api/v1/servers/start-all")
+@app.post("/api/v1/servers/start-all", dependencies=[Depends(verify_auth)])
 async def start_all_servers_endpoint():
     """启动所有服务器"""
     started_count, failed_servers = start_all_servers()
@@ -250,7 +268,7 @@ async def start_all_servers_endpoint():
 
 
 # 停止所有服务器
-@app.post("/api/v1/servers/stop-all")
+@app.post("/api/v1/servers/stop-all", dependencies=[Depends(verify_auth)])
 async def stop_all_servers():
     """停止所有服务器"""
     stopped_count = 0
@@ -280,7 +298,7 @@ class PortConfigRequest(BaseModel):
     port: int
 
 
-@app.get("/api/v1/servers/port-configs")
+@app.get("/api/v1/servers/port-configs", dependencies=[Depends(verify_auth)])
 async def get_all_port_configs():
     """获取全部服务器的固定端口配置"""
     enabled = get_enabled_servers()
@@ -295,7 +313,7 @@ async def get_all_port_configs():
     return result
 
 
-@app.get("/api/v1/servers/{server_id}/port-config")
+@app.get("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
 async def get_port_config(server_id: str):
     """获取单个服务器的固定端口配置"""
     enabled = get_enabled_servers()
@@ -309,7 +327,7 @@ async def get_port_config(server_id: str):
     }
 
 
-@app.put("/api/v1/servers/{server_id}/port-config")
+@app.put("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
 async def set_port_config(server_id: str, body: PortConfigRequest):
     """设置服务器固定端口（立即持久化，下次启动生效）"""
     enabled = get_enabled_servers()
@@ -329,7 +347,7 @@ async def set_port_config(server_id: str, body: PortConfigRequest):
     }
 
 
-@app.delete("/api/v1/servers/{server_id}/port-config")
+@app.delete("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
 async def delete_port_config(server_id: str):
     """删除服务器固定端口配置（恢复动态分配）"""
     enabled = get_enabled_servers()

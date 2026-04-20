@@ -11,6 +11,7 @@ from datetime import datetime
 from utils.logger import logger
 from utils.port_allocator import get_port_allocator
 from config.port_config import get_fixed_port
+from config import settings
 
 
 class ProcessInfo:
@@ -272,12 +273,14 @@ class ProcessManager:
                 "--port", str(port)
             ]
 
-            # 启动进程
+            # 启动进程（将输出重定向到日志文件）
             import subprocess
+            log_file = settings.LOG_DIR / f"{server_id}_process.log"
+
             process = subprocess.Popen(
                 cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                stdout=log_file.open('a'),
+                stderr=log_file.open('a'),
                 start_new_session=True
             )
 
@@ -286,9 +289,20 @@ class ProcessManager:
 
             # 检查进程是否仍在运行
             if process.poll() is None:
+                logger.info(f"✓ 进程启动成功，日志: {log_file}")
                 return process.pid
             else:
+                # 读取错误日志
+                error_msg = ""
+                if log_file.exists():
+                    with log_file.open('r') as f:
+                        # 读取最后 20 行
+                        lines = f.readlines()
+                        error_msg = ''.join(lines[-20:]) if lines else ""
+
                 logger.error(f"进程启动失败，退出码: {process.returncode}")
+                if error_msg:
+                    logger.error(f"错误输出:\n{error_msg}")
                 return None
 
         except Exception as e:

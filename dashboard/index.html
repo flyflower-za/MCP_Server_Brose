@@ -382,7 +382,7 @@
       </div>
     </div>
     <div class="header-right">
-      <span class="hub-url" id="hub-url">http://localhost:51234</span>
+      <span class="hub-url" id="hub-url">正在检测…</span>
       <button class="refresh-btn" id="refresh-btn" title="手动刷新" onclick="refreshAll()">
         <svg id="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
           <path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
@@ -509,7 +509,13 @@
 <div id="toast-container"></div>
 
 <script>
-const HUB_BASE = 'http://localhost:51234';
+// 自动检测 HUB_BASE（从当前页面 URL 获取）
+const HUB_BASE = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+
+// 如果是 file:// 协议，则使用默认值
+if (window.location.protocol === 'file:') {
+  window.HUB_BASE_FALLBACK = 'http://localhost:51234';
+}
 
 // state
 let servers     = {};   // { [id]: { config, status, portConfig } }
@@ -694,12 +700,17 @@ function buildCard(id, { config, status, portConfig }) {
           placeholder="如 51238"
           value="${isFixed ? fixedPort : ''}"
           title="输入固定端口号 (1024–65535)"
+          readonly
+          style="opacity: 0.7; cursor: not-allowed;"
         />
-        <button class="btn btn-port-save" onclick="savePort('${id}')">
+        <button class="btn btn-ghost" id="port-edit-btn-${id}" style="padding:6px 12px; font-size:12px;" onclick="toggleEditPort('${id}')">
+          ✏️ 锁定 / 编辑
+        </button>
+        <button class="btn btn-port-save" id="port-save-btn-${id}" style="display:none;" onclick="savePort('${id}')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
           保存
         </button>
-        ${isFixed ? `<button class="btn btn-port-clear" onclick="clearPort('${id}')" title="恢复动态分配">✕</button>` : ''}
+        ${isFixed ? `<button class="btn btn-port-clear" id="port-clear-btn-${id}" style="display:none;" onclick="clearPort('${id}')" title="恢复动态分配">✕ 注销端口</button>` : ''}
       </div>
     </div>
 
@@ -737,6 +748,21 @@ function updatePDFBadge() {
 }
 
 // ── port config ────────────────────────────────
+function toggleEditPort(id) {
+  const input = document.getElementById(`port-input-${id}`);
+  const editBtn = document.getElementById(`port-edit-btn-${id}`);
+  const saveBtn = document.getElementById(`port-save-btn-${id}`);
+  const clearBtn = document.getElementById(`port-clear-btn-${id}`);
+
+  input.removeAttribute('readonly');
+  input.style.opacity = '1';
+  input.style.cursor = 'text';
+  editBtn.style.display = 'none';
+  saveBtn.style.display = 'flex';
+  if (clearBtn) clearBtn.style.display = 'flex';
+  input.focus();
+}
+
 async function savePort(id) {
   const input = document.getElementById(`port-input-${id}`);
   const raw   = input.value.trim();
@@ -863,6 +889,10 @@ function resetCountdown() {
 (async function init() {
   addLog('Dashboard 初始化', 'INFO');
   addLog(`连接 Hub: ${HUB_BASE}`, 'INFO');
+
+  // 更新显示的 Hub URL
+  document.getElementById('hub-url').textContent = HUB_BASE;
+
   await refreshAll();
   addLog('初始化完成，自动监控中', 'SUCCESS');
 

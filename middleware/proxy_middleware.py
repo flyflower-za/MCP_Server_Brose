@@ -30,11 +30,11 @@ class ProxyMiddleware(BaseHTTPMiddleware):
         Returns:
             响应
         """
-        logger.debug(f"收到请求: {request.url.path}")
+        logger.info(f"📨 代理收到请求: {request.url.path} ({request.method})")
 
         # 跳过管理端点和系统端点
         if await self._should_skip(request):
-            logger.debug(f"跳过转发: {request.url.path}")
+            logger.info(f"⏭️  跳过转发: {request.url.path}")
             return await call_next(request)
 
         # 解析请求路径，确定目标服务器
@@ -61,8 +61,8 @@ class ProxyMiddleware(BaseHTTPMiddleware):
             )
 
         # 移除前缀并构建目标URL
-        from config import settings
-        server_config = settings.MCP_SERVERS_CONFIG.get(server_id, {})
+        from config.settings import MCP_SERVERS_CONFIG
+        server_config = MCP_SERVERS_CONFIG.get(server_id, {})
         prefix = server_config.get("prefix", "")
 
         # 移除路径前缀
@@ -71,6 +71,7 @@ class ProxyMiddleware(BaseHTTPMiddleware):
             path = path[len(prefix):]
 
         target_url = f"http://127.0.0.1:{server_status['port']}{path}"
+        logger.info(f"🔄 转发请求到: {target_url}")
 
         try:
             # 转发请求
@@ -94,20 +95,26 @@ class ProxyMiddleware(BaseHTTPMiddleware):
         Returns:
             是否跳过
         """
-        # 跳过的路径前缀
+        path = request.url.path
+
+        # 精确匹配的路径
+        exact_matches = ["/", "/health"]
+        if path in exact_matches:
+            return True
+
+        # 前缀匹配的路径（需要确保不会误匹配其他路径）
         skip_prefixes = [
-            "/docs",
-            "/redoc",
-            "/openapi.json",
-            "/api/v1/servers",  # 管理端点
-            "/health",
-            "/",
-            "/static"
+            "/docs",          # API 文档
+            "/redoc",         # ReDoc 文档
+            "/openapi.json",  # OpenAPI schema
+            "/api/v1/servers",# 管理端点
+            "/static",        # 静态文件
+            "/dashboard",     # Dashboard
         ]
 
         # 检查路径是否匹配
         for prefix in skip_prefixes:
-            if request.url.path.startswith(prefix):
+            if path.startswith(prefix):
                 return True
 
         return False
@@ -124,7 +131,7 @@ class ProxyMiddleware(BaseHTTPMiddleware):
         """
         # 路径格式: /pdf/extract -> pdf_extractor
         # 从配置中找到对应的前缀
-        from config import settings
+        from config.settings import MCP_SERVERS_CONFIG
 
         path_parts = request.url.path.strip("/").split("/")
 
@@ -133,15 +140,15 @@ class ProxyMiddleware(BaseHTTPMiddleware):
 
         # 获取路径的第一部分作为前缀
         prefix = f"/{path_parts[0]}"
-        logger.debug(f"解析路径: {request.url.path} -> 前缀: {prefix}")
+        logger.info(f"🔍 解析路径: {request.url.path} -> 前缀: {prefix}")
 
         # 查找对应的服务器
-        for server_id, config in settings.MCP_SERVERS_CONFIG.items():
+        for server_id, config in MCP_SERVERS_CONFIG.items():
             if config.get("prefix") == prefix:
-                logger.debug(f"找到服务器: {server_id}")
+                logger.info(f"✅ 找到服务器: {server_id}")
                 return server_id
 
-        logger.debug(f"未找到对应的服务器")
+        logger.warning(f"❌ 未找到对应的服务器 (前缀: {prefix})")
         return None
 
     async def _forward_request(self, request: Request, target_url: str) -> Response:
