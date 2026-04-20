@@ -6,10 +6,12 @@ from typing import Dict
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from config import settings, get_enabled_servers
+from config.port_config import get_fixed_port, set_fixed_port, remove_fixed_port, get_all_fixed_ports
 from utils.logger import logger
 from utils.process_manager import get_process_manager
 from middleware.proxy_middleware import ProxyMiddleware
@@ -71,6 +73,17 @@ def start_all_servers():
         logger.warning(f"启动失败的服务器: {', '.join(failed_servers)}")
 
     return started_count, failed_servers
+
+
+# Dashboard 控制台
+@app.get("/dashboard")
+async def dashboard():
+    """管理控制台可视化界面"""
+    from pathlib import Path
+    dashboard_path = Path(__file__).parent / "dashboard" / "index.html"
+    if not dashboard_path.exists():
+        raise HTTPException(status_code=404, detail="Dashboard UI not found")
+    return FileResponse(str(dashboard_path))
 
 
 # 根路径
@@ -257,6 +270,82 @@ async def stop_all_servers():
     }
 
 
+
+# ─────────────────────────────────────────────
+# 固定端口配置 API
+# ─────────────────────────────────────────────
+
+class PortConfigRequest(BaseModel):
+    """固定端口配置请求"""
+    port: int
+
+
+@app.get("/api/v1/servers/port-configs")
+async def get_all_port_configs():
+    """获取全部服务器的固定端口配置"""
+    enabled = get_enabled_servers()
+    fixed = get_all_fixed_ports()
+    result = {}
+    for server_id in enabled:
+        result[server_id] = {
+            "server_id": server_id,
+            "fixed_port": fixed.get(server_id),
+            "mode": "fixed" if server_id in fixed else "dynamic",
+        }
+    return result
+
+
+@app.get("/api/v1/servers/{server_id}/port-config")
+async def get_port_config(server_id: str):
+    """获取单个服务器的固定端口配置"""
+    enabled = get_enabled_servers()
+    if server_id not in enabled:
+        raise HTTPException(status_code=404, detail=f"服务器 {server_id} 不存在")
+    fixed_port = get_fixed_port(server_id)
+    return {
+        "server_id": server_id,
+        "fixed_port": fixed_port,
+        "mode": "fixed" if fixed_port else "dynamic",
+    }
+
+
+@app.put("/api/v1/servers/{server_id}/port-config")
+async def set_port_config(server_id: str, body: PortConfigRequest):
+    """设置服务器固定端口（立即持久化，下次启动生效）"""
+    enabled = get_enabled_servers()
+    if server_id not in enabled:
+        raise HTTPException(status_code=404, detail=f"服务器 {server_id} 不存在")
+    try:
+        set_fixed_port(server_id, body.port)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+
+    logger.info(f"🔧 服务器 {server_id} 固定端口已设置为 {body.port}")
+    return {
+        "success": True,
+        "server_id": server_id,
+        "fixed_port": body.port,
+        "message": f"固定端口已保存，重启后生效",
+    }
+
+
+@app.delete("/api/v1/servers/{server_id}/port-config")
+async def delete_port_config(server_id: str):
+    """删除服务器固定端口配置（恢复动态分配）"""
+    enabled = get_enabled_servers()
+    if server_id not in enabled:
+        raise HTTPException(status_code=404, detail=f"服务器 {server_id} 不存在")
+    existed = remove_fixed_port(server_id)
+    logger.info(f"🔧 服务器 {server_id} 固定端口已移除，将使用动态端口分配")
+    return {
+        "success": True,
+        "server_id": server_id,
+        "existed": existed,
+        "mode": "dynamic",
+        "message": "固定端口已移除，下次启动将动态分配",
+    }
+
+
 def main():
     """启动服务器"""
     logger.info("=" * 60)
@@ -270,6 +359,7 @@ def main():
 
     logger.info(f"API网关将在 {settings.HOST}:{settings.PORT} 启动")
     logger.info(f"API文档: http://{settings.HOST}:{settings.PORT}/docs")
+    logger.info(f"🌟 Dashboard 控制台: http://{settings.HOST}:{settings.PORT}/dashboard")
     logger.info("")
     logger.info("服务器管理API:")
     logger.info(f"  - GET  /api/v1/servers/statuses     # 查看所有服务器状态")

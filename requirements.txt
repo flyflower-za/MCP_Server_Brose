@@ -18,3 +18,7 @@ python-dotenv>=1.0.0
 
 # 其他依赖
 python-multipart>=0.0.6
+
+httpx
+
+psutil

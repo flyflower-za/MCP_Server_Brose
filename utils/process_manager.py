@@ -10,6 +10,7 @@ from typing import Dict, Optional, Any
 from datetime import datetime
 from utils.logger import logger
 from utils.port_allocator import get_port_allocator
+from config.port_config import get_fixed_port
 
 
 class ProcessInfo:
@@ -63,8 +64,20 @@ class ProcessManager:
                     logger.warning(f"服务器 {server_id} 已在运行中")
                     return False
 
-            # 分配端口
-            port = self.port_allocator.allocate_port()
+            # 分配端口（优先使用固定端口配置）
+            fixed_port = get_fixed_port(server_id)
+            if fixed_port is not None:
+                port = self.port_allocator.allocate_port(preferred_port=fixed_port)
+                if port != fixed_port:
+                    logger.error(
+                        f"服务器 {server_id} 配置的固定端口 {fixed_port} 不可用，"
+                        f"请先释放该端口或在 Dashboard 中修改端口配置"
+                    )
+                    if port:
+                        self.port_allocator.release_port(port)
+                    return False
+            else:
+                port = self.port_allocator.allocate_port()
             if port is None:
                 logger.error(f"无法为服务器 {server_id} 分配端口")
                 return False

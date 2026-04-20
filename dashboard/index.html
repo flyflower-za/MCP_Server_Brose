@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCP Servers Hub — Dashboard</title>
+  <meta name="description" content="MCP Servers Hub 可视化管理控制台 — 实时监控、固定端口配置、启停控制" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base:        #080c14;
+      --bg-surface:     #0d1220;
+      --bg-glass:       rgba(255,255,255,0.04);
+      --bg-glass-hover: rgba(255,255,255,0.07);
+      --border:         rgba(255,255,255,0.08);
+      --border-light:   rgba(255,255,255,0.14);
+
+      --accent-blue:   #3b82f6;
+      --accent-cyan:   #06b6d4;
+      --accent-purple: #8b5cf6;
+      --accent-green:  #10b981;
+      --accent-orange: #f59e0b;
+      --accent-red:    #ef4444;
+
+      --text-primary:  #f1f5f9;
+      --text-secondary:#94a3b8;
+      --text-muted:    #475569;
+
+      --radius-sm: 8px; --radius-md: 12px;
+      --radius-lg: 16px; --radius-xl: 24px;
+
+      --shadow-glow-blue:  0 0 40px rgba(59,130,246,0.15);
+      --shadow-glow-green: 0 0 30px rgba(16,185,129,0.2);
+      --shadow-card:       0 4px 24px rgba(0,0,0,0.4);
+      --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-base);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 0%, rgba(59,130,246,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 100%, rgba(139,92,246,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 60% 50%, rgba(6,182,212,0.04) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .app { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 28px 80px; }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 28px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 28px;
+    }
+    .header-left { display: flex; align-items: center; gap: 16px; }
+    .logo {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center; font-size: 20px;
+      box-shadow: var(--shadow-glow-blue); flex-shrink: 0;
+    }
+    .header-title h1 {
+      font-size: 18px; font-weight: 700;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-cyan));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .header-title p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .hub-url {
+      font-family: 'JetBrains Mono', monospace; font-size: 12px;
+      color: var(--text-muted); background: var(--bg-glass);
+      border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 12px;
+    }
+    .refresh-btn {
+      width: 36px; height: 36px; background: var(--bg-glass);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text-secondary); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .refresh-btn:hover { background: var(--bg-glass-hover); color: var(--text-primary); }
+    .refresh-btn.spinning svg { animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── STAT CARDS ── */
+    .status-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+    .stat-card {
+      background: var(--bg-glass); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 20px 24px;
+      display: flex; align-items: center; gap: 16px;
+      transition: all var(--transition); position: relative; overflow: hidden;
+    }
+    .stat-card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity var(--transition); }
+    .stat-card:hover { border-color: var(--border-light); transform: translateY(-1px); }
+    .stat-card:hover::before { opacity: 1; }
+    .stat-card.blue::before  { background: linear-gradient(135deg, rgba(59,130,246,0.06), transparent); }
+    .stat-card.green::before { background: linear-gradient(135deg, rgba(16,185,129,0.06), transparent); }
+    .stat-card.purple::before{ background: linear-gradient(135deg, rgba(139,92,246,0.06), transparent); }
+    .stat-card.cyan::before  { background: linear-gradient(135deg, rgba(6,182,212,0.06), transparent); }
+    .stat-icon { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .stat-icon.blue   { background: rgba(59,130,246,0.15); }
+    .stat-icon.green  { background: rgba(16,185,129,0.15); }
+    .stat-icon.purple { background: rgba(139,92,246,0.15); }
+    .stat-icon.cyan   { background: rgba(6,182,212,0.15); }
+    .stat-value { font-size: 28px; font-weight: 700; line-height: 1; }
+    .stat-value.blue   { color: var(--accent-blue); }
+    .stat-value.green  { color: var(--accent-green); }
+    .stat-value.purple { color: var(--accent-purple); }
+    .stat-value.cyan   { color: var(--accent-cyan); }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    /* ── GLOBAL ACTIONS ── */
+    .global-actions {
+      display: flex; gap: 10px; padding: 14px 20px;
+      background: var(--bg-glass); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); margin-bottom: 24px; align-items: center;
+    }
+    .global-actions-label { font-size: 12px; color: var(--text-muted); margin-right: 4px; }
+
+    /* ── MAIN GRID ── */
+    .main-grid { display: grid; grid-template-columns: 1fr 390px; gap: 24px; align-items: start; }
+
+    /* ── SECTION HEADER ── */
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .section-title {
+      font-size: 13px; font-weight: 600; color: var(--text-secondary);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-blue); }
+
+    /* ── SERVER CARD ── */
+    .server-card {
+      background: var(--bg-glass); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px; margin-bottom: 16px;
+      transition: all var(--transition); position: relative; overflow: hidden;
+    }
+    .server-card:hover { border-color: var(--border-light); box-shadow: var(--shadow-card); }
+    .server-card.running { border-color: rgba(16,185,129,0.2); box-shadow: var(--shadow-glow-green); }
+    .server-card.stopped, .server-card.not_running { border-color: rgba(239,68,68,0.12); }
+
+    .server-top {
+      display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px;
+    }
+    .server-info { display: flex; align-items: center; gap: 14px; }
+    .server-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
+      border: 1px solid rgba(59,130,246,0.2); border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
+    }
+    .server-name { font-size: 16px; font-weight: 600; }
+    .server-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+    .server-module { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-cyan); margin-top: 4px; opacity: 0.8; }
+
+    .status-badge {
+      display: flex; align-items: center; gap: 6px; padding: 6px 12px;
+      border-radius: 999px; font-size: 12px; font-weight: 500; flex-shrink: 0;
+    }
+    .status-badge.running { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25); color: var(--accent-green); }
+    .status-badge.stopped, .status-badge.not_running { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: var(--accent-red); }
+
+    .pulse { width: 8px; height: 8px; border-radius: 50%; position: relative; flex-shrink: 0; }
+    .pulse.green { background: var(--accent-green); }
+    .pulse.red   { background: var(--accent-red); }
+    .pulse.green::after {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      background: var(--accent-green); animation: pulse-ring 2s ease-out infinite;
+    }
+    @keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2.2); opacity: 0; } }
+
+    /* ── SERVER META ── */
+    .server-meta {
+      display: flex; gap: 0; margin-bottom: 18px;
+      background: rgba(0,0,0,0.2); border-radius: var(--radius-sm);
+      border: 1px solid var(--border); overflow: hidden;
+    }
+    .meta-item {
+      flex: 1; padding: 10px 14px;
+      border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 3px;
+    }
+    .meta-item:last-child { border-right: none; }
+    .meta-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .meta-value { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
+    .meta-value.highlight { color: var(--accent-cyan); }
+
+    /* ── PORT CONFIG ROW ── */
+    .port-config-row {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+      padding: 12px 16px;
+      background: rgba(59,130,246,0.04);
+      border: 1px solid rgba(59,130,246,0.12);
+      border-radius: var(--radius-sm);
+    }
+    .port-config-label {
+      font-size: 12px; color: var(--text-secondary); white-space: nowrap; flex-shrink: 0;
+    }
+    .port-mode-badge {
+      font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+      text-transform: uppercase; letter-spacing: 0.06em; flex-shrink: 0;
+    }
+    .port-mode-badge.fixed   { background: rgba(16,185,129,0.12); color: var(--accent-green); border: 1px solid rgba(16,185,129,0.25); }
+    .port-mode-badge.dynamic { background: rgba(245,158,11,0.12); color: var(--accent-orange); border: 1px solid rgba(245,158,11,0.25); }
+
+    .port-input-wrap { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+    .port-input {
+      width: 90px; background: rgba(0,0,0,0.25); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text-primary);
+      font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500;
+      padding: 6px 10px; text-align: center; transition: all var(--transition);
+    }
+    .port-input:focus { outline: none; border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.12); }
+    .port-input::placeholder { color: var(--text-muted); font-size: 11px; }
+
+    .port-hint {
+      font-size: 11px; color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace; white-space: nowrap;
+    }
+
+    /* ── SERVER ACTIONS ── */
+    .server-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: flex; align-items: center; gap: 6px; padding: 8px 16px;
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 500;
+      cursor: pointer; border: 1px solid transparent; transition: all var(--transition);
+      white-space: nowrap; font-family: 'Inter', sans-serif;
+    }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+    .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .btn-start   { background: rgba(16,185,129,0.12);  border-color: rgba(16,185,129,0.25);  color: var(--accent-green); }
+    .btn-start:hover { background: rgba(16,185,129,0.22); border-color: rgba(16,185,129,0.4); }
+    .btn-stop    { background: rgba(239,68,68,0.1);    border-color: rgba(239,68,68,0.2);    color: var(--accent-red); }
+    .btn-stop:hover  { background: rgba(239,68,68,0.18);  border-color: rgba(239,68,68,0.35); }
+    .btn-restart { background: rgba(245,158,11,0.1);   border-color: rgba(245,158,11,0.2);   color: var(--accent-orange); }
+    .btn-restart:hover{ background: rgba(245,158,11,0.18); border-color: rgba(245,158,11,0.35); }
+    .btn-port-save { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.25); color: var(--accent-blue); padding: 6px 14px; }
+    .btn-port-save:hover { background: rgba(59,130,246,0.22); border-color: rgba(59,130,246,0.4); }
+    .btn-port-clear { background: transparent; border-color: var(--border); color: var(--text-muted); padding: 6px 10px; font-size: 12px; }
+    .btn-port-clear:hover { color: var(--accent-red); border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      border-color: transparent; color: white;
+      box-shadow: 0 2px 12px rgba(59,130,246,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(59,130,246,0.35); }
+    .btn-ghost { background: var(--bg-glass); border-color: var(--border); color: var(--text-secondary); }
+    .btn-ghost:hover { background: var(--bg-glass-hover); border-color: var(--border-light); color: var(--text-primary); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    /* ── PANEL ── */
+    .panel { background: var(--bg-glass); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .panel-header {
+      padding: 14px 20px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .panel-title { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .panel-body { padding: 20px; }
+
+    /* ── PDF TESTER ── */
+    .input-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .input-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .input-field {
+      background: rgba(0,0,0,0.25); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text-primary);
+      font-family: 'Inter', sans-serif; font-size: 13px; padding: 10px 14px;
+      transition: all var(--transition); width: 100%;
+    }
+    .input-field::placeholder { color: var(--text-muted); }
+    .input-field:focus { outline: none; border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+
+    .checkbox-group { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .checkbox-group input { accent-color: var(--accent-blue); width: 14px; height: 14px; }
+    .checkbox-group label { font-size: 13px; color: var(--text-secondary); cursor: pointer; }
+
+    .result-box {
+      background: rgba(0,0,0,0.3); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 14px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      color: var(--text-secondary); max-height: 220px; overflow-y: auto;
+      white-space: pre-wrap; word-break: break-all; line-height: 1.6; display: none;
+    }
+    .result-box.visible { display: block; }
+    .result-box.success { border-color: rgba(16,185,129,0.25); color: #86efac; }
+    .result-box.error   { border-color: rgba(239,68,68,0.25);  color: #fca5a5; }
+
+    /* ── LOG ── */
+    .log-container {
+      background: rgba(0,0,0,0.3); border-radius: var(--radius-sm);
+      max-height: 280px; overflow-y: auto;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7;
+    }
+    .log-line {
+      padding: 3px 14px; border-bottom: 1px solid rgba(255,255,255,0.03);
+      display: flex; gap: 10px; align-items: baseline;
+    }
+    .log-line:last-child { border-bottom: none; }
+    .log-time  { color: var(--text-muted); flex-shrink: 0; font-size: 10px; }
+    .log-level { flex-shrink: 0; font-size: 10px; font-weight: 600; width: 46px; }
+    .log-level.INFO    { color: var(--accent-blue); }
+    .log-level.WARNING { color: var(--accent-orange); }
+    .log-level.ERROR   { color: var(--accent-red); }
+    .log-level.SUCCESS { color: var(--accent-green); }
+    .log-msg { color: var(--text-secondary); word-break: break-all; }
+
+    /* ── HEALTH ── */
+    .health-ring {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; position: relative; flex-shrink: 0;
+    }
+    .health-ring.healthy { border-color: rgba(16,185,129,0.4); box-shadow: 0 0 16px rgba(16,185,129,0.2); }
+    .health-ring.offline  { border-color: rgba(239,68,68,0.3); }
+
+    /* ── TOAST ── */
+    #toast-container { position: fixed; bottom: 28px; right: 28px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+    .toast {
+      display: flex; align-items: center; gap: 12px; padding: 14px 18px;
+      background: var(--bg-surface); border: 1px solid var(--border);
+      border-radius: var(--radius-md); box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      font-size: 13px; font-weight: 500;
+      animation: toast-in 0.3s cubic-bezier(0.34,1.56,0.64,1) forwards; max-width: 320px;
+    }
+    .toast.success { border-color: rgba(16,185,129,0.3); color: var(--accent-green); }
+    .toast.error   { border-color: rgba(239,68,68,0.3);  color: var(--accent-red); }
+    .toast.info    { border-color: rgba(59,130,246,0.3);  color: var(--accent-blue); }
+    .toast.warning { border-color: rgba(245,158,11,0.3);  color: var(--accent-orange); }
+    @keyframes toast-in  { from { opacity:0; transform:translateX(20px) scale(0.95); } to { opacity:1; transform:translateX(0) scale(1); } }
+    @keyframes toast-out { from { opacity:1; } to { opacity:0; transform:translateX(20px); } }
+
+    /* ── EMPTY ── */
+    .empty-state { text-align: center; padding: 48px 24px; color: var(--text-muted); font-size: 13px; }
+    .empty-state .icon { font-size: 40px; margin-bottom: 12px; opacity: 0.4; }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.18); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .sidebar { flex-direction: row; flex-wrap: wrap; }
+      .sidebar > * { flex: 1 1 320px; }
+    }
+    @media (max-width: 700px) {
+      .status-bar { grid-template-columns: repeat(2, 1fr); }
+      .header { flex-direction: column; align-items: flex-start; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">🚀</div>
+      <div class="header-title">
+        <h1>MCP Servers Hub</h1>
+        <p>进程隔离架构 · 可视化管理控制台</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="hub-url" id="hub-url">http://localhost:51234</span>
+      <button class="refresh-btn" id="refresh-btn" title="手动刷新" onclick="refreshAll()">
+        <svg id="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+          <path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- STAT CARDS -->
+  <section class="status-bar">
+    <div class="stat-card blue">
+      <div class="stat-icon blue">🌐</div>
+      <div>
+        <div class="stat-value blue" id="stat-hub">—</div>
+        <div class="stat-label">Hub 状态</div>
+      </div>
+    </div>
+    <div class="stat-card green">
+      <div class="stat-icon green">⚙️</div>
+      <div>
+        <div class="stat-value green" id="stat-running">—</div>
+        <div class="stat-label">运行中服务</div>
+      </div>
+    </div>
+    <div class="stat-card purple">
+      <div class="stat-icon purple">📦</div>
+      <div>
+        <div class="stat-value purple" id="stat-total">—</div>
+        <div class="stat-label">已注册服务</div>
+      </div>
+    </div>
+    <div class="stat-card cyan">
+      <div class="stat-icon cyan">⏱️</div>
+      <div>
+        <div class="stat-value cyan" id="stat-uptime" style="font-size:20px;font-family:'JetBrains Mono',monospace">—</div>
+        <div class="stat-label">页面监控时长</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL ACTIONS -->
+  <div class="global-actions">
+    <span class="global-actions-label">全局操作：</span>
+    <button class="btn btn-start" onclick="startAll()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg> 启动全部
+    </button>
+    <button class="btn btn-stop" onclick="stopAll()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 停止全部
+    </button>
+    <div style="margin-left:auto; font-size:11px; color:var(--text-muted)">
+      自动刷新 <span id="auto-refresh-countdown" style="color:var(--accent-cyan);font-family:'JetBrains Mono',monospace;">15s</span>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- SERVER LIST -->
+    <div>
+      <div class="section-header">
+        <div class="section-title"><span class="dot"></span>MCP 服务器</div>
+      </div>
+      <div id="servers-container">
+        <div class="empty-state"><div class="icon">⏳</div><div>正在连接到 Hub…</div></div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- PDF TESTER -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span>📄</span> PDF 提取测试</div>
+          <span id="pdf-server-badge" style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red);">离线</span>
+        </div>
+        <div class="panel-body">
+          <div class="input-group">
+            <label class="input-label">PDF URL</label>
+            <input id="pdf-url" class="input-field" type="url" placeholder="https://example.com/file.pdf" />
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="pdf-meta" checked />
+            <label for="pdf-meta">包含元数据</label>
+          </div>
+          <button class="btn btn-primary" id="pdf-submit-btn" style="width:100%;justify-content:center;" onclick="submitPDF()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            开始提取
+          </button>
+          <div id="pdf-result" class="result-box" style="margin-top:14px;"></div>
+        </div>
+      </div>
+
+      <!-- HEALTH -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span>💓</span> Hub 健康状态</div>
+        </div>
+        <div class="panel-body">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+            <div class="health-ring" id="health-ring">🔌</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;" id="health-status-text">连接中…</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px;" id="health-version">—</div>
+            </div>
+          </div>
+          <div id="health-detail" style="font-size:12px;color:var(--text-muted);line-height:1.8;"></div>
+        </div>
+      </div>
+
+      <!-- LOG -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span>📋</span> 操作日志</div>
+          <button class="btn btn-ghost" style="padding:4px 10px;font-size:11px;" onclick="clearLogs()">清空</button>
+        </div>
+        <div class="log-container" id="log-container"></div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script>
+const HUB_BASE = 'http://localhost:51234';
+
+// state
+let servers     = {};   // { [id]: { config, status, portConfig } }
+let pdfOnline   = false;
+let pageStart   = Date.now();
+let autoTimer   = 15;
+
+// ── utils ──────────────────────────────────────
+function formatUptime(sec) {
+  const h = Math.floor(sec/3600), m = Math.floor((sec%3600)/60), s = Math.floor(sec%60);
+  if (h > 0) return `${h}h ${m}m`;
+  if (m > 0) return `${m}m ${s}s`;
+  return `${s}s`;
+}
+
+// ── toast ──────────────────────────────────────
+function toast(msg, type = 'info') {
+  const icons = { success:'✅', error:'❌', info:'ℹ️', warning:'⚠️' };
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.innerHTML = `<span>${icons[type]}</span><span>${msg}</span>`;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => {
+    el.style.animation = 'toast-out 0.3s ease forwards';
+    setTimeout(() => el.remove(), 310);
+  }, 3500);
+}
+
+// ── log ────────────────────────────────────────
+function addLog(msg, level = 'INFO') {
+  const c = document.getElementById('log-container');
+  const t = new Date().toLocaleTimeString('zh-CN', { hour12: false });
+  const line = document.createElement('div');
+  line.className = 'log-line';
+  line.innerHTML = `<span class="log-time">${t}</span><span class="log-level ${level}">${level}</span><span class="log-msg">${msg}</span>`;
+  c.appendChild(line);
+  c.scrollTop = c.scrollHeight;
+  while (c.children.length > 120) c.removeChild(c.firstChild);
+}
+function clearLogs() { document.getElementById('log-container').innerHTML = ''; addLog('日志已清空'); }
+
+// ── api ────────────────────────────────────────
+async function api(path, method = 'GET', body = null) {
+  const opts = { method, headers: {'Content-Type':'application/json'} };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(`${HUB_BASE}${path}`, opts);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.detail || `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+// ── fetch ──────────────────────────────────────
+async function fetchHealth() {
+  try {
+    const d = await api('/health');
+    const ring = document.getElementById('health-ring');
+    ring.className  = 'health-ring healthy';
+    ring.textContent = '💚';
+    document.getElementById('health-status-text').textContent = '健康';
+    document.getElementById('health-status-text').style.color = 'var(--accent-green)';
+    document.getElementById('health-version').textContent = `架构: ${d.architecture || '进程隔离'}`;
+    document.getElementById('health-detail').innerHTML =
+      `<div>已加载进程: <b style="color:var(--text-primary)">${d.loaded_servers}</b></div>
+       <div>运行中进程: <b style="color:var(--accent-green)">${d.running_servers}</b></div>
+       <div>活跃服务: <b style="color:var(--accent-cyan)">${(d.servers||[]).join(', ')||'无'}</b></div>`;
+    document.getElementById('stat-hub').textContent = '在线';
+  } catch(e) {
+    const ring = document.getElementById('health-ring');
+    ring.className  = 'health-ring offline';
+    ring.textContent = '❌';
+    document.getElementById('health-status-text').textContent = 'Hub 离线';
+    document.getElementById('health-status-text').style.color = 'var(--accent-red)';
+    document.getElementById('health-version').textContent = e.message;
+    document.getElementById('stat-hub').textContent = '离线';
+  }
+}
+
+async function fetchServers() {
+  try {
+    const [listData, statusData, portConfData] = await Promise.all([
+      api('/api/v1/servers'),
+      api('/api/v1/servers/statuses'),
+      api('/api/v1/servers/port-configs'),
+    ]);
+    const merged = {};
+    for (const srv of (listData.servers || [])) {
+      merged[srv.id] = {
+        config:     srv,
+        status:     statusData[srv.id]  || { status: 'not_running' },
+        portConfig: portConfData[srv.id] || { mode: 'dynamic', fixed_port: null },
+      };
+    }
+    servers = merged;
+    renderServers();
+  } catch(e) {
+    addLog(`获取服务器列表失败: ${e.message}`, 'ERROR');
+    document.getElementById('servers-container').innerHTML = `
+      <div class="empty-state">
+        <div class="icon">🔌</div>
+        <div>无法连接到 Hub (${e.message})</div>
+        <div style="margin-top:8px;font-size:11px;">请运行: <code style="color:var(--accent-cyan)">bash start_safe.sh</code></div>
+      </div>`;
+  }
+}
+
+// ── render ─────────────────────────────────────
+function renderServers() {
+  const container = document.getElementById('servers-container');
+  if (!Object.keys(servers).length) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">📭</div><div>暂无已注册的 MCP 服务器</div></div>`;
+    updateStats(0, 0); return;
+  }
+  let running = 0;
+  const total = Object.keys(servers).length;
+  container.innerHTML = '';
+  for (const [id, data] of Object.entries(servers)) {
+    if (data.status?.status === 'running') running++;
+    if (id === 'pdf_extractor') pdfOnline = data.status?.status === 'running';
+    container.appendChild(buildCard(id, data));
+  }
+  updateStats(running, total);
+  updatePDFBadge();
+}
+
+function buildCard(id, { config, status, portConfig }) {
+  const isRunning    = status?.status === 'running';
+  const statusClass  = status?.status || 'not_running';
+  const badgeLabel   = isRunning ? '运行中' : (status?.status === 'stopped' ? '已停止' : '未运行');
+  const pid     = status?.pid     ?? status?.last_info?.pid     ?? '—';
+  const port    = status?.port    ?? status?.last_info?.port    ?? '—';
+  const uptime  = status?.uptime_seconds != null ? formatUptime(status.uptime_seconds) : '—';
+  const restarts = status?.restart_count ?? status?.last_info?.restart_count ?? '—';
+
+  const isFixed    = portConfig?.mode === 'fixed';
+  const fixedPort  = portConfig?.fixed_port;
+
+  const card = document.createElement('div');
+  card.className = `server-card ${statusClass}`;
+  card.id = `card-${id}`;
+  card.innerHTML = `
+    <div class="server-top">
+      <div class="server-info">
+        <div class="server-icon">📦</div>
+        <div>
+          <div class="server-name">${config.name || id}</div>
+          <div class="server-desc">${config.description || ''}</div>
+          <div class="server-module">${config.module || ''}</div>
+        </div>
+      </div>
+      <div class="status-badge ${statusClass}">
+        <span class="pulse ${isRunning ? 'green' : 'red'}"></span>
+        ${badgeLabel}
+      </div>
+    </div>
+
+    <!-- runtime meta -->
+    <div class="server-meta">
+      <div class="meta-item"><span class="meta-label">PID</span><span class="meta-value highlight">${pid}</span></div>
+      <div class="meta-item"><span class="meta-label">当前端口</span><span class="meta-value highlight">${port}</span></div>
+      <div class="meta-item"><span class="meta-label">运行时长</span><span class="meta-value">${uptime}</span></div>
+      <div class="meta-item"><span class="meta-label">重启次数</span><span class="meta-value">${restarts}</span></div>
+    </div>
+
+    <!-- port config row -->
+    <div class="port-config-row" id="port-row-${id}">
+      <div>
+        <span class="port-config-label">🔌 固定端口</span>
+        <div style="margin-top:4px;">
+          <span class="port-mode-badge ${isFixed ? 'fixed' : 'dynamic'}" id="port-mode-badge-${id}">
+            ${isFixed ? `固定 · ${fixedPort}` : '动态分配'}
+          </span>
+        </div>
+      </div>
+      <div class="port-input-wrap">
+        <span class="port-hint">${isFixed ? `当前固定:` : '设置端口:'}</span>
+        <input
+          class="port-input"
+          id="port-input-${id}"
+          type="number" min="1024" max="65535"
+          placeholder="如 51238"
+          value="${isFixed ? fixedPort : ''}"
+          title="输入固定端口号 (1024–65535)"
+        />
+        <button class="btn btn-port-save" onclick="savePort('${id}')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
+          保存
+        </button>
+        ${isFixed ? `<button class="btn btn-port-clear" onclick="clearPort('${id}')" title="恢复动态分配">✕</button>` : ''}
+      </div>
+    </div>
+
+    <!-- lifecycle actions -->
+    <div class="server-actions">
+      <button class="btn btn-start"   id="btn-start-${id}"   onclick="serverAction('${id}','start')"   ${isRunning ? 'disabled' : ''}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg> 启动
+      </button>
+      <button class="btn btn-stop"    id="btn-stop-${id}"    onclick="serverAction('${id}','stop')"    ${!isRunning ? 'disabled' : ''}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 停止
+      </button>
+      <button class="btn btn-restart" id="btn-restart-${id}" onclick="serverAction('${id}','restart')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/></svg> 重启
+      </button>
+      ${port !== '—' && isRunning ? `
+      <button class="btn btn-ghost" onclick="window.open('http://localhost:${port}/docs','_blank')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        API 文档
+      </button>` : ''}
+    </div>
+  `;
+  return card;
+}
+
+function updateStats(r, t) {
+  document.getElementById('stat-running').textContent = r;
+  document.getElementById('stat-total').textContent   = t;
+}
+function updatePDFBadge() {
+  const b = document.getElementById('pdf-server-badge');
+  b.style.cssText = pdfOnline
+    ? 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);color:var(--accent-green)'
+    : 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red)';
+  b.textContent = pdfOnline ? '在线' : '离线';
+}
+
+// ── port config ────────────────────────────────
+async function savePort(id) {
+  const input = document.getElementById(`port-input-${id}`);
+  const raw   = input.value.trim();
+  if (!raw) { toast('请输入端口号', 'warning'); return; }
+  const port = parseInt(raw, 10);
+  if (isNaN(port) || port < 1024 || port > 65535) {
+    toast('端口号须在 1024~65535 之间', 'error'); return;
+  }
+  try {
+    await api(`/api/v1/servers/${id}/port-config`, 'PUT', { port });
+    addLog(`固定端口已保存: ${id} → ${port}`, 'SUCCESS');
+    toast(`端口已固定为 ${port}，重启后生效`, 'success');
+    // optimistic update badge
+    const badge = document.getElementById(`port-mode-badge-${id}`);
+    if (badge) { badge.className = 'port-mode-badge fixed'; badge.textContent = `固定 · ${port}`; }
+    setTimeout(refreshAll, 600);
+  } catch(e) {
+    addLog(`保存端口失败: ${e.message}`, 'ERROR');
+    toast(`保存失败: ${e.message}`, 'error');
+  }
+}
+
+async function clearPort(id) {
+  try {
+    await api(`/api/v1/servers/${id}/port-config`, 'DELETE');
+    addLog(`${id} 固定端口已移除，将动态分配`, 'SUCCESS');
+    toast('已移除固定端口，下次启动将动态分配', 'info');
+    setTimeout(refreshAll, 600);
+  } catch(e) {
+    addLog(`移除端口失败: ${e.message}`, 'ERROR');
+    toast(`操作失败: ${e.message}`, 'error');
+  }
+}
+
+// ── server lifecycle ───────────────────────────
+async function serverAction(id, action) {
+  const labels = { start:'启动', stop:'停止', restart:'重启' };
+  addLog(`正在${labels[action]}服务器: ${id}`, 'INFO');
+  ['start','stop','restart'].forEach(a => {
+    const b = document.getElementById(`btn-${a}-${id}`); if (b) b.disabled = true;
+  });
+  try {
+    const d = await api(`/api/v1/servers/${id}/${action}`, 'POST');
+    if (d.success) {
+      addLog(`✅ ${labels[action]}成功: ${id}`, 'SUCCESS');
+      toast(`${labels[action]}成功: ${id}`, 'success');
+    } else { toast(`操作未成功: ${id}`, 'warning'); }
+  } catch(e) {
+    addLog(`${labels[action]}失败: ${e.message}`, 'ERROR');
+    toast(`${labels[action]}失败: ${e.message}`, 'error');
+  }
+  setTimeout(refreshAll, 1200);
+}
+
+async function startAll() {
+  try {
+    const d = await api('/api/v1/servers/start-all', 'POST');
+    addLog(`启动全部完成: ${d.started_count} 个`, 'SUCCESS');
+    toast(`已启动 ${d.started_count} 个服务器`, 'success');
+  } catch(e) { toast(`失败: ${e.message}`, 'error'); }
+  setTimeout(refreshAll, 1200);
+}
+async function stopAll() {
+  try {
+    const d = await api('/api/v1/servers/stop-all', 'POST');
+    addLog(`停止全部完成: ${d.stopped_count} 个`, 'SUCCESS');
+    toast(`已停止 ${d.stopped_count} 个服务器`, 'success');
+  } catch(e) { toast(`失败: ${e.message}`, 'error'); }
+  setTimeout(refreshAll, 1200);
+}
+
+// ── pdf tester ─────────────────────────────────
+async function submitPDF() {
+  const url  = document.getElementById('pdf-url').value.trim();
+  const meta = document.getElementById('pdf-meta').checked;
+  const btn  = document.getElementById('pdf-submit-btn');
+  const res  = document.getElementById('pdf-result');
+  if (!url) { toast('请输入 PDF URL', 'warning'); return; }
+  btn.disabled = true; btn.textContent = '提取中…';
+  res.className = 'result-box visible';
+  res.style.color = 'var(--text-muted)';
+  res.textContent = '⏳ 正在请求 pdf_extractor…';
+  addLog(`PDF提取: ${url.slice(0,60)}…`, 'INFO');
+  try {
+    const d = await api('/pdf/extract', 'POST', { url, include_metadata: meta });
+    if (d.success) {
+      res.className = 'result-box visible success';
+      const metaStr = d.metadata
+        ? `\n[元数据]\n  标题: ${d.metadata.title||'—'}\n  作者: ${d.metadata.author||'—'}\n  制作: ${d.metadata.producer||'—'}\n`
+        : '';
+      res.textContent = `✅ 提取成功 | 共 ${d.total_pages} 页\n${metaStr}\n[内容预览]\n${(d.content||'').slice(0,800)}${d.content?.length>800?'\n…（已截断）':''}`;
+      addLog(`PDF提取成功，共 ${d.total_pages} 页`, 'SUCCESS');
+      toast(`提取成功！${d.total_pages} 页`, 'success');
+    } else {
+      res.className = 'result-box visible error';
+      res.textContent = `❌ 提取失败\n\n${d.error}`;
+      addLog(`PDF提取失败: ${d.error}`, 'ERROR');
+      toast('PDF 提取失败', 'error');
+    }
+  } catch(e) {
+    res.className = 'result-box visible error';
+    res.textContent = `❌ 请求失败: ${e.message}\n\n请确认 pdf_extractor 正在运行`;
+    addLog(`PDF请求失败: ${e.message}`, 'ERROR');
+    toast(`请求失败: ${e.message}`, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 开始提取`;
+  }
+}
+
+// ── refresh ────────────────────────────────────
+async function refreshAll() {
+  const btn = document.getElementById('refresh-btn');
+  btn.classList.add('spinning');
+  try { await Promise.all([fetchHealth(), fetchServers()]); }
+  finally { btn.classList.remove('spinning'); resetCountdown(); }
+}
+function resetCountdown() {
+  autoTimer = 15;
+  document.getElementById('auto-refresh-countdown').textContent = '15s';
+}
+
+// ── init ───────────────────────────────────────
+(async function init() {
+  addLog('Dashboard 初始化', 'INFO');
+  addLog(`连接 Hub: ${HUB_BASE}`, 'INFO');
+  await refreshAll();
+  addLog('初始化完成，自动监控中', 'SUCCESS');
+
+  // uptime counter
+  setInterval(() => {
+    document.getElementById('stat-uptime').textContent = formatUptime((Date.now()-pageStart)/1000);
+  }, 1000);
+
+  // auto refresh countdown
+  setInterval(() => {
+    autoTimer--;
+    const el = document.getElementById('auto-refresh-countdown');
+    if (el) el.textContent = autoTimer + 's';
+    if (autoTimer <= 0) refreshAll();
+  }, 1000);
+})();
+</script>
+</body>
+</html>
