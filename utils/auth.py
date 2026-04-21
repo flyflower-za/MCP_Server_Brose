@@ -2,13 +2,13 @@
 认证和授权 API
 支持 JWT Token 和密码哈希
 """
+import hmac
 import os
 from datetime import timedelta
 from typing import Optional
 
 from fastapi import APIRouter, HTTPException, Depends
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from fastapi.security.utils import http_bearer
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials, HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel, Field
 
 from config import settings
@@ -93,7 +93,7 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)) 
         if payload is None:
             raise credentials_exception
         return payload
-    except http_bearer.HTTPBearerException as e:
+    except Exception:
         raise credentials_exception
 
 

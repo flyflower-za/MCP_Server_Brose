@@ -374,6 +374,70 @@
       .status-bar { grid-template-columns: repeat(2, 1fr); }
       .header { flex-direction: column; align-items: flex-start; gap: 14px; }
     }
+
+    /* ── PERFORMANCE GRID ── */
+    .perf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .perf-item {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 10px; background: var(--bg-surface);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+    }
+    .perf-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .perf-value { font-size: 14px; font-weight: 600; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; }
+
+    /* ── CONFIG LIST ── */
+    .config-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px; border-bottom: 1px solid var(--border);
+      font-size: 12px; transition: background var(--transition);
+    }
+    .config-item:last-child { border-bottom: none; }
+    .config-item:hover { background: var(--bg-surface); }
+    .config-info { display: flex; flex-direction: column; gap: 2px; }
+    .config-name { font-weight: 500; color: var(--text-primary); }
+    .config-id { font-size: 10px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+    .config-actions { display: flex; gap: 6px; }
+    .config-btn {
+      padding: 4px 8px; font-size: 10px; border-radius: 4px;
+      border: 1px solid var(--border); background: #ffffff;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .config-btn:hover { background: var(--bg-surface); border-color: var(--accent-blue); }
+    .config-btn.toggle { width: 32px; text-align: center; }
+    .config-btn.toggle.active { background: rgba(5,150,105,0.1); border-color: rgba(5,150,105,0.3); color: var(--accent-green); }
+    .config-btn.toggle.inactive { background: rgba(220,38,38,0.08); border-color: rgba(220,38,38,0.25); color: var(--accent-red); }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10000; opacity: 0; pointer-events: none; transition: opacity var(--transition);
+    }
+    .modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .modal {
+      background: #ffffff; border-radius: var(--radius-lg);
+      width: 90%; max-width: 480px; max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3); transform: scale(0.95);
+      transition: transform var(--transition);
+    }
+    .modal-overlay.active .modal { transform: scale(1); }
+    .modal-header {
+      padding: 20px 24px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .modal-title { font-size: 16px; font-weight: 600; }
+    .modal-close {
+      width: 32px; height: 32px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border); background: #ffffff;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .modal-close:hover { background: var(--bg-surface); border-color: var(--accent-red); color: var(--accent-red); }
+    .modal-body { padding: 24px; }
+    .modal-footer {
+      padding: 16px 24px; border-top: 1px solid var(--border);
+      display: flex; gap: 10px; justify-content: flex-end;
+    }
   </style>
 </head>
 <body>
@@ -390,6 +454,15 @@
     </div>
     <div class="header-right">
       <span class="hub-url" id="hub-url">正在检测…</span>
+
+      <!-- User Info (shown when logged in) -->
+      <div id="user-info" style="display:none;align-items:center;gap:8px;">
+        <span style="font-size:12px;color:var(--text-secondary);">
+          👤 <span id="username-display">admin</span>
+        </span>
+        <button class="btn btn-ghost" style="padding:4px 10px;font-size:11px;" onclick="performLogout()">退出</button>
+      </div>
+
       <button class="refresh-btn" id="refresh-btn" title="手动刷新" onclick="refreshAll()">
         <svg id="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
           <path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
@@ -439,8 +512,17 @@
     <button class="btn btn-stop" onclick="stopAll()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 停止全部
     </button>
-    <div style="margin-left:auto; font-size:11px; color:var(--text-muted)">
-      自动刷新 <span id="auto-refresh-countdown" style="color:var(--accent-cyan);font-family:'JetBrains Mono',monospace;">15s</span>
+    <button class="btn btn-ghost" onclick="exportConfig()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      导出配置
+    </button>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:11px;color:var(--text-muted);">
+        版本 <span style="color:var(--accent-cyan);font-family:'JetBrains Mono',monospace;">v1.0.0</span>
+      </span>
+      <span style="font-size:11px; color:var(--text-muted)">
+        自动刷新 <span id="auto-refresh-countdown" style="color:var(--accent-cyan);font-family:'JetBrains Mono',monospace;">15s</span>
+      </span>
     </div>
   </div>
 
@@ -452,6 +534,27 @@
       <div class="section-header">
         <div class="section-title"><span class="dot"></span>MCP 服务器</div>
       </div>
+
+      <!-- 搜索和过滤 -->
+      <div style="display:flex;gap:10px;margin-bottom:16px;">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="搜索服务器名称、模块..."
+          style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;"
+          oninput="filterServers()"
+        />
+        <select
+          id="status-filter"
+          style="padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;background:#ffffff;"
+          onchange="filterServers()"
+        >
+          <option value="all">全部状态</option>
+          <option value="running">运行中</option>
+          <option value="stopped">已停止</option>
+        </select>
+      </div>
+
       <div id="servers-container">
         <div class="empty-state"><div class="icon">⏳</div><div>正在连接到 Hub…</div></div>
       </div>
@@ -480,6 +583,46 @@
             开始提取
           </button>
           <div id="pdf-result" class="result-box" style="margin-top:14px;"></div>
+        </div>
+      </div>
+
+      <!-- CONFIG MANAGER -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span>⚙️</span> 配置管理</div>
+          <button class="btn btn-ghost" style="padding:4px 10px;font-size:11px;" onclick="showConfigModal()">+ 添加</button>
+        </div>
+        <div class="panel-body" style="padding:0;">
+          <div id="config-list" style="max-height:200px;overflow-y:auto;">
+            <!-- 配置列表将在这里渲染 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- PERFORMANCE -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title"><span>📊</span> 性能监控</div>
+        </div>
+        <div class="panel-body">
+          <div class="perf-grid">
+            <div class="perf-item">
+              <span class="perf-label">Hub CPU</span>
+              <span class="perf-value" id="perf-cpu">—%</span>
+            </div>
+            <div class="perf-item">
+              <span class="perf-label">Hub 内存</span>
+              <span class="perf-value" id="perf-memory">— MB</span>
+            </div>
+            <div class="perf-item">
+              <span class="perf-label">端口池</span>
+              <span class="perf-value" id="perf-ports">—/—</span>
+            </div>
+            <div class="perf-item">
+              <span class="perf-label">运行进程</span>
+              <span class="perf-value" id="perf-processes">—/—</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -513,6 +656,86 @@
   </div>
 </div>
 
+<!-- CONFIG MODAL -->
+<div id="config-modal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">添加服务器</div>
+      <button class="modal-close" onclick="closeConfigModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="config-form">
+        <input type="hidden" id="config-edit-mode" value="add" />
+        <div class="input-group">
+          <label class="input-label">服务器 ID *</label>
+          <input id="config-id" class="input-field" type="text" placeholder="如: web_scraper" required />
+        </div>
+        <div class="input-group">
+          <label class="input-label">服务器名称 *</label>
+          <input id="config-name" class="input-field" type="text" placeholder="如: Web Scraper" required />
+        </div>
+        <div class="input-group">
+          <label class="input-label">描述</label>
+          <input id="config-desc" class="input-field" type="text" placeholder="服务器功能描述" />
+        </div>
+        <div class="input-group">
+          <label class="input-label">Python 模块路径 *</label>
+          <input id="config-module" class="input-field" type="text" placeholder="如: mcp_servers.web_scraper.server" required />
+        </div>
+        <div class="input-group">
+          <label class="input-label">URL 前缀</label>
+          <input id="config-prefix" class="input-field" type="text" placeholder="如: /scraper" />
+        </div>
+        <div class="input-group">
+          <label class="input-label">标签（逗号分隔）</label>
+          <input id="config-tags" class="input-field" type="text" placeholder="如: web,scraper,html" />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="config-enabled" checked />
+          <label for="config-enabled">启用此服务器</label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeConfigModal()">取消</button>
+      <button class="btn btn-primary" onclick="submitConfig()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="login-modal" class="modal-overlay" style="z-index:10001;">
+  <div class="modal" style="max-width:400px;">
+    <div class="modal-header">
+      <div class="modal-title">🔐 登录到 MCP Servers Hub</div>
+    </div>
+    <div class="modal-body">
+      <div style="text-align:center;margin-bottom:20px;">
+        <div style="font-size:48px;margin-bottom:12px;">🚀</div>
+        <div style="font-size:14px;color:var(--text-muted);">请输入管理员凭据以访问控制台</div>
+      </div>
+      <form id="login-form">
+        <div class="input-group">
+          <label class="input-label">用户名</label>
+          <input id="login-username" class="input-field" type="text" placeholder="admin" required />
+        </div>
+        <div class="input-group">
+          <label class="input-label">密码</label>
+          <input id="login-password" class="input-field" type="password" placeholder="••••••••" required />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="login-remember" checked />
+          <label for="login-remember">记住我（7天）</label>
+        </div>
+      </form>
+      <div id="login-error" style="color:var(--accent-red);font-size:12px;margin-top:10px;display:none;"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="performLogin()">登录</button>
+    </div>
+  </div>
+</div>
+
 <div id="toast-container"></div>
 
 <script>
@@ -529,6 +752,8 @@ let servers     = {};   // { [id]: { config, status, portConfig } }
 let pdfOnline   = false;
 let pageStart   = Date.now();
 let autoTimer   = 15;
+let authToken   = localStorage.getItem('mcp_hub_token') || null;
+let currentUsername = localStorage.getItem('mcp_hub_username') || null;
 
 // ── utils ──────────────────────────────────────
 function formatUptime(sec) {
@@ -567,13 +792,111 @@ function clearLogs() { document.getElementById('log-container').innerHTML = ''; 
 // ── api ────────────────────────────────────────
 async function api(path, method = 'GET', body = null) {
   const opts = { method, headers: {'Content-Type':'application/json'} };
+
+  // 添加认证 Token
+  if (authToken) {
+    opts.headers['Authorization'] = `Bearer ${authToken}`;
+  }
+
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(`${HUB_BASE}${path}`, opts);
+
+  // 处理 401 未授权
+  if (res.status === 401) {
+    logout();
+    throw new Error('未授权，请重新登录');
+  }
+
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.detail || `HTTP ${res.status}`);
   }
   return res.json();
+}
+
+// ── authentication ─────────────────────────────
+function checkAuth() {
+  if (authToken && currentUsername) {
+    // 已登录
+    document.getElementById('user-info').style.display = 'flex';
+    document.getElementById('username-display').textContent = currentUsername;
+    return true;
+  } else {
+    // 未登录，显示登录框
+    document.getElementById('login-modal').classList.add('active');
+    return false;
+  }
+}
+
+async function performLogin() {
+  const username = document.getElementById('login-username').value.trim();
+  const password = document.getElementById('login-password').value;
+  const remember = document.getElementById('login-remember').checked;
+  const errorDiv = document.getElementById('login-error');
+
+  if (!username || !password) {
+    errorDiv.textContent = '请输入用户名和密码';
+    errorDiv.style.display = 'block';
+    return;
+  }
+
+  try {
+    const d = await fetch(`${HUB_BASE}/api/v1/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+
+    if (!d.ok) {
+      const err = await d.json().catch(() => ({}));
+      throw new Error(err.detail || '登录失败');
+    }
+
+    const data = await d.json();
+    authToken = data.access_token;
+    currentUsername = username;
+
+    // 保存到 localStorage
+    if (remember) {
+      localStorage.setItem('mcp_hub_token', authToken);
+      localStorage.setItem('mcp_hub_username', username);
+    }
+
+    // 更新 UI
+    document.getElementById('login-modal').classList.remove('active');
+    document.getElementById('user-info').style.display = 'flex';
+    document.getElementById('username-display').textContent = username;
+    errorDiv.style.display = 'none';
+
+    // 清空表单
+    document.getElementById('login-form').reset();
+
+    addLog(`用户 ${username} 已登录`, 'SUCCESS');
+    toast('登录成功', 'success');
+
+    // 开始加载数据
+    refreshAll();
+  } catch(e) {
+    errorDiv.textContent = e.message;
+    errorDiv.style.display = 'block';
+  }
+}
+
+function performLogout() {
+  authToken = null;
+  currentUsername = null;
+  localStorage.removeItem('mcp_hub_token');
+  localStorage.removeItem('mcp_hub_username');
+
+  document.getElementById('user-info').style.display = 'none';
+  document.getElementById('login-modal').classList.add('active');
+
+  addLog('用户已退出登录', 'INFO');
+  toast('已退出登录', 'info');
+}
+
+function logout() {
+  performLogout();
 }
 
 // ── fetch ──────────────────────────────────────
@@ -637,16 +960,53 @@ function renderServers() {
     container.innerHTML = `<div class="empty-state"><div class="icon">📭</div><div>暂无已注册的 MCP 服务器</div></div>`;
     updateStats(0, 0); return;
   }
+
+  // 获取过滤条件
+  const searchText = document.getElementById('search-input').value.toLowerCase();
+  const statusFilter = document.getElementById('status-filter').value;
+
   let running = 0;
+  let displayed = 0;
   const total = Object.keys(servers).length;
   container.innerHTML = '';
+
   for (const [id, data] of Object.entries(servers)) {
     if (data.status?.status === 'running') running++;
     if (id === 'pdf_extractor') pdfOnline = data.status?.status === 'running';
-    container.appendChild(buildCard(id, data));
+
+    // 应用过滤条件
+    const matchesSearch = (
+      searchText === '' ||
+      (data.config?.name || '').toLowerCase().includes(searchText) ||
+      (data.config?.module || '').toLowerCase().includes(searchText) ||
+      (data.config?.description || '').toLowerCase().includes(searchText) ||
+      id.toLowerCase().includes(searchText)
+    );
+
+    const matchesStatus = (
+      statusFilter === 'all' ||
+      (statusFilter === 'running' && data.status?.status === 'running') ||
+      (statusFilter === 'stopped' && data.status?.status !== 'running')
+    );
+
+    if (matchesSearch && matchesStatus) {
+      container.appendChild(buildCard(id, data));
+      displayed++;
+    }
   }
+
+  // 如果没有匹配的结果
+  if (displayed === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><div>没有找到匹配的服务器</div></div>`;
+  }
+
   updateStats(running, total);
   updatePDFBadge();
+}
+
+// ── filter ────────────────────────────────────
+function filterServers() {
+  renderServers();
 }
 
 function buildCard(id, { config, status, portConfig }) {
@@ -933,6 +1293,12 @@ function resetCountdown() {
   // 更新显示的 Hub URL
   document.getElementById('hub-url').textContent = HUB_BASE;
 
+  // 检查认证状态
+  if (!checkAuth()) {
+    // 未登录，等待用户登录
+    return;
+  }
+
   await refreshAll();
   addLog('初始化完成，自动监控中', 'SUCCESS');
 
@@ -948,7 +1314,197 @@ function resetCountdown() {
     if (el) el.textContent = autoTimer + 's';
     if (autoTimer <= 0) refreshAll();
   }, 1000);
+
+  // 初始化性能监控
+  fetchPerformance();
+  setInterval(fetchPerformance, 5000); // 每 5 秒更新
+
+  // 初始化配置列表
+  fetchConfigList();
 })();
+
+// ── config management ──────────────────────────
+async function fetchConfigList() {
+  try {
+    const d = await api('/api/v1/config/servers');
+    renderConfigList(d.servers);
+  } catch(e) {
+    addLog(`获取配置列表失败: ${e.message}`, 'ERROR');
+  }
+}
+
+function renderConfigList(servers) {
+  const container = document.getElementById('config-list');
+  if (!servers || Object.keys(servers).length === 0) {
+    container.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-muted);font-size:12px;">暂无服务器配置</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+  for (const [id, config] of Object.entries(servers)) {
+    const item = document.createElement('div');
+    item.className = 'config-item';
+    item.innerHTML = `
+      <div class="config-info">
+        <div class="config-name">${config.name}</div>
+        <div class="config-id">${id}</div>
+      </div>
+      <div class="config-actions">
+        <button class="config-btn toggle ${config.enabled ? 'active' : 'inactive'}"
+                onclick="toggleServer('${id}', ${!config.enabled})"
+                title="${config.enabled ? '禁用' : '启用'}">
+          ${config.enabled ? '✓' : '✕'}
+        </button>
+        <button class="config-btn" onclick="editConfig('${id}')" title="编辑">✏️</button>
+        <button class="config-btn" onclick="deleteConfig('${id}')" title="删除">🗑️</button>
+      </div>
+    `;
+    container.appendChild(item);
+  }
+}
+
+function showConfigModal(editMode = false, serverId = null) {
+  const modal = document.getElementById('config-modal');
+  const title = document.getElementById('modal-title');
+  const form = document.getElementById('config-form');
+
+  // 重置表单
+  form.reset();
+  document.getElementById('config-edit-mode').value = editMode ? 'edit' : 'add';
+  document.getElementById('config-id').disabled = editMode;
+
+  if (editMode && serverId) {
+    // 编辑模式 - 填充表单
+    title.textContent = '编辑服务器';
+    // 获取服务器详情
+    api('/api/v1/config/servers').then(d => {
+      const config = d.servers[serverId];
+      if (config) {
+        document.getElementById('config-id').value = serverId;
+        document.getElementById('config-name').value = config.name;
+        document.getElementById('config-desc').value = config.description || '';
+        document.getElementById('config-module').value = config.module;
+        document.getElementById('config-prefix').value = config.prefix || '';
+        document.getElementById('config-tags').value = (config.tags || []).join(',');
+        document.getElementById('config-enabled').checked = config.enabled;
+      }
+    });
+  } else {
+    // 添加模式
+    title.textContent = '添加服务器';
+  }
+
+  modal.classList.add('active');
+}
+
+function closeConfigModal() {
+  document.getElementById('config-modal').classList.remove('active');
+}
+
+async function submitConfig() {
+  const form = document.getElementById('config-form');
+  if (!form.checkValidity()) {
+    toast('请填写所有必填项', 'warning');
+    return;
+  }
+
+  const editMode = document.getElementById('config-edit-mode').value === 'edit';
+  const serverId = document.getElementById('config-id').value.trim();
+  const config = {
+    name: document.getElementById('config-name').value.trim(),
+    description: document.getElementById('config-desc').value.trim(),
+    module: document.getElementById('config-module').value.trim(),
+    prefix: document.getElementById('config-prefix').value.trim(),
+    tags: document.getElementById('config-tags').value.split(',').map(t => t.trim()).filter(t => t),
+    enabled: document.getElementById('config-enabled').checked
+  };
+
+  try {
+    if (editMode) {
+      await api(`/api/v1/config/servers/${serverId}`, 'PUT', config);
+      addLog(`服务器配置已更新: ${serverId}`, 'SUCCESS');
+      toast('配置已更新', 'success');
+    } else {
+      await api(`/api/v1/config/servers?server_id=${encodeURIComponent(serverId)}`, 'POST', config);
+      addLog(`新服务器已添加: ${serverId}`, 'SUCCESS');
+      toast('服务器已添加', 'success');
+    }
+    closeConfigModal();
+    fetchConfigList();
+    setTimeout(() => refreshAll(), 500);
+  } catch(e) {
+    addLog(`操作失败: ${e.message}`, 'ERROR');
+    toast(`操作失败: ${e.message}`, 'error');
+  }
+}
+
+function editConfig(id) {
+  showConfigModal(true, id);
+}
+
+async function toggleServer(id, enabled) {
+  try {
+    await api(`/api/v1/config/servers/${id}/toggle?enabled=${enabled}`, 'PATCH');
+    addLog(`服务器 ${id} 已${enabled ? '启用' : '禁用'}`, 'SUCCESS');
+    toast(`已${enabled ? '启用' : '禁用'}: ${id}`, 'success');
+    fetchConfigList();
+    setTimeout(() => refreshAll(), 500);
+  } catch(e) {
+    addLog(`操作失败: ${e.message}`, 'ERROR');
+    toast(`操作失败: ${e.message}`, 'error');
+  }
+}
+
+async function deleteConfig(id) {
+  if (!confirm(`确定要删除服务器 "${id}" 吗？此操作不可恢复。`)) {
+    return;
+  }
+
+  try {
+    await api(`/api/v1/config/servers/${id}`, 'DELETE');
+    addLog(`服务器已删除: ${id}`, 'SUCCESS');
+    toast('服务器已删除', 'success');
+    fetchConfigList();
+    setTimeout(() => refreshAll(), 500);
+  } catch(e) {
+    addLog(`删除失败: ${e.message}`, 'ERROR');
+    toast(`删除失败: ${e.message}`, 'error');
+  }
+}
+
+// ── performance monitoring ─────────────────────
+async function fetchPerformance() {
+  try {
+    const d = await api('/api/v1/system/resources');
+    document.getElementById('perf-cpu').textContent = d.hub.cpu_percent + '%';
+    document.getElementById('perf-memory').textContent = d.hub.memory_mb + ' MB';
+    document.getElementById('perf-ports').textContent =
+      `${d.port_pool.allocated_count}/${d.port_pool.total_ports}`;
+    document.getElementById('perf-processes').textContent =
+      `${d.processes.running_processes}/${d.processes.total_processes}`;
+  } catch(e) {
+    // 静默失败，不显示错误
+  }
+}
+
+// ── export config ─────────────────────────────
+async function exportConfig() {
+  try {
+    const d = await api('/api/v1/system/export');
+    const blob = new Blob([JSON.stringify(d, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mcp-hub-config-${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    addLog('配置已导出', 'SUCCESS');
+    toast('配置已导出', 'success');
+  } catch(e) {
+    addLog(`导出失败: ${e.message}`, 'ERROR');
+    toast(`导出失败: ${e.message}`, 'error');
+  }
+}
 </script>
 </body>
 </html>

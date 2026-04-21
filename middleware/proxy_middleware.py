@@ -108,6 +108,9 @@ class ProxyMiddleware(BaseHTTPMiddleware):
             "/redoc",         # ReDoc 文档
             "/openapi.json",  # OpenAPI schema
             "/api/v1/servers",# 管理端点
+            "/api/v1/auth",   # 认证端点
+            "/api/v1/config", # 配置管理端点
+            "/api/v1/system", # 系统监控端点
             "/static",        # 静态文件
             "/dashboard",     # Dashboard
         ]

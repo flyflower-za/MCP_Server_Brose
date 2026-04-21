@@ -6,10 +6,10 @@ from typing import Dict
 
 import secrets
 import uvicorn
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi.security import HTTPBasic, HTTPBasicCredentials, HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
 
 from config import settings, get_enabled_servers
@@ -17,6 +17,9 @@ from config.port_config import get_fixed_port, set_fixed_port, remove_fixed_port
 from utils.logger import logger
 from utils.process_manager import get_process_manager
 from middleware.proxy_middleware import ProxyMiddleware
+from api.system import router as system_router
+from api.config import router as config_router
+from utils.auth import router as auth_router
 
 
 # 创建FastAPI应用（API网关）
@@ -44,9 +47,15 @@ app.add_middleware(ProxyMiddleware)
 # 获取进程管理器
 process_manager = get_process_manager()
 
+# 注册系统监控和管理 API
+app.include_router(system_router)
+app.include_router(config_router)
+app.include_router(auth_router)
+
 
 # 安全认证
 security = HTTPBasic()
+bearer_security = HTTPBearer(auto_error=False)
 
 def verify_auth(credentials: HTTPBasicCredentials = Depends(security)):
     """基础身份验证"""
@@ -59,6 +68,65 @@ def verify_auth(credentials: HTTPBasicCredentials = Depends(security)):
             headers={"WWW-Authenticate": "Basic"},
         )
     return credentials.username
+
+
+async def verify_mixed_auth(request: Request):
+    """
+    混合验证：优先使用 JWT Token，回退到 Basic Auth
+
+    从请求头中手动检查 Authorization，优先验证 Bearer Token
+    """
+    from utils.security import token_manager
+
+    auth_header = request.headers.get("Authorization")
+
+    if not auth_header:
+        raise HTTPException(
+            status_code=401,
+            detail="Missing authentication credentials",
+        )
+
+    # 优先检查 Bearer Token
+    if auth_header.startswith("Bearer "):
+        token = auth_header[7:]  # 移除 "Bearer " 前缀
+        payload = token_manager.verify_token(token)
+        if payload:
+            return payload.get("username", "unknown")
+
+        # Token 无效
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired token",
+        )
+
+    # 回退到 Basic Auth
+    if auth_header.startswith("Basic "):
+        import base64
+        try:
+            decoded = base64.b64decode(auth_header[6:]).decode("utf-8")
+            username, password = decoded.split(":", 1)
+
+            correct_username = secrets.compare_digest(username, settings.DASHBOARD_USERNAME)
+            correct_password = secrets.compare_digest(password, settings.DASHBOARD_PASSWORD)
+
+            if correct_username and correct_password:
+                return username
+
+            raise HTTPException(
+                status_code=401,
+                detail="Incorrect username or password",
+            )
+        except Exception:
+            raise HTTPException(
+                status_code=401,
+                detail="Invalid Basic Auth format",
+            )
+
+    # 不支持的认证方式
+    raise HTTPException(
+        status_code=401,
+        detail="Unsupported authentication type",
+    )
 
 
 # API模型
@@ -94,7 +162,7 @@ def start_all_servers():
 
 
 # Dashboard 控制台
-@app.get("/dashboard", dependencies=[Depends(verify_auth)])
+@app.get("/dashboard", dependencies=[Depends(verify_mixed_auth)])
 async def dashboard():
     """管理控制台可视化界面"""
     from pathlib import Path
@@ -128,8 +196,39 @@ async def health_check():
     }
 
 
+# 系统信息
+@app.get("/api/v1/system")
+async def system_info():
+    """系统信息 API"""
+    enabled_servers = get_enabled_servers()
+
+    return {
+        "system": settings.TITLE,
+        "version": settings.VERSION,
+        "status": "running",
+        "api_prefix": settings.API_PREFIX,
+        "architecture": "process_isolation",
+        "loaded_servers": len(process_manager.processes),
+        "servers": {
+            server_id: {
+                "name": config.get("name", server_id),
+                "description": config.get("description", ""),
+                "status": "running" if server_id in process_manager.processes else "stopped"
+            }
+            for server_id, config in enabled_servers.items()
+        },
+        "endpoints": {
+            "dashboard": "GET /dashboard",
+            "health": "GET /health",
+            "servers": "GET /api/v1/servers",
+            "system_info": "GET /api/v1/system",
+            "api_docs": "GET /docs"
+        }
+    }
+
+
 # 服务器列表
-@app.get("/api/v1/servers", dependencies=[Depends(verify_auth)])
+@app.get("/api/v1/servers")
 async def list_servers():
     """列出所有MCP服务器"""
     enabled_servers = get_enabled_servers()
@@ -151,7 +250,7 @@ async def list_servers():
 
 
 # 获取单个服务器状态
-@app.get("/api/v1/servers/{server_id}/status", dependencies=[Depends(verify_auth)])
+@app.get("/api/v1/servers/{server_id}/status")
 async def get_server_status(server_id: str):
     """获取单个服务器的详细状态"""
     enabled_servers = get_enabled_servers()
@@ -164,7 +263,7 @@ async def get_server_status(server_id: str):
 
 
 # 启动单个服务器
-@app.post("/api/v1/servers/{server_id}/start", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
+@app.post("/api/v1/servers/{server_id}/start", response_model=ServerActionResponse)
 async def start_server(server_id: str):
     """启动单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -184,7 +283,7 @@ async def start_server(server_id: str):
 
 
 # 停止单个服务器
-@app.post("/api/v1/servers/{server_id}/stop", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
+@app.post("/api/v1/servers/{server_id}/stop", response_model=ServerActionResponse)
 async def stop_server(server_id: str):
     """停止单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -203,7 +302,7 @@ async def stop_server(server_id: str):
 
 
 # 重启单个服务器
-@app.post("/api/v1/servers/{server_id}/restart", response_model=ServerActionResponse, dependencies=[Depends(verify_auth)])
+@app.post("/api/v1/servers/{server_id}/restart", response_model=ServerActionResponse)
 async def restart_server(server_id: str):
     """重启单个服务器"""
     enabled_servers = get_enabled_servers()
@@ -230,7 +329,7 @@ async def get_all_server_statuses():
 
 
 # 启动所有服务器
-@app.post("/api/v1/servers/start-all", dependencies=[Depends(verify_auth)])
+@app.post("/api/v1/servers/start-all")
 async def start_all_servers_endpoint():
     """启动所有服务器"""
     started_count, failed_servers = start_all_servers()
@@ -244,7 +343,7 @@ async def start_all_servers_endpoint():
 
 
 # 停止所有服务器
-@app.post("/api/v1/servers/stop-all", dependencies=[Depends(verify_auth)])
+@app.post("/api/v1/servers/stop-all")
 async def stop_all_servers():
     """停止所有服务器"""
     stopped_count = 0
@@ -274,7 +373,7 @@ class PortConfigRequest(BaseModel):
     port: int
 
 
-@app.get("/api/v1/servers/port-configs", dependencies=[Depends(verify_auth)])
+@app.get("/api/v1/servers/port-configs")
 async def get_all_port_configs():
     """获取全部服务器的固定端口配置"""
     enabled = get_enabled_servers()
@@ -289,7 +388,7 @@ async def get_all_port_configs():
     return result
 
 
-@app.get("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
+@app.get("/api/v1/servers/{server_id}/port-config")
 async def get_port_config(server_id: str):
     """获取单个服务器的固定端口配置"""
     enabled = get_enabled_servers()
@@ -303,7 +402,7 @@ async def get_port_config(server_id: str):
     }
 
 
-@app.put("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
+@app.put("/api/v1/servers/{server_id}/port-config")
 async def set_port_config(server_id: str, body: PortConfigRequest):
     """设置服务器固定端口（立即持久化，下次启动生效）"""
     enabled = get_enabled_servers()
@@ -323,7 +422,7 @@ async def set_port_config(server_id: str, body: PortConfigRequest):
     }
 
 
-@app.delete("/api/v1/servers/{server_id}/port-config", dependencies=[Depends(verify_auth)])
+@app.delete("/api/v1/servers/{server_id}/port-config")
 async def delete_port_config(server_id: str):
     """删除服务器固定端口配置（恢复动态分配）"""
     enabled = get_enabled_servers()
