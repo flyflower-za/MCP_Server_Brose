@@ -39,11 +39,12 @@ class Settings:
     LOG_DIR: Path = BASE_DIR / "logs"
     LOG_FILE: Path = LOG_DIR / "mcp_server.log"
 
-    # CORS配置
-    CORS_ORIGINS: list = ["*"]
-    CORS_ALLOW_CREDENTIALS: bool = True
-    CORS_ALLOW_METHODS: list = ["*"]
-    CORS_ALLOW_HEADERS: list = ["*"]
+    # CORS配置（生产环境应该限制允许的来源）
+    CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "*").split(",")
+    CORS_ALLOW_CREDENTIALS: bool = os.getenv("CORS_ALLOW_CREDENTIALS", "True").lower() == "true"
+    CORS_ALLOW_METHODS: list = os.getenv("CORS_ALLOW_METHODS", "GET,POST,PUT,DELETE,OPTIONS").split(",")
+    CORS_ALLOW_HEADERS: list = os.getenv("CORS_ALLOW_HEADERS", "Content-Type,Authorization").split(",")
+    CORS_MAX_AGE: int = int(os.getenv("CORS_MAX_AGE", "3600"))  # 1小时
 
     # 超时配置
     REQUEST_TIMEOUT: int = int(os.getenv("REQUEST_TIMEOUT", "30"))
@@ -62,6 +63,11 @@ class Settings:
     # Dashboard 安全配置
     DASHBOARD_USERNAME: str = os.getenv("DASHBOARD_USERNAME", "admin")
     DASHBOARD_PASSWORD: str = os.getenv("DASHBOARD_PASSWORD", "brose123")  # 建议在.env中修改
+
+    # JWT Token 配置
+    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "")
+    JWT_ALGORITHM: str = "HS256"
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = os.getenv("JWT_ACCESS_TOKEN_EXPIRE_MINUTES", 1440)  # 24小时
 
     @classmethod
     def setup(cls):

@@ -2344,3 +2344,366 @@
 2026-04-21 00:39:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/status
 2026-04-21 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/status (GET)
 2026-04-21 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/status
+2026-04-22 00:15:38 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:15:38 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:15:38 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:15:38 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:15:38 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:15:38 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:15:38 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:15:38 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:15:42 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-22 00:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-22 00:15:42 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:15:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:15:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:15:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:15:43 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-22 00:15:43 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-22 00:15:43 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:15:43 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:15:43 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:15:43 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:15:43 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:15:43 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:15:43 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:15:43 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:15:44 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-22 00:15:44 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-22 00:15:44 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:15:44 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:15:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:15:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:15:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:15:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:15:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:15:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:15:59 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:15:59 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:15:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:15:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:15:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:15:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:15:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:15:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:16:04 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/status (GET)
+2026-04-22 00:16:04 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/status
+2026-04-22 00:16:14 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:16:14 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:16:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:16:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:16:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:16:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:16:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:16:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:16:29 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:16:29 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:16:29 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:16:29 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:16:29 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:16:29 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:16:29 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:16:29 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:16:44 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:16:44 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:16:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:16:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:16:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:16:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:16:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:16:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:00 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:00 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:15 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:15 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:15 - mcp_hub - WARNING - 首选端口 51240 不可用
+2026-04-22 00:17:15 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:17:28 - mcp_hub - WARNING - 首选端口 51240 不可用
+2026-04-22 00:17:28 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:17:30 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:30 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/port-config (PUT)
+2026-04-22 00:17:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/port-config
+2026-04-22 00:17:35 - mcp_hub - INFO - 🔧 服务器 pdf_extractor 固定端口已设置为 51239
+2026-04-22 00:17:36 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:36 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/restart (POST)
+2026-04-22 00:17:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/restart
+2026-04-22 00:17:51 - mcp_hub - INFO - ✅ 强制停止服务器 pdf_extractor
+2026-04-22 00:17:51 - mcp_hub - INFO - ============================================================
+2026-04-22 00:17:51 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-22 00:17:51 - mcp_hub - INFO - ============================================================
+2026-04-22 00:17:51 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-22 00:17:51 - mcp_hub - INFO - 地址: 0.0.0.0:51239
+2026-04-22 00:17:51 - mcp_hub - INFO - 
+2026-04-22 00:17:51 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-22 00:17:53 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-22 00:17:53 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 48659, Port: 51239)
+2026-04-22 00:17:53 - mcp_hub - INFO - ✅ 成功重启服务器 pdf_extractor (Port: 51238 -> 51239)
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/port-config (PUT)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/port-config
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:53 - mcp_hub - INFO - 🔧 服务器 pdf_extractor 固定端口已设置为 51238
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/port-config (PUT)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/port-config
+2026-04-22 00:17:53 - mcp_hub - INFO - 🔧 服务器 pdf_extractor 固定端口已设置为 51238
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:54 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:17:54 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:17:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:17:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:17:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:17:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:17:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:17:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:17:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/pdf_extractor/restart (POST)
+2026-04-22 00:17:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/pdf_extractor/restart
+2026-04-22 00:17:57 - mcp_hub - WARNING - 首选端口 51240 不可用
+2026-04-22 00:17:57 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:17:57 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:17:57 - mcp_hub - WARNING - 首选端口 99999 不可用
+2026-04-22 00:18:06 - mcp_hub - INFO - ✅ 强制停止服务器 pdf_extractor
+2026-04-22 00:18:07 - mcp_hub - INFO - ============================================================
+2026-04-22 00:18:07 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-22 00:18:07 - mcp_hub - INFO - ============================================================
+2026-04-22 00:18:07 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-22 00:18:07 - mcp_hub - INFO - 地址: 0.0.0.0:51238
+2026-04-22 00:18:07 - mcp_hub - INFO - 
+2026-04-22 00:18:07 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-22 00:18:08 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-22 00:18:08 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 48763, Port: 51238)
+2026-04-22 00:18:08 - mcp_hub - INFO - ✅ 成功重启服务器 pdf_extractor (Port: 51239 -> 51238)
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:18:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:18:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:18:24 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:24 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:18:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:18:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:18:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:18:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:18:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:18:39 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:39 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:18:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:18:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:18:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:18:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:18:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:18:44 - mcp_hub - WARNING - 首选端口 51240 不可用
+2026-04-22 00:18:44 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:18:44 - mcp_hub - ERROR - 无可用端口
+2026-04-22 00:18:44 - mcp_hub - WARNING - 首选端口 99999 不可用
+2026-04-22 00:18:54 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:18:54 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:18:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:18:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:18:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:18:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:18:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:18:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:19:09 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:19:09 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:19:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:19:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:19:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:19:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:19:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:19:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:19:24 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:19:24 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:19:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:19:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:19:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:19:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:19:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:19:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:19:39 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:19:39 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:19:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:19:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:19:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:19:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:19:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:19:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:19:54 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:19:54 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:19:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:19:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:19:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:19:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:19:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:19:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:20:09 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:20:09 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:20:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:20:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:20:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:20:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:20:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:20:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:20:24 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:20:24 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:20:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:20:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:20:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:20:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:20:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:20:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:20:39 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:20:39 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:20:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:20:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:20:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:20:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:20:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:20:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:20:54 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:20:54 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:20:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:20:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:20:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:20:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:20:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:20:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:21:09 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:21:09 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:21:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:21:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:21:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:21:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:21:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:21:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:21:24 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:21:24 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:21:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:21:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:21:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:21:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:21:24 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:21:24 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:21:40 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:21:40 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:21:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:21:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:21:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:21:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:21:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:21:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:21:55 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:21:55 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:21:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:21:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:21:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:21:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:21:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:21:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:22:10 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:22:10 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:22:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:22:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:22:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:22:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:22:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:22:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-22 00:22:25 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-22 00:22:25 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-22 00:22:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-22 00:22:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-22 00:22:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-22 00:22:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-22 00:22:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-22 00:22:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs

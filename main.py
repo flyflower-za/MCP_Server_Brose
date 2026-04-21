@@ -7,7 +7,7 @@ from typing import Dict
 import secrets
 import uvicorn
 from fastapi import FastAPI, HTTPException, Depends
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
@@ -107,32 +107,8 @@ async def dashboard():
 # 根路径
 @app.get("/")
 async def root():
-    """根路径 - 显示系统信息"""
-    enabled_servers = get_enabled_servers()
-
-    return {
-        "system": settings.TITLE,
-        "version": settings.VERSION,
-        "status": "running",
-        "api_prefix": settings.API_PREFIX,
-        "architecture": "process_isolation",
-        "loaded_servers": len(process_manager.processes),
-        "servers": {
-            server_id: {
-                "name": config.get("name", server_id),
-                "description": config.get("description", ""),
-                "status": "running" if server_id in process_manager.processes else "stopped"
-            }
-            for server_id, config in enabled_servers.items()
-        },
-        "endpoints": {
-            "system_info": "GET /",
-            "health": "GET /health",
-            "servers": "GET /api/v1/servers",
-            "server_management": "POST /api/v1/servers/{server_id}/restart",
-            "api_docs": "GET /docs"
-        }
-    }
+    """根路径 - 重定向到管理控制台"""
+    return RedirectResponse(url="/dashboard")
 
 
 # 健康检查
