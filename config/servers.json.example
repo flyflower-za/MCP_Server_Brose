@@ -1,0 +1,11 @@
+{
+  "pdf_extractor": {
+    "name": "PDF Extractor",
+    "description": "Get PDF content from URLs",
+    "enabled": true,
+    "version": "1.0.0",
+    "module": "mcp_servers.pdf_extractor.server",
+    "prefix": "/pdf",
+    "tags": ["pdf", "extractor", "document"]
+  }
+}

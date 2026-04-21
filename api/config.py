@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 
 from config import settings, MCP_SERVERS_CONFIG, get_enabled_servers
 from utils.auth import verify_basic_auth
+from utils.config_manager import get_config_manager
 
 
 router = APIRouter(prefix="/api/v1/config", tags=["Configuration"])
@@ -89,9 +90,13 @@ async def add_server(
         "tags": config.tags
     }
 
+    # 自动保存到磁盘
+    config_manager = get_config_manager()
+    config_manager.save_servers(MCP_SERVERS_CONFIG)
+
     return {
         "success": True,
-        "message": f"服务器 {server_id} 已添加",
+        "message": f"服务器 {server_id} 已添加并保存",
         "server_id": server_id,
         "config": MCP_SERVERS_CONFIG[server_id]
     }
@@ -134,9 +139,13 @@ async def update_server(
     if config.enabled is not None:
         current_config["enabled"] = config.enabled
 
+    # 自动保存到磁盘
+    config_manager = get_config_manager()
+    config_manager.save_servers(MCP_SERVERS_CONFIG)
+
     return {
         "success": True,
-        "message": f"服务器 {server_id} 配置已更新",
+        "message": f"服务器 {server_id} 配置已更新并保存",
         "server_id": server_id,
         "config": current_config
     }
@@ -165,9 +174,13 @@ async def delete_server(
     # 保存配置（用于恢复）
     deleted_config = MCP_SERVERS_CONFIG.pop(server_id)
 
+    # 自动保存到磁盘
+    config_manager = get_config_manager()
+    config_manager.save_servers(MCP_SERVERS_CONFIG)
+
     return {
         "success": True,
-        "message": f"服务器 {server_id} 已删除",
+        "message": f"服务器 {server_id} 已删除并保存",
         "server_id": server_id,
         "deleted_config": deleted_config
     }
@@ -197,11 +210,50 @@ async def toggle_server(
 
     MCP_SERVERS_CONFIG[server_id]["enabled"] = enabled
 
+    # 自动保存到磁盘
+    config_manager = get_config_manager()
+    config_manager.save_servers(MCP_SERVERS_CONFIG)
+
     return {
         "success": True,
-        "message": f"服务器 {server_id} 已{'启用' if enabled else '禁用'}",
+        "message": f"服务器 {server_id} 已{'启用' if enabled else '禁用'}并保存",
         "server_id": server_id,
         "enabled": enabled
+    }
+
+    Args:
+        server_id: 服务器 ID
+        config: 更新的配置
+
+    Returns:
+        成功消息
+    """
+    if server_id not in MCP_SERVERS_CONFIG:
+        raise HTTPException(
+            status_code=404,
+            detail=f"服务器 {server_id} 不存在"
+        )
+
+    # 更新配置
+    current_config = MCP_SERVERS_CONFIG[server_id]
+    if config.name is not None:
+        current_config["name"] = config.name
+    if config.description is not None:
+        current_config["description"] = config.description
+    if config.module is not None:
+        current_config["module"] = config.module
+    if config.prefix is not None:
+        current_config["prefix"] = config.prefix
+    if config.tags is not None:
+        current_config["tags"] = config.tags
+    if config.enabled is not None:
+        current_config["enabled"] = config.enabled
+
+    return {
+        "success": True,
+        "message": f"服务器 {server_id} 配置已更新",
+        "server_id": server_id,
+        "config": current_config
     }
 
 
@@ -215,13 +267,94 @@ async def export_config(current_user: str = Depends(verify_basic_auth)):
     """
     from config.port_config import get_all_fixed_ports
     from utils.process_manager import get_process_manager
+    from utils.config_manager import get_config_manager
 
     process_manager = get_process_manager()
+    config_manager = get_config_manager()
+
+    # 使用配置管理器导出
+    return config_manager.export_all()
+
+
+@router.get("/status")
+async def get_config_status(current_user: str = Depends(verify_basic_auth)):
+    """
+    获取配置存储状态
+
+    Returns:
+        配置状态信息
+    """
+    config_manager = get_config_manager()
+    return config_manager.get_status()
+
+
+@router.post("/save")
+async def save_all_configs(current_user: str = Depends(verify_basic_auth)):
+    """
+    手动保存所有配置到磁盘
+
+    Returns:
+        保存结果
+    """
+    config_manager = get_config_manager()
+
+    # 保存服务器配置
+    servers_saved = config_manager.save_servers(MCP_SERVERS_CONFIG)
+
+    # 保存端口配置
+    from config.port_config import get_all_fixed_ports
+    ports_saved = config_manager.save_ports(get_all_fixed_ports())
+
+    # 保存系统设置
+    settings_saved = config_manager.save_settings({
+        "auto_restart": settings.PROCESS_AUTO_RESTART,
+        "max_restart_count": settings.PROCESS_MAX_RESTART,
+        "health_check_interval": settings.PROCESS_HEALTH_CHECK_INTERVAL,
+        "log_level": settings.LOG_LEVEL,
+        "port_allocation": {
+            "base_port": settings.PROCESS_BASE_PORT,
+            "max_port": 51250  # 从 PortAllocator 获取
+        }
+    })
 
     return {
-        "version": "1.0.0",
-        "mcp_servers": MCP_SERVERS_CONFIG,
-        "enabled_servers": list(get_enabled_servers().keys()),
-        "fixed_ports": get_all_fixed_ports(),
-        "running_servers": list(process_manager.processes.keys())
+        "success": all([servers_saved, ports_saved, settings_saved]),
+        "message": "配置已保存",
+        "servers_saved": servers_saved,
+        "ports_saved": ports_saved,
+        "settings_saved": settings_saved
     }
+
+
+@router.post("/import")
+async def import_configs(
+    overwrite: bool = False,
+    current_user: str = Depends(verify_basic_auth)
+):
+    """
+    从磁盘导入配置（重载配置文件）
+
+    Args:
+        overwrite: 是否覆盖内存中的配置
+
+    Returns:
+        导入结果
+    """
+    config_manager = get_config_manager()
+
+    # 导入配置
+    success = config_manager.import_all(
+        config_manager.export_all(),
+        overwrite=overwrite
+    )
+
+    if success:
+        return {
+            "success": True,
+            "message": "配置导入成功"
+        }
+    else:
+        return {
+            "success": False,
+            "message": "配置导入失败"
+        }

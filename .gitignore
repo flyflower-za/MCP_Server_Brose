@@ -28,6 +28,11 @@ logs/*.*
 # Environment variables
 .env
 
+# Config files (keep examples)
+config/*.json
+!config/*.example
+config/backups/
+
 # OS
 .DS_Store
 Thumbs.db

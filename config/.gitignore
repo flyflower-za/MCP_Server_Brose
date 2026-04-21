@@ -1,0 +1,4 @@
+# 忽略实际配置文件，只保留 .example 文件
+*.json
+!*.example
+!backups/

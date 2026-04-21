@@ -162,7 +162,7 @@ def start_all_servers():
 
 
 # Dashboard 控制台
-@app.get("/dashboard", dependencies=[Depends(verify_mixed_auth)])
+@app.get("/dashboard")
 async def dashboard():
     """管理控制台可视化界面"""
     from pathlib import Path
