@@ -209,6 +209,7 @@ async def system_info():
         "api_prefix": settings.API_PREFIX,
         "architecture": "process_isolation",
         "loaded_servers": len(process_manager.processes),
+        "auth_enabled": settings.DASHBOARD_AUTH_ENABLED,  # 添加认证配置
         "servers": {
             server_id: {
                 "name": config.get("name", server_id),

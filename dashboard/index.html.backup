@@ -643,128 +643,6 @@
       padding: 16px 24px; border-top: 1px solid var(--border);
       display: flex; gap: 10px; justify-content: flex-end;
     }
-
-    /* ── TEST CENTER ── */
-    .test-tabs {
-      display: flex;
-      gap: 4px;
-      padding: 8px;
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-    .test-tab {
-      padding: 8px 14px;
-      border: 1px solid transparent;
-      background: transparent;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: all var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .test-tab:hover {
-      background: rgba(37,99,235,0.08);
-      color: var(--accent-blue);
-    }
-    .test-tab.active {
-      background: rgba(37,99,235,0.12);
-      border-color: rgba(37,99,235,0.3);
-      color: var(--accent-blue);
-    }
-    .test-tab-content {
-      display: none;
-    }
-    .test-tab-content.active {
-      display: block;
-    }
-    .test-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .test-form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .test-form-label {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-    .test-form-input {
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 13px;
-      font-family: inherit;
-      transition: all var(--transition);
-    }
-    .test-form-input:focus {
-      outline: none;
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-    }
-    .test-form-input[type="url"] {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .test-success-content {
-      background: rgba(5,150,105,0.08);
-      border: 1px solid rgba(5,150,105,0.25);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      margin-top: 12px;
-    }
-    .test-success-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-      color: var(--accent-green);
-      font-weight: 600;
-      font-size: 13px;
-    }
-    .test-error-content {
-      background: rgba(220,38,38,0.08);
-      border: 1px solid rgba(220,38,38,0.25);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      margin-top: 12px;
-    }
-    .test-error-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-      color: var(--accent-red);
-      font-weight: 600;
-      font-size: 13px;
-    }
-    .test-result-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .test-result-btn {
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      background: #ffffff;
-      cursor: pointer;
-      font-size: 11px;
-      font-weight: 500;
-      transition: all var(--transition);
-    }
-    .test-result-btn:hover {
-      border-color: var(--accent-blue);
-      color: var(--accent-blue);
-    }
   </style>
 </head>
 <body>
@@ -910,25 +788,56 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-      <!-- 🆕 UNIFIED TEST CENTER (优化后的设计) -->
-      <div class="panel" id="panel-test-center">
-        <div class="panel-header" onclick="togglePanel('panel-test-center')">
-          <div class="panel-title"><span>🧪</span> 测试中心</div>
+      <!-- PDF TESTER -->
+      <div class="panel" id="panel-pdf-tester">
+        <div class="panel-header" onclick="togglePanel('panel-pdf-tester')">
+          <div class="panel-title"><span>📄</span> PDF 提取测试</div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span id="test-services-count" style="font-size:10px;padding:3px 8px;border-radius:999px;background:var(--accent-blue);color:white;">2服务</span>
+            <span id="pdf-server-badge" style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red);">离线</span>
             <div class="panel-collapse-indicator" title="点击展开/折叠">▼</div>
           </div>
         </div>
         <div class="panel-body">
-          <!-- 选项卡导航 -->
-          <div class="test-tabs" id="test-tabs">
-            <!-- 动态生成 -->
+          <div class="input-group">
+            <label class="input-label">PDF URL</label>
+            <input id="pdf-url" class="input-field" type="url" placeholder="https://example.com/file.pdf" />
           </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="pdf-meta" checked />
+            <label for="pdf-meta">包含元数据</label>
+          </div>
+          <button class="btn btn-primary" id="pdf-submit-btn" style="width:100%;justify-content:center;" onclick="submitPDF()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            开始提取
+          </button>
+          <div id="pdf-result" class="result-box" style="margin-top:14px;"></div>
+        </div>
+      </div>
 
-          <!-- 选项卡内容 -->
-          <div id="test-tab-content">
-            <!-- 动态生成 -->
+      <!-- QR CODE TESTER -->
+      <div class="panel" id="panel-qrcode-tester">
+        <div class="panel-header" onclick="togglePanel('panel-qrcode-tester')">
+          <div class="panel-title"><span>📱</span> 二维码识别测试</div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span id="qrcode-server-badge" style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red);">离线</span>
+            <div class="panel-collapse-indicator" title="点击展开/折叠">▼</div>
           </div>
+        </div>
+        <div class="panel-body">
+          <div class="input-group">
+            <label class="input-label">二维码图片 URL</label>
+            <input id="qrcode-url" class="input-field" type="url" placeholder="https://example.com/qrcode.png" />
+          </div>
+          <div style="margin: 14px 0; text-align: center; color: var(--text-muted); font-size: 11px;">— 或 —</div>
+          <div class="input-group">
+            <label class="input-label">Base64 图片数据</label>
+            <textarea id="qrcode-base64" class="input-field" rows="3" placeholder="data:image/png;base64,iVBORw0KGgo..." style="resize:vertical;font-family:'JetBrains Mono',monospace;font-size:11px;"></textarea>
+          </div>
+          <button class="btn btn-primary" id="qrcode-submit-btn" style="width:100%;justify-content:center;" onclick="submitQRCode()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><path d="M3 14h7v7H3z"/></svg>
+            识别二维码
+          </button>
+          <div id="qrcode-result" class="result-box" style="margin-top:14px;"></div>
         </div>
       </div>
 
@@ -1111,63 +1020,6 @@ let pageStart   = Date.now();
 let autoTimer   = 15;
 let authToken   = localStorage.getItem('mcp_hub_token') || null;
 let currentUsername = localStorage.getItem('mcp_hub_username') || null;
-let authEnabled = true;  // 认证是否启用，从系统API获取
-
-// 🆕 测试相关状态
-let currentTestTab = null;  // 当前选中的测试选项卡
-
-// 🆕 服务测试配置 (驱动测试面板生成)
-const SERVICE_TESTERS = {
-  pdf_extractor: {
-    name: "PDF 提取测试",
-    icon: "📄",
-    category: "document",
-    api: {
-      endpoint: "/pdf/extract",
-      method: "POST"
-    },
-    inputs: [
-      {
-        id: "url",
-        type: "url",
-        label: "PDF URL",
-        placeholder: "https://example.com/file.pdf",
-        required: true
-      },
-      {
-        id: "include_metadata",
-        type: "checkbox",
-        label: "包含元数据",
-        default: true
-      }
-    ]
-  },
-  qrcode_reader: {
-    name: "二维码识别测试",
-    icon: "📱",
-    category: "image",
-    api: {
-      endpoint: "/qrcode/read",
-      method: "POST"
-    },
-    inputs: [
-      {
-        id: "image_url",
-        type: "url",
-        label: "二维码图片 URL",
-        placeholder: "https://example.com/qrcode.png"
-      },
-      {
-        id: "image_base64",
-        type: "textarea",
-        label: "Base64 图片数据",
-        placeholder: "data:image/png;base64,iVBORw0KGgo...",
-        rows: 3
-      }
-    ]
-  }
-  // 🆕 新增服务只需在这里添加配置，无需修改HTML
-};
 
 // ── utils ──────────────────────────────────────
 function formatUptime(sec) {
@@ -1230,52 +1082,27 @@ async function api(path, method = 'GET', body = null) {
 
 // ── authentication ─────────────────────────────
 function checkAuth() {
-  // 如果认证被禁用，直接返回true
-  if (!authEnabled) {
-    return true;
-  }
-
   if (authToken && currentUsername) {
     // 已登录
-    const userInfoEl = document.getElementById('user-info');
-    if (userInfoEl) {
-      userInfoEl.style.display = 'flex';
-    }
-    const usernameDisplayEl = document.getElementById('username-display');
-    if (usernameDisplayEl) {
-      usernameDisplayEl.textContent = currentUsername;
-    }
+    document.getElementById('user-info').style.display = 'flex';
+    document.getElementById('username-display').textContent = currentUsername;
     return true;
   } else {
     // 未登录，显示登录框
-    const loginModalEl = document.getElementById('login-modal');
-    if (loginModalEl) {
-      loginModalEl.classList.add('active');
-    }
+    document.getElementById('login-modal').classList.add('active');
     return false;
   }
 }
 
 async function performLogin() {
-  const usernameEl = document.getElementById('login-username');
-  const passwordEl = document.getElementById('login-password');
-  const rememberEl = document.getElementById('login-remember');
+  const username = document.getElementById('login-username').value.trim();
+  const password = document.getElementById('login-password').value;
+  const remember = document.getElementById('login-remember').checked;
   const errorDiv = document.getElementById('login-error');
 
-  if (!usernameEl || !passwordEl) {
-    console.error('登录表单元素未找到');
-    return;
-  }
-
-  const username = usernameEl.value.trim();
-  const password = passwordEl.value;
-  const remember = rememberEl ? rememberEl.checked : false;
-
   if (!username || !password) {
-    if (errorDiv) {
-      errorDiv.textContent = '请输入用户名和密码';
-      errorDiv.style.display = 'block';
-    }
+    errorDiv.textContent = '请输入用户名和密码';
+    errorDiv.style.display = 'block';
     return;
   }
 
@@ -1302,30 +1129,13 @@ async function performLogin() {
     }
 
     // 更新 UI
-    const loginModalEl = document.getElementById('login-modal');
-    if (loginModalEl) {
-      loginModalEl.classList.remove('active');
-    }
-
-    const userInfoEl = document.getElementById('user-info');
-    if (userInfoEl) {
-      userInfoEl.style.display = 'flex';
-    }
-
-    const usernameDisplayEl = document.getElementById('username-display');
-    if (usernameDisplayEl) {
-      usernameDisplayEl.textContent = username;
-    }
-
-    if (errorDiv) {
-      errorDiv.style.display = 'none';
-    }
+    document.getElementById('login-modal').classList.remove('active');
+    document.getElementById('user-info').style.display = 'flex';
+    document.getElementById('username-display').textContent = username;
+    errorDiv.style.display = 'none';
 
     // 清空表单
-    const loginFormEl = document.getElementById('login-form');
-    if (loginFormEl) {
-      loginFormEl.reset();
-    }
+    document.getElementById('login-form').reset();
 
     addLog(`用户 ${username} 已登录`, 'SUCCESS');
     toast('登录成功', 'success');
@@ -1333,11 +1143,8 @@ async function performLogin() {
     // 开始加载数据
     refreshAll();
   } catch(e) {
-    if (errorDiv) {
-      errorDiv.textContent = e.message;
-      errorDiv.style.display = 'block';
-    }
-    toast('登录失败: ' + e.message, 'error');
+    errorDiv.textContent = e.message;
+    errorDiv.style.display = 'block';
   }
 }
 
@@ -1347,15 +1154,8 @@ function performLogout() {
   localStorage.removeItem('mcp_hub_token');
   localStorage.removeItem('mcp_hub_username');
 
-  const userInfoEl = document.getElementById('user-info');
-  if (userInfoEl) {
-    userInfoEl.style.display = 'none';
-  }
-
-  const loginModalEl = document.getElementById('login-modal');
-  if (loginModalEl) {
-    loginModalEl.classList.add('active');
-  }
+  document.getElementById('user-info').style.display = 'none';
+  document.getElementById('login-modal').classList.add('active');
 
   addLog('用户已退出登录', 'INFO');
   toast('已退出登录', 'info');
@@ -1370,51 +1170,23 @@ async function fetchHealth() {
   try {
     const d = await api('/health');
     const ring = document.getElementById('health-ring');
-    if (ring) {
-      ring.className  = 'health-ring healthy';
-      ring.textContent = '💚';
-    }
-
-    const healthStatusTextEl = document.getElementById('health-status-text');
-    if (healthStatusTextEl) {
-      healthStatusTextEl.textContent = '健康';
-      healthStatusTextEl.style.color = 'var(--accent-green)';
-    }
-
-    const healthVersionEl = document.getElementById('health-version');
-    if (healthVersionEl) {
-      healthVersionEl.textContent = `架构: ${d.architecture || '进程隔离'}`;
-    }
-
-    const healthDetailEl = document.getElementById('health-detail');
-    if (healthDetailEl) {
-      healthDetailEl.innerHTML =
-        `<div>已加载进程: <b style="color:var(--text-primary)">${d.loaded_servers}</b></div>
-         <div>运行中进程: <b style="color:var(--accent-green)">${d.running_servers}</b></div>
-         <div>活跃服务: <b style="color:var(--accent-cyan)">${(d.servers||[]).join(', ')||'无'}</b></div>`;
-    }
-
-    const statHubEl = document.getElementById('stat-hub');
-    if (statHubEl) {
-      statHubEl.textContent = '在线';
-    }
+    ring.className  = 'health-ring healthy';
+    ring.textContent = '💚';
+    document.getElementById('health-status-text').textContent = '健康';
+    document.getElementById('health-status-text').style.color = 'var(--accent-green)';
+    document.getElementById('health-version').textContent = `架构: ${d.architecture || '进程隔离'}`;
+    document.getElementById('health-detail').innerHTML =
+      `<div>已加载进程: <b style="color:var(--text-primary)">${d.loaded_servers}</b></div>
+       <div>运行中进程: <b style="color:var(--accent-green)">${d.running_servers}</b></div>
+       <div>活跃服务: <b style="color:var(--accent-cyan)">${(d.servers||[]).join(', ')||'无'}</b></div>`;
+    document.getElementById('stat-hub').textContent = '在线';
   } catch(e) {
     const ring = document.getElementById('health-ring');
-    if (ring) {
-      ring.className  = 'health-ring offline';
-      ring.textContent = '❌';
-    }
-
-    const healthStatusTextEl = document.getElementById('health-status-text');
-    if (healthStatusTextEl) {
-      healthStatusTextEl.textContent = 'Hub 离线';
-      healthStatusTextEl.style.color = 'var(--accent-red)';
-    }
-
-    const healthVersionEl = document.getElementById('health-version');
-    if (healthVersionEl) {
-      healthVersionEl.textContent = e.message;
-    }
+    ring.className  = 'health-ring offline';
+    ring.textContent = '❌';
+    document.getElementById('health-status-text').textContent = 'Hub 离线';
+    document.getElementById('health-status-text').style.color = 'var(--accent-red)';
+    document.getElementById('health-version').textContent = e.message;
     document.getElementById('stat-hub').textContent = '离线';
   }
 }
@@ -1436,7 +1208,6 @@ async function fetchServers() {
     }
     servers = merged;
     renderServers();
-    generateTestPanels();
   } catch(e) {
     addLog(`获取服务器列表失败: ${e.message}`, 'ERROR');
     document.getElementById('servers-container').innerHTML = `
@@ -1790,7 +1561,6 @@ function updateStats(r, t) {
 }
 function updatePDFBadge() {
   const b = document.getElementById('pdf-server-badge');
-  if (!b) return; // 如果元素不存在则跳过
   b.style.cssText = pdfOnline
     ? 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);color:var(--accent-green)'
     : 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red)';
@@ -2019,345 +1789,7 @@ async function stopAll() {
   }
 }
 
-// ── 🆕 测试中心动态生成 ──────────────────────
-function generateTestPanels() {
-  const tabsContainer = document.getElementById('test-tabs');
-  const contentContainer = document.getElementById('test-tab-content');
-
-  if (!tabsContainer || !contentContainer) {
-    console.warn('测试中心容器未找到');
-    return;
-  }
-
-  tabsContainer.innerHTML = '';
-  contentContainer.innerHTML = '';
-
-  let firstTab = true;
-
-  // 遍历所有启用的服务器
-  for (const [serverId, serverConfig] of Object.entries(servers)) {
-    // 跳过没有测试配置的服务
-    if (!SERVICE_TESTERS[serverId]) continue;
-
-    const testConfig = SERVICE_TESTERS[serverId];
-
-    // 创建选项卡按钮
-    const tab = document.createElement('button');
-    tab.className = `test-tab ${firstTab ? 'active' : ''}`;
-    tab.innerHTML = `${testConfig.icon} ${testConfig.name}`;
-    tab.onclick = () => switchTestTab(serverId);
-    tab.dataset.serviceId = serverId;
-    tabsContainer.appendChild(tab);
-
-    // 创建选项卡内容
-    const content = document.createElement('div');
-    content.className = `test-tab-content ${firstTab ? 'active' : ''}`;
-    content.id = `tab-content-${serverId}`;
-    content.innerHTML = generateTestForm(serverId, testConfig);
-    contentContainer.appendChild(content);
-
-    if (firstTab) {
-      currentTestTab = serverId;
-      firstTab = false;
-    }
-  }
-
-  // 更新服务数量徽章
-  const testableServiceCount = Object.keys(SERVICE_TESTERS).filter(id => servers[id]).length;
-  const countBadge = document.getElementById('test-services-count');
-  if (countBadge) {
-    countBadge.textContent = `${testableServiceCount}服务`;
-  }
-}
-
-// 切换测试选项卡
-function switchTestTab(serverId) {
-  // 更新选项卡状态
-  document.querySelectorAll('.test-tab').forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.serviceId === serverId);
-  });
-
-  // 更新内容显示
-  document.querySelectorAll('.test-tab-content').forEach(content => {
-    content.classList.toggle('active', content.id === `tab-content-${serverId}`);
-  });
-
-  currentTestTab = serverId;
-  addLog(`切换到测试面板: ${SERVICE_TESTERS[serverId].name}`, 'INFO');
-}
-
-// 生成测试表单
-function generateTestForm(serverId, testConfig) {
-  let html = '<div class="test-form">';
-
-  // 生成输入字段
-  testConfig.inputs.forEach(input => {
-    if (input.type === 'url') {
-      html += `
-        <div class="input-group">
-          <label class="input-label">${input.label}</label>
-          <input id="${serverId}-${input.id}" class="input-field" type="${input.type}"
-                 placeholder="${input.placeholder}" ${input.required ? 'required' : ''} />
-        </div>
-      `;
-    } else if (input.type === 'textarea') {
-      html += `
-        <div class="input-group">
-          <label class="input-label">${input.label}</label>
-          <textarea id="${serverId}-${input.id}" class="input-field" rows="${input.rows || 3}"
-                    placeholder="${input.placeholder}"
-                    style="resize:vertical;font-family:'JetBrains Mono',monospace;font-size:11px;"></textarea>
-        </div>
-      `;
-    } else if (input.type === 'checkbox') {
-      html += `
-        <div class="checkbox-group">
-          <input type="checkbox" id="${serverId}-${input.id}" ${input.default ? 'checked' : ''} />
-          <label for="${serverId}-${input.id}">${input.label}</label>
-        </div>
-      `;
-    } else if (input.type === 'text') {
-      html += `
-        <div class="input-group">
-          <label class="input-label">${input.label}</label>
-          <input id="${serverId}-${input.id}" class="input-field" type="text"
-                 placeholder="${input.placeholder}" />
-        </div>
-      `;
-    }
-  });
-
-  // 提交按钮
-  const icon = testConfig.icon;
-  html += `
-    <button class="btn btn-primary service-submit-btn"
-            style="width:100%;justify-content:center;"
-            onclick="submitServiceTest('${serverId}')">
-      ${icon} 开始测试
-    </button>
-  `;
-
-  // 结果显示
-  html += `<div id="${serverId}-result" class="result-box"></div>`;
-
-  html += '</div>';
-
-  return html;
-}
-
-// 🆕 统一的服务测试提交函数
-async function submitServiceTest(serverId) {
-  const testConfig = SERVICE_TESTERS[serverId];
-  if (!testConfig) {
-    toast('测试配置未找到', 'error');
-    return;
-  }
-
-  const requestData = {};
-  let missingRequired = false;
-
-  // 收集输入数据
-  for (const input of testConfig.inputs) {
-    const element = document.getElementById(`${serverId}-${input.id}`);
-    if (!element) {
-      console.error(`找不到输入元素: ${serverId}-${input.id}`);
-      continue;
-    }
-
-    if (input.type === 'checkbox') {
-      requestData[input.id] = element.checked;
-    } else {
-      requestData[input.id] = element.value;
-      if (input.required && !element.value.trim()) {
-        missingRequired = true;
-      }
-    }
-  }
-
-  if (missingRequired) {
-    toast('请填写所有必填字段', 'warning');
-    return;
-  }
-
-  // 更新UI状态
-  const btn = document.querySelector(`#tab-content-${serverId} .service-submit-btn`);
-  const resultDiv = document.getElementById(`${serverId}-result`);
-
-  if (btn) btn.disabled = true;
-  if (btn) btn.textContent = '测试中…';
-
-  resultDiv.className = 'result-box visible';
-  resultDiv.style.color = 'var(--text-muted)';
-  resultDiv.textContent = '⏳ 正在测试…';
-
-  addLog(`测试 ${testConfig.name}: ${JSON.stringify(requestData).slice(0,50)}...`, 'INFO');
-
-  try {
-    const d = await api(testConfig.api.endpoint, testConfig.api.method, requestData);
-    displayTestResult(serverId, d);
-  } catch(e) {
-    displayTestError(serverId, e);
-  } finally {
-    if (btn) {
-      btn.disabled = false;
-      btn.innerHTML = `${testConfig.icon} 开始测试`;
-    }
-  }
-}
-
-// 🆕 显示测试结果
-function displayTestResult(serverId, result) {
-  const resultDiv = document.getElementById(`${serverId}-result`);
-  const testConfig = SERVICE_TESTERS[serverId];
-
-  if (!resultDiv) return;
-
-  if (result.success) {
-    resultDiv.className = 'result-box visible success';
-
-    // 根据不同服务类型格式化结果
-    if (serverId === 'pdf_extractor') {
-      const metaStr = result.metadata
-        ? `\n[📋 元数据]\n  标题: ${result.metadata.title||'—'}\n  作者: ${result.metadata.author||'—'}\n  制作: ${result.metadata.producer||'—'}\n`
-        : '';
-
-      resultDiv.innerHTML = `
-        <div class="test-success-content">
-          <div style="font-weight:600;margin-bottom:8px;">✅ 提取成功</div>
-          <div style="font-size:12px;color:var(--accent-green);margin-bottom:4px;">
-            共 ${result.total_pages} 页
-          </div>
-          ${metaStr ? `<div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">${metaStr}</div>` : ''}
-          <div style="margin-top:8px;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">[内容预览]</div>
-            <div style="max-height:200px;overflow-y:auto;font-size:11px;font-family:monospace;background:rgba(0,0,0,0.02);padding:8px;border-radius:4px;">
-              ${(result.content || '').slice(0,500)}${result.content?.length>500?'\n…（已截断）':''}
-            </div>
-          </div>
-          <div style="margin-top:8px;display:flex;gap:8px;">
-            <button class="btn btn-ghost" style="padding:4px 8px;font-size:11px;"
-                    onclick="copyTestResult('${serverId}-result')">
-              📋 复制
-            </button>
-            <button class="btn btn-ghost" style="padding:4px 8px;font-size:11px;"
-                    onclick="clearTestResult('${serverId}-result')">
-              🗑️ 清除
-            </button>
-          </div>
-        </div>
-      `;
-    } else if (serverId === 'qrcode_reader') {
-      const metaStr = result.metadata
-        ? `\n[📋 元数据]\n  类型: ${result.metadata.type||'—'}\n  检测到: ${result.metadata.detected ? '是' : '否'}\n`
-        : '';
-
-      resultDiv.innerHTML = `
-        <div class="test-success-content">
-          <div style="font-weight:600;margin-bottom:8px;">✅ 识别成功</div>
-          ${metaStr ? `<div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">${metaStr}</div>` : ''}
-          <div style="margin-top:8px;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">[二维码内容]</div>
-            <div style="word-break:break-all;font-size:12px;background:rgba(0,0,0,0.02);padding:8px;border-radius:4px;">
-              ${result.qr_data || '无内容'}
-            </div>
-          </div>
-          <div style="margin-top:8px;display:flex;gap:8px;">
-            <button class="btn btn-ghost" style="padding:4px 8px;font-size:11px;"
-                    onclick="copyTestResult('${serverId}-result')">
-              📋 复制
-            </button>
-            <button class="btn btn-ghost" style="padding:4px 8px;font-size:11px;"
-                    onclick="clearTestResult('${serverId}-result')">
-              🗑️ 清除
-            </button>
-          </div>
-        </div>
-      `;
-    } else {
-      // 通用结果显示
-      resultDiv.innerHTML = `
-        <div class="test-success-content">
-          <div style="font-weight:600;margin-bottom:8px;">✅ 测试成功</div>
-          <div style="white-space:pre-wrap;font-size:11px;font-family:monospace;background:rgba(0,0,0,0.02);padding:8px;border-radius:4px;">
-${JSON.stringify(result, null, 2)}
-          </div>
-        </div>
-      `;
-    }
-
-    toast('测试成功！', 'success');
-    addLog(`${testConfig.name}测试成功`, 'SUCCESS');
-  } else {
-    resultDiv.className = 'result-box visible error';
-    resultDiv.innerHTML = `
-      <div class="test-error-content">
-        <div style="font-weight:600;margin-bottom:8px;">❌ 测试失败</div>
-        <div style="font-size:12px;color:var(--accent-red);">
-          ${result.error || '未知错误'}
-        </div>
-      </div>
-    `;
-    toast('测试失败', 'error');
-    addLog(`${testConfig.name}测试失败: ${result.error}`, 'ERROR');
-  }
-}
-
-// 🆕 显示测试错误
-function displayTestError(serverId, error) {
-  const resultDiv = document.getElementById(`${serverId}-result`);
-  const testConfig = SERVICE_TESTERS[serverId];
-
-  if (!resultDiv) return;
-
-  const errorMsg = error.message || error.toString();
-
-  resultDiv.className = 'result-box visible error';
-  resultDiv.innerHTML = `
-    <div class="test-error-content">
-      <div style="font-weight:600;margin-bottom:8px;">❌ 请求失败</div>
-      <div style="font-size:12px;color:var(--accent-red);margin-bottom:8px;">
-        ${errorMsg}
-      </div>
-      <div style="margin-top:8px;">
-        <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">💡 可能原因:</div>
-        <div style="font-size:11px;color:var(--text-secondary);">
-          • ${testConfig.name} 服务未运行<br>
-          • 网络连接问题<br>
-          • API 端点配置错误
-        </div>
-      </div>
-    </div>
-  `;
-
-  addLog(`${testConfig.name}请求失败: ${errorMsg}`, 'ERROR');
-}
-
-// 🆕 复制测试结果
-function copyTestResult(elementId) {
-  const resultDiv = document.getElementById(elementId);
-  if (!resultDiv) return;
-
-  const text = resultDiv.textContent || resultDiv.innerText;
-  if (!text) return;
-
-  navigator.clipboard.writeText(text).then(() => {
-    toast('结果已复制到剪贴板', 'success');
-  }).catch(err => {
-    toast('复制失败', 'error');
-  });
-}
-
-// 🆕 清除测试结果
-function clearTestResult(elementId) {
-  const resultDiv = document.getElementById(elementId);
-  if (resultDiv) {
-    resultDiv.className = 'result-box';
-    resultDiv.innerHTML = '';
-    resultDiv.style.cssText = '';
-  }
-}
-
-// Old PDF and QR code test functions - kept for reference
+// ── pdf tester ─────────────────────────────────
 async function submitPDF() {
   const url  = document.getElementById('pdf-url').value.trim();
   const meta = document.getElementById('pdf-meta').checked;
@@ -2466,28 +1898,10 @@ function resetCountdown() {
   // 更新显示的 Hub URL
   document.getElementById('hub-url').textContent = HUB_BASE;
 
-  // 获取系统配置（包括认证设置）
-  try {
-    const systemInfo = await api('/api/v1/system');
-    authEnabled = systemInfo.auth_enabled !== undefined ? systemInfo.auth_enabled : true;
-
-    if (!authEnabled) {
-      addLog('认证已禁用，直接访问', 'INFO');
-      // 隐藏登录模态框（如果存在）
-      document.getElementById('login-modal').classList.remove('active');
-    } else {
-      // 检查认证状态
-      if (!checkAuth()) {
-        // 未登录，等待用户登录
-        return;
-      }
-    }
-  } catch(e) {
-    addLog(`获取系统配置失败: ${e.message}`, 'ERROR');
-    // 默认需要认证
-    if (!checkAuth()) {
-      return;
-    }
+  // 检查认证状态
+  if (!checkAuth()) {
+    // 未登录，等待用户登录
+    return;
   }
 
   await refreshAll();

@@ -65,6 +65,7 @@ class Settings:
     # Dashboard 安全配置
     DASHBOARD_USERNAME: str = os.getenv("DASHBOARD_USERNAME", "admin")
     DASHBOARD_PASSWORD: str = os.getenv("DASHBOARD_PASSWORD", "brose123")  # 建议在.env中修改
+    DASHBOARD_AUTH_ENABLED: bool = os.getenv("DASHBOARD_AUTH_ENABLED", "True").lower() == "true"  # 是否启用认证
 
     # JWT Token 配置
     JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "")
