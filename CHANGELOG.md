@@ -17,6 +17,50 @@
 
 ---
 
+## [1.0.1] - 2026-04-22
+
+### 🐛 Bug 修复
+- ✅ 修复 `api/config.py` 语法错误（删除重复代码块）
+- ✅ 修复 n8n 集成文档中错误的端点路径（`/extract` → `/pdf/extract`）
+- ✅ 修复请求超时配置（从硬编码 30 秒改为配置文件读取）
+
+### ⚙️ 配置优化
+- ✅ `PROCESS_BASE_PORT` 现在自动跟随 `MCP_PORT`（默认 `MCP_PORT + 1`）
+- ✅ 增加默认请求超时时间：30 秒 → 120 秒
+- ✅ 优化 `.env` 和 `config.env` 配置，添加进程管理配置项
+- ✅ 从 `config.env` 自动创建 `.env` 文件
+
+### ✨ 新增功能
+- ✅ PM2 进程管理支持
+  - 新增 `ecosystem.config.js` 配置文件
+  - 新增全局管理命令 `mcp-server`（支持 start/stop/restart/status/logs）
+  - 支持 PM2 开机自启动
+- ✅ 优化 `start_safe.sh` 启动脚本
+  - 集成自动停止功能（启动前清理旧进程）
+  - 保持 `stop.sh` 独立可用
+
+### 📝 文档更新
+- ✅ 修复 `docs/N8N_INTEGRATION.md` 中的端点路径错误
+- ✅ 更新配置说明，明确端口跟随机制
+
+### 🔧 改进
+- ✅ 中间件超时时间现在从配置文件读取（`REQUEST_TIMEOUT`）
+- ✅ 配置文件 `config.env` 作为模板，`.env` 为实际使用
+
+### 📦 新增文件
+- `ecosystem.config.js` - PM2 配置文件
+- `/usr/local/bin/mcp-server` - 全局管理命令
+
+### 🔄 修改文件
+- `config/settings.py` - 进程端口跟随机制、超时配置
+- `middleware/proxy_middleware.py` - 使用配置的超时时间
+- `api/config.py` - 修复语法错误
+- `.env` - 新增进程管理配置
+- `config.env` - 新增进程管理配置
+- `docs/N8N_INTEGRATION.md` - 修复端点路径
+
+---
+
 ## [1.0.0] - 2026-04-22
 
 ### ✨ 新增功能

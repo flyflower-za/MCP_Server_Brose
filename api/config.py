@@ -39,7 +39,7 @@ class ServerConfigUpdate(BaseModel):
 @router.get("/servers")
 async def list_all_servers(current_user: str = Depends(verify_basic_auth)):
     """
-    获取所有服务器配置（包括已禁用的）
+    获取所有服务器配置(包括已禁用的)
 
     Returns:
         所有服务器配置
@@ -171,7 +171,7 @@ async def delete_server(
             detail=f"服务器 {server_id} 不存在"
         )
 
-    # 保存配置（用于恢复）
+    # 保存配置(用于恢复)
     deleted_config = MCP_SERVERS_CONFIG.pop(server_id)
 
     # 自动保存到磁盘
@@ -219,41 +219,6 @@ async def toggle_server(
         "message": f"服务器 {server_id} 已{'启用' if enabled else '禁用'}并保存",
         "server_id": server_id,
         "enabled": enabled
-    }
-
-    Args:
-        server_id: 服务器 ID
-        config: 更新的配置
-
-    Returns:
-        成功消息
-    """
-    if server_id not in MCP_SERVERS_CONFIG:
-        raise HTTPException(
-            status_code=404,
-            detail=f"服务器 {server_id} 不存在"
-        )
-
-    # 更新配置
-    current_config = MCP_SERVERS_CONFIG[server_id]
-    if config.name is not None:
-        current_config["name"] = config.name
-    if config.description is not None:
-        current_config["description"] = config.description
-    if config.module is not None:
-        current_config["module"] = config.module
-    if config.prefix is not None:
-        current_config["prefix"] = config.prefix
-    if config.tags is not None:
-        current_config["tags"] = config.tags
-    if config.enabled is not None:
-        current_config["enabled"] = config.enabled
-
-    return {
-        "success": True,
-        "message": f"服务器 {server_id} 配置已更新",
-        "server_id": server_id,
-        "config": current_config
     }
 
 
@@ -332,7 +297,7 @@ async def import_configs(
     current_user: str = Depends(verify_basic_auth)
 ):
     """
-    从磁盘导入配置（重载配置文件）
+    从磁盘导入配置(重载配置文件)
 
     Args:
         overwrite: 是否覆盖内存中的配置

@@ -40,7 +40,7 @@ http://0.0.0.0:51234
 ```json
 {
   "method": "POST",
-  "url": "http://localhost:51234/extract",
+  "url": "http://localhost:51234/pdf/extract",
   "authentication": "none",
   "requestBody": {
     "contentType": "application/json",
@@ -51,6 +51,8 @@ http://0.0.0.0:51234
   }
 }
 ```
+
+**⚠️ 重要提示：** 端点路径必须包含 `/pdf` 前缀！
 
 **字段说明:**
 - `url`: 你的PDF文件URL
@@ -67,7 +69,7 @@ http://0.0.0.0:51234
   ↓
 节点2: HTTP Request (提取PDF)
   - Method: POST
-  - URL: http://localhost:51234/extract
+  - URL: http://localhost:51234/pdf/extract
   - Body: {
     "url": "你的PDF_URL",
     "include_metadata": true
@@ -88,7 +90,7 @@ http://0.0.0.0:51234
 节点3: Loop Over Items (循环处理)
   ↓
 节点4: HTTP Request (提取每个PDF)
-  - URL: http://localhost:51234/extract
+  - URL: http://localhost:51234/pdf/extract
   ↓
 节点5: Aggregate (聚合结果)
 ```
@@ -102,9 +104,11 @@ http://0.0.0.0:51234
 1. 拖拽 `HTTP Request` 节点到画布
 2. 配置节点：
    - **Method**: `POST`
-   - **URL**: `http://localhost:51234/extract`
+   - **URL**: `http://localhost:51234/pdf/extract`
    - **Authentication**: `None`
    - **Content Type**: `JSON`
+
+⚠️ **注意：** 路径必须是 `/pdf/extract`，不能是 `/extract`
 
 ### **步骤2: 配置请求体**
 
@@ -184,7 +188,7 @@ MCP_PORT=51234
       "position": [450, 300],
       "parameters": {
         "method": "POST",
-        "url": "http://localhost:51234/extract",
+        "url": "http://localhost:51234/pdf/extract",
         "authentication": "none",
         "requestBody": {
           "contentType": "application/json",
@@ -220,8 +224,8 @@ MCP_PORT=51234
 
 | 端点 | 方法 | 功能 | n8n节点类型 |
 |------|------|------|------------|
-| `/extract` | POST | 提取单个PDF | HTTP Request |
-| `/extract/batch` | POST | 批量提取PDF | HTTP Request |
+| `/pdf/extract` | POST | 提取单个PDF | HTTP Request |
+| `/pdf/extract/batch` | POST | 批量提取PDF | HTTP Request |
 | `/health` | GET | 健康检查 | HTTP Request |
 | `/` | GET | 系统信息 | HTTP Request |
 
@@ -388,13 +392,15 @@ REQUEST_TIMEOUT=120
 ### **方法1: 使用curl测试**
 
 ```bash
-curl -X POST "http://localhost:51234/extract" \
+curl -X POST "http://localhost:51234/pdf/extract" \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://myctiapi.cti-soft.com:58443/api/HomeQuery/PreviewReportH5?ReportNo=A225097188910101C;198641334",
     "include_metadata": true
   }'
 ```
+
+⚠️ **注意：** 端点路径是 `/pdf/extract`，包含 `/pdf` 前缀！
 
 ### **方法2: 在n8n中测试**
 

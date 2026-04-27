@@ -52,3 +52,8 @@ htmlcov/
 
 */__pycache__
 logs/mcp_server.log
+
+mcp_servers/__pycache__
+
+
+mcp_servers/__pycache__/*

@@ -17,7 +17,10 @@ class ProxyMiddleware(BaseHTTPMiddleware):
     def __init__(self, app: ASGIApp):
         super().__init__(app)
         self.process_manager = get_process_manager()
-        self.client = httpx.AsyncClient(timeout=30.0)
+        # 从配置读取超时时间
+        from config.settings import settings
+        timeout = settings.REQUEST_TIMEOUT
+        self.client = httpx.AsyncClient(timeout=timeout)
 
     async def dispatch(self, request: Request, call_next):
         """

@@ -6,14 +6,14 @@ echo "🚀 MCP服务器安全启动"
 echo "===================="
 
 # 1. 检查虚拟环境
-if [ ! -d "venv" ]; then
+if [ ! -d ".venv" ]; then
     echo "❌ 未找到虚拟环境"
     exit 1
 fi
 
 # 2. 激活虚拟环境
 echo "📦 激活虚拟环境..."
-source venv/bin/activate
+source .venv/bin/activate
 
 # 3. 检查依赖
 echo "🔍 检查依赖..."

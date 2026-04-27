@@ -47,13 +47,15 @@ class Settings:
     CORS_MAX_AGE: int = int(os.getenv("CORS_MAX_AGE", "3600"))  # 1小时
 
     # 超时配置
-    REQUEST_TIMEOUT: int = int(os.getenv("REQUEST_TIMEOUT", "30"))
+    REQUEST_TIMEOUT: int = int(os.getenv("REQUEST_TIMEOUT", "120"))
 
     # SSL配置
     SSL_VERIFY: bool = os.getenv("SSL_VERIFY", "False").lower() == "false"
 
     # 进程管理配置
-    PROCESS_BASE_PORT: int = int(os.getenv("PROCESS_BASE_PORT", "51235"))  # 服务器进程起始端口
+    # PROCESS_BASE_PORT 默认为 MCP_PORT + 1，可单独配置覆盖
+    _mcp_port = int(os.getenv("MCP_PORT", "8000"))
+    PROCESS_BASE_PORT: int = int(os.getenv("PROCESS_BASE_PORT", str(_mcp_port + 1)))
     PROCESS_MAX_RESTART: int = int(os.getenv("PROCESS_MAX_RESTART", "3"))  # 最大自动重启次数
     PROCESS_HEALTH_CHECK_INTERVAL: int = int(os.getenv("PROCESS_HEALTH_CHECK_INTERVAL", "30"))  # 健康检查间隔(秒)
     PROCESS_AUTO_RESTART: bool = os.getenv("PROCESS_AUTO_RESTART", "True").lower() == "true"  # 自动重启故障进程
