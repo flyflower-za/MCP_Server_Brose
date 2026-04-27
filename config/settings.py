@@ -95,6 +95,15 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
         "prefix": "/pdf",
         "tags": ["pdf", "extractor", "document"]
     },
+    "qrcode_reader": {
+        "name": "QR Code Reader",
+        "description": "Extract content from QR codes in images",
+        "enabled": True,
+        "version": "1.0.0",
+        "module": "mcp_servers.qrcode_reader.server",
+        "prefix": "/qrcode",
+        "tags": ["qrcode", "image", "reader", "barcode"]
+    },
     # 可以在这里添加更多的MCP服务器
     # "web_scraper": {
     #     "name": "Web Scraper",

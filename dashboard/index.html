@@ -814,6 +814,33 @@
         </div>
       </div>
 
+      <!-- QR CODE TESTER -->
+      <div class="panel" id="panel-qrcode-tester">
+        <div class="panel-header" onclick="togglePanel('panel-qrcode-tester')">
+          <div class="panel-title"><span>📱</span> 二维码识别测试</div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span id="qrcode-server-badge" style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red);">离线</span>
+            <div class="panel-collapse-indicator" title="点击展开/折叠">▼</div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="input-group">
+            <label class="input-label">二维码图片 URL</label>
+            <input id="qrcode-url" class="input-field" type="url" placeholder="https://example.com/qrcode.png" />
+          </div>
+          <div style="margin: 14px 0; text-align: center; color: var(--text-muted); font-size: 11px;">— 或 —</div>
+          <div class="input-group">
+            <label class="input-label">Base64 图片数据</label>
+            <textarea id="qrcode-base64" class="input-field" rows="3" placeholder="data:image/png;base64,iVBORw0KGgo..." style="resize:vertical;font-family:'JetBrains Mono',monospace;font-size:11px;"></textarea>
+          </div>
+          <button class="btn btn-primary" id="qrcode-submit-btn" style="width:100%;justify-content:center;" onclick="submitQRCode()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><path d="M3 14h7v7H3z"/></svg>
+            识别二维码
+          </button>
+          <div id="qrcode-result" class="result-box" style="margin-top:14px;"></div>
+        </div>
+      </div>
+
       <!-- CONFIG MANAGER -->
       <div class="panel" id="panel-config-manager">
         <div class="panel-header" onclick="togglePanel('panel-config-manager')">
@@ -988,6 +1015,7 @@ if (window.location.protocol === 'file:') {
 // state
 let servers     = {};   // { [id]: { config, status, portConfig } }
 let pdfOnline   = false;
+let qrcodeOnline = false;
 let pageStart   = Date.now();
 let autoTimer   = 15;
 let authToken   = localStorage.getItem('mcp_hub_token') || null;
@@ -1211,6 +1239,7 @@ function renderServers() {
   for (const [id, data] of Object.entries(servers)) {
     if (data.status?.status === 'running') running++;
     if (id === 'pdf_extractor') pdfOnline = data.status?.status === 'running';
+    if (id === 'qrcode_reader') qrcodeOnline = data.status?.status === 'running';
 
     // 应用过滤条件
     const matchesSearch = (
@@ -1240,6 +1269,7 @@ function renderServers() {
 
   updateStats(running, total);
   updatePDFBadge();
+  updateQRCodeBadge();
 
   // 恢复折叠状态（延迟执行以确保DOM已更新）
   setTimeout(restoreCollapseState, 50);
@@ -1365,7 +1395,9 @@ function resetLayout() {
     'panel-log',            // 操作日志 - 折叠
     'panel-config-manager', // 配置管理 - 折叠
     'panel-performance',    // 性能监控 - 折叠
-    'panel-health'         // 健康状态 - 折叠
+    'panel-health',         // 健康状态 - 折叠
+    'panel-pdf-tester',     // PDF测试 - 折叠
+    'panel-qrcode-tester'   // 二维码测试 - 折叠
   ];
 
   const panels = document.querySelectorAll('.panel');
@@ -1535,6 +1567,15 @@ function updatePDFBadge() {
   b.textContent = pdfOnline ? '在线' : '离线';
 }
 
+function updateQRCodeBadge() {
+  const b = document.getElementById('qrcode-server-badge');
+  if (!b) return; // 如果元素不存在则跳过
+  b.style.cssText = qrcodeOnline
+    ? 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);color:var(--accent-green)'
+    : 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red)';
+  b.textContent = qrcodeOnline ? '在线' : '离线';
+}
+
 // ── generate api endpoints ──────────────────────
 function generateApiEndpoints(id, config, status, currentPort) {
   const isRunning = status?.status === 'running';
@@ -1556,6 +1597,22 @@ function generateApiEndpoints(id, config, status, currentPort) {
     endpoints.push({
       method: 'POST',
       url: `${baseUrl}/extract/batch`,
+      active: isRunning
+    });
+  } else if (id === 'qrcode_reader' || prefix === '/qrcode') {
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/read`,
+      active: isRunning
+    });
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/read/batch`,
+      active: isRunning
+    });
+    endpoints.push({
+      method: 'GET',
+      url: `${baseUrl}/health`,
       active: isRunning
     });
   }
@@ -1771,6 +1828,56 @@ async function submitPDF() {
   }
 }
 
+// ── qrcode tester ───────────────────────────────
+async function submitQRCode() {
+  const url = document.getElementById('qrcode-url').value.trim();
+  const base64 = document.getElementById('qrcode-base64').value.trim();
+  const btn = document.getElementById('qrcode-submit-btn');
+  const res = document.getElementById('qrcode-result');
+
+  if (!url && !base64) {
+    toast('请输入图片 URL 或 Base64 数据', 'warning');
+    return;
+  }
+
+  const requestData = {};
+  if (url) requestData.image_url = url;
+  if (base64) requestData.image_base64 = base64;
+
+  btn.disabled = true;
+  btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 识别中…`;
+  res.className = 'result-box visible';
+  res.style.color = 'var(--text-muted)';
+  res.textContent = '⏳ 正在识别二维码…';
+  addLog(`二维码识别: ${url ? url.slice(0,60) : 'Base64数据'}…`, 'INFO');
+
+  try {
+    const d = await api('/qrcode/read', 'POST', requestData);
+    if (d.success) {
+      res.className = 'result-box visible success';
+      const metadataStr = d.metadata
+        ? `\n[元数据]\n  类型: ${d.metadata.type || '—'}\n  检测到: ${d.metadata.detected ? '是' : '否'}\n`
+        : '';
+      res.textContent = `✅ 识别成功\n\n${metadataStr}[二维码内容]\n${d.qr_data || '无内容'}`;
+      addLog(`二维码识别成功: ${d.qr_data?.slice(0,50) || '空'}...`, 'SUCCESS');
+      toast('二维码识别成功！', 'success');
+    } else {
+      res.className = 'result-box visible error';
+      res.textContent = `❌ 识别失败\n\n${d.error}`;
+      addLog(`二维码识别失败: ${d.error}`, 'ERROR');
+      toast('二维码识别失败', 'error');
+    }
+  } catch(e) {
+    res.className = 'result-box visible error';
+    res.textContent = `❌ 请求失败: ${e.message}\n\n请确认 qrcode_reader 正在运行`;
+    addLog(`二维码请求失败: ${e.message}`, 'ERROR');
+    toast(`请求失败: ${e.message}`, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><path d="M3 14h7v7H3z"/></svg> 识别二维码`;
+  }
+}
+
 // ── refresh ────────────────────────────────────
 async function refreshAll() {
   const btn = document.getElementById('refresh-btn');
@@ -1810,7 +1917,8 @@ function resetCountdown() {
       'panel-log',            // 操作日志 - 折叠
       'panel-config-manager', // 配置管理 - 折叠
       'panel-performance',    // 性能监控 - 折叠
-      'panel-health'         // 健康状态 - 折叠
+      'panel-health',         // 健康状态 - 折叠
+      'panel-pdf-tester'      // PDF测试 - 折叠
     ];
     defaultCollapsed.forEach(panelId => {
       const panel = document.getElementById(panelId);

@@ -17,27 +17,293 @@
 
 ---
 
+## [1.0.2] - 2026-04-27
+
+### ✨ 新增功能
+
+#### **QR Code Reader MCP Server** ⭐⭐⭐
+- ✅ 全新的二维码识别服务
+- ✅ 支持多种输入方式：
+  - 图片 URL 识别
+  - Base64 图片数据识别
+  - 文本形式二维码内容处理
+- ✅ 批量二维码识别支持
+- ✅ 返回二维码位置和元数据信息
+- ✅ 基于 OpenCV 的高性能识别
+- ✅ 完整的错误处理和日志记录
+
+**新增文件**:
+- `mcp_servers/qrcode_reader/__init__.py` - 模块初始化
+- `mcp_servers/qrcode_reader/server.py` - 服务实现和路由
+- `mcp_servers/qrcode_reader/models.py` - 数据模型定义
+
+**新增 API**:
+- `POST /qrcode/read` - 识别单个二维码
+- `POST /qrcode/read/batch` - 批量识别二维码
+- `GET /qrcode/health` - 健康检查
+
+**新增文档**:
+- `docs/QR_CODE_READER.md` - 二维码识别器完整使用指南
+
+#### **Dashboard 二维码测试面板** ⭐⭐
+- ✅ 侧边栏新增二维码识别测试面板
+- ✅ 支持图片 URL 输入
+- ✅ 支持 Base64 数据输入
+- ✅ 实时显示识别结果
+- ✅ 在线/离线状态显示
+
+**修改文件**:
+- `dashboard/index.html` - 添加二维码测试面板和 API 端点显示
+
+### 📝 文档更新
+
+#### **文档结构优化** ⭐⭐⭐
+- ✅ **文档清理**: 从 29 个文档精简到 15 个
+- ✅ **文档整合**: 从 15 个文档优化到 10 个
+- ✅ 删除临时性检查报告和过时文档
+- ✅ 合并重复内容，提高文档质量
+
+**删除的文档** (13个):
+- 临时检查报告: `BUTTON_FUNCTION_CHECK.md`, `FIX_SUMMARY.md`, `PROJECT_STATUS.md`, `PROJECT_CLEANUP_SUMMARY.md`
+- 过时文档: `CHANGELOG_2026_04_21.md`, `DASHBOARD_FEATURES_COMPLETED.md`, `DASHBOARD_THEME_UPDATE.md`, `IMPROVEMENT_RECOMMENDATIONS.md`
+- 重复文档: `PROJECT_ANALYSIS_REPORT.md`, `DOCS_STRUCTURE_SUMMARY.md`, `FILE_ORGANIZATION.md`
+- 过时指南: `SCRIPTS_FINAL_GUIDE.md`, `SCRIPT_USAGE.md`
+- 其他: `client_example.md`
+
+**新增文档** (3个):
+- `docs/GETTING_STARTED.md` - 综合快速开始指南（整合了 START_HERE.md + QUICK_START.md + STARTUP_GUIDE.md）
+- `docs/PORT_GUIDE.md` - 完整端口管理指南（整合了 PORT_CONFIG_GUIDE.md + PORT_MANAGEMENT.md）
+- `docs/PROJECT_OVERVIEW.md` - 项目综合概述（整合了 PROJECT_ANALYSIS.md + PROJECT_STRUCTURE.md）
+
+**删除的文档** (7个):
+- `START_HERE.md`, `QUICK_START.md`, `STARTUP_GUIDE.md`
+- `PORT_CONFIG_GUIDE.md`, `PORT_MANAGEMENT.md`
+- `PROJECT_ANALYSIS.md`, `PROJECT_STRUCTURE.md`
+
+**文档优化效果**:
+- 数量减少: 29 → 15 → 10 (减少 66%)
+- 内容更全面: 整合后的文档内容更加完整
+- 结构更清晰: 相关内容集中，减少查找时间
+- 维护更简单: 减少了文档数量，降低维护成本
+
+### 🔧 改进
+
+#### **Dashboard 功能增强**
+- ✅ 更新 API 端点生成逻辑，支持新的 qrcode_reader 服务
+- ✅ 优化二维码识别服务状态显示
+- ✅ 添加二维码测试面板到默认展开列表
+- ✅ 改进服务器卡片中 API 端点的显示
+
+#### **代码质量提升**
+- ✅ 统一 MCP 服务器模块结构
+- ✅ 改进错误处理和日志记录
+- ✅ 优化代码注释和文档字符串
+
+### 📦 依赖更新
+
+**新增依赖**:
+```
+opencv-python>=4.8.0    # 计算机视觉库，用于二维码检测
+qrcode>=7.4.0           # 二维码生成和识别库
+```
+
+**移除依赖**:
+```
+pyzbar>=0.1.9           # 不再需要 zbar 库依赖
+```
+
+**原因**: 
+- OpenCV 是更通用的计算机视觉库
+- 避免系统依赖（pyzbar 需要 zbar shared library）
+- 更好的跨平台兼容性
+
+### 🧪 测试
+
+#### **新增测试**
+- ✅ 二维码识别功能测试（文本输入、Base64 图片）
+- ✅ 批量识别测试
+- ✅ 错误处理测试
+- ✅ Dashboard 集成测试
+
+**测试结果**: 所有测试通过 ✅
+
+### 🎨 UI/UX 改进
+
+#### **Dashboard 新增组件**
+- ✅ 二维码识别测试面板
+- ✅ 二维码服务状态徽章
+- ✅ API 端点动态显示（支持二维码服务）
+
+#### **交互优化**
+- ✅ 更直观的测试界面
+- ✅ 实时状态更新
+- ✅ 更好的错误提示
+
+### 📊 文件变更统计
+
+**新增文件**: 7 个
+- `mcp_servers/qrcode_reader/` 目录 (3个文件)
+- `docs/` 目录 (3个新文档，7个删除)
+- `test_qrcode_complete.py` (测试文件，已清理)
+
+**修改文件**: 4 个
+- `config/settings.py` - 注册新服务器
+- `requirements.txt` - 更新依赖
+- `dashboard/index.html` - 添加二维码测试面板
+- `CHANGELOG.md` - 本文件
+
+**删除文件**: 20 个
+- 文档清理: 13 个过时文档
+- 文档整合: 7 个被合并的文档
+
+### 🔄 兼容性
+
+#### **向后兼容**
+- ✅ 所有现有 API 保持不变
+- ✅ 新增服务不影响现有服务
+- ✅ 配置文件格式兼容
+- ✅ Dashboard 界面兼容
+
+#### **迁移指南**
+- ✅ 无需迁移，直接使用
+- ✅ 新服务自动启用（enabled: true）
+- ✅ 文档自动更新
+
+### 💡 使用建议
+
+#### **新用户**
+1. 阅读全新的 `docs/GETTING_STARTED.md` 快速开始
+2. 在 Dashboard 中测试二维码识别功能
+3. 查看 `docs/QR_CODE_READER.md` 了解详细用法
+
+#### **现有用户**
+1. 重启系统以启用新的二维码服务
+2. 查看 Dashboard 中的新测试面板
+3. 更新书签到新的文档结构
+
+### 🔮 未来计划
+
+#### **下一版本** (1.1.0)
+- 📋 更多 MCP 服务器集成
+- 📊 性能监控面板增强
+- 🔔 告警系统
+- 🐳 Docker 容器化支持
+- 🔄 CI/CD 流水线
+
+---
+
 ## [1.0.1] - 2026-04-22
+
+### ✨ 新增功能
+
+#### **PM2 进程管理集成** ⭐⭐⭐
+- ✅ PM2 配置文件 `ecosystem.config.js`
+- ✅ 全局管理命令 `mcp-server`
+- ✅ 自动重启支持
+- ✅ 开机自启动支持
+
+**使用方式**:
+
+**方式 1：全局命令（推荐）**
+```bash
+mcp-server start    # 启动
+mcp-server stop     # 停止
+mcp-server restart  # 重启
+mcp-server status   # 状态
+mcp-server logs     # 日志
+```
+
+**方式 2：PM2 原生命令**
+```bash
+# 首次启动
+pm2 start ecosystem.config.js
+
+# 后续管理
+pm2 restart mcp-server
+pm2 stop mcp-server
+pm2 status mcp-server
+pm2 logs mcp-server
+```
+
+**开机自启动**
+```bash
+pm2 save
+pm2 startup
+```
+
+#### **启动脚本优化**
+- ✅ 优化 `start_safe.sh` 启动脚本
+  - 集成自动停止功能（启动前清理旧进程）
+  - 保持 `stop.sh` 独立可用
+
+**工作流程**:
+```
+启动 start_safe.sh
+    ↓
+检查并调用 stop.sh（清理旧进程）
+    ↓
+清理完成
+    ↓
+激活虚拟环境
+    ↓
+启动服务器
+```
+
+### ⚙️ 配置优化
+
+#### **端口自动跟随**
+- ✅ `PROCESS_BASE_PORT` 现在自动设置为 `MCP_PORT + 1`
+```bash
+# .env 配置
+MCP_PORT=51234
+# PROCESS_BASE_PORT 自动设置为 51235
+```
+
+#### **超时时间优化**
+- ✅ 默认超时：30 秒 → **120 秒**
+- ✅ 中间件超时现在从配置文件读取
+- ✅ 解决大 PDF 处理时的超时问题
+
+#### **环境配置文件**
+- ✅ `.env` - 实际使用的配置
+- ✅ `config.env` - 配置模板
+- ✅ 新增进程管理配置项
+
+**完整配置示例**:
+```bash
+# 服务器配置
+MCP_HOST=0.0.0.0
+MCP_PORT=51234
+
+# 请求超时（默认 120 秒）
+REQUEST_TIMEOUT=120
+
+# 进程管理
+PROCESS_BASE_PORT=51235  # 自动跟随 MCP_PORT + 1
+PROCESS_MAX_RESTART=3
+PROCESS_HEALTH_CHECK_INTERVAL=30
+PROCESS_AUTO_RESTART=true
+```
 
 ### 🐛 Bug 修复
 - ✅ 修复 `api/config.py` 语法错误（删除重复代码块）
 - ✅ 修复 n8n 集成文档中错误的端点路径（`/extract` → `/pdf/extract`）
 - ✅ 修复请求超时配置（从硬编码 30 秒改为配置文件读取）
 
-### ⚙️ 配置优化
-- ✅ `PROCESS_BASE_PORT` 现在自动跟随 `MCP_PORT`（默认 `MCP_PORT + 1`）
-- ✅ 增加默认请求超时时间：30 秒 → 120 秒
-- ✅ 优化 `.env` 和 `config.env` 配置，添加进程管理配置项
-- ✅ 从 `config.env` 自动创建 `.env` 文件
+**语法错误详情**:
+- **文件**: `api/config.py`
+- **问题**: 重复代码块导致语法错误
+- **修复**: 删除重复的函数定义
 
-### ✨ 新增功能
-- ✅ PM2 进程管理支持
-  - 新增 `ecosystem.config.js` 配置文件
-  - 新增全局管理命令 `mcp-server`（支持 start/stop/restart/status/logs）
-  - 支持 PM2 开机自启动
-- ✅ 优化 `start_safe.sh` 启动脚本
-  - 集成自动停止功能（启动前清理旧进程）
-  - 保持 `stop.sh` 独立可用
+**端点路径错误详情**:
+- **文件**: `docs/N8N_INTEGRATION.md`
+- **问题**: 错误的端点路径 `/extract`
+- **修复**: 更正为 `/pdf/extract`
+
+**超时配置详情**:
+- **文件**: `middleware/proxy_middleware.py`
+- **问题**: 硬编码 30 秒超时
+- **修复**: 从 `REQUEST_TIMEOUT` 配置读取
 
 ### 📝 文档更新
 - ✅ 修复 `docs/N8N_INTEGRATION.md` 中的端点路径错误
@@ -58,6 +324,58 @@
 - `.env` - 新增进程管理配置
 - `config.env` - 新增进程管理配置
 - `docs/N8N_INTEGRATION.md` - 修复端点路径
+
+### 🔄 升级指南
+
+#### **从旧版本升级**
+
+1. **更新代码**
+   ```bash
+   git pull origin main
+   ```
+
+2. **创建 .env 文件**
+   ```bash
+   cp config.env .env
+   ```
+
+3. **停止旧进程**
+   ```bash
+   bash stop.sh
+   ```
+
+4. **使用 PM2 启动**
+   ```bash
+   mcp-server start
+   ```
+
+5. **保存 PM2 配置**
+   ```bash
+   pm2 save
+   pm2 startup
+   ```
+
+### 💡 使用建议
+
+#### **环境选择**
+1. **生产环境推荐使用 PM2**
+   - 自动重启
+   - 开机自启
+   - 日志管理
+
+2. **开发环境可使用传统方式**
+   ```bash
+   bash start_safe.sh  # 前台运行，查看实时日志
+   ```
+
+#### **配置管理**
+- 修改 `.env` 后需要重启
+  ```bash
+  mcp-server restart
+  ```
+
+### 🐛 已知问题
+无
 
 ---
 
@@ -308,5 +626,5 @@ PyJWT>=2.8.0  # JWT Token 支持
 
 ---
 
-**最后更新**: 2026-04-22  
+**最后更新**: 2026-04-27  
 **维护者**: Jimmy
