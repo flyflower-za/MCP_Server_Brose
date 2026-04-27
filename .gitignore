@@ -59,3 +59,4 @@ mcp_servers/__pycache__
 mcp_servers/__pycache__/*
 logs/mcp_server.log
 logs/mcp_server.log
+logs/mcp_server.log

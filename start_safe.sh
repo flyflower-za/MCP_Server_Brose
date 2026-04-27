@@ -31,12 +31,16 @@ else
     PORT=51234
 fi
 
-if lsof -i :$PORT > /dev/null 2>&1; then
-    echo "⚠️  端口$PORT被占用，正在清理..."
-    lsof -ti :$PORT | xargs kill -9 2>/dev/null
-    sleep 2
-    echo "✅ 端口已清理"
-fi
+# 清理主端口和MCP服务器端口（MCP_PORT+1 到 MCP_PORT+10）
+echo "🧹 检查并清理端口..."
+for port in $PORT $(seq $((PORT + 1)) $((PORT + 10))); do
+    if lsof -i :$port > /dev/null 2>&1; then
+        echo "⚠️  端口$port被占用，正在清理..."
+        lsof -ti :$port | xargs kill -9 2>/dev/null
+        sleep 0.5
+        echo "✅ 端口$port已清理"
+    fi
+done
 
 # 5. 显示启动信息
 echo ""

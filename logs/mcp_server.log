@@ -10140,3 +10140,938 @@ INFO:     Application shutdown complete.
 2026-04-28 00:35:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
 2026-04-28 00:35:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
 2026-04-28 00:35:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:35:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:35:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:35:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:35:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:35:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:35:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:35:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:35:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:35:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:35:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:35:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:35:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:35:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:35:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:35:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:35:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:35:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:35:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:36:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:36:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:36:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:36:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:36:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:36:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:36:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:36:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:36:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:36:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:36:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:36:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:36:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:36:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:36:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:36:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:36:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:36:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:36:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:36:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:36:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:36:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:36:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:36:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:36:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:36:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:36:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:36:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:36:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:36:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:36:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:36:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:36:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:36:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:37:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:37:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:37:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:37:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:37:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:37:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:37:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:37:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:37:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:37:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:37:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:37:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:37:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:37:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:37:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:37:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:37:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:37:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:37:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:37:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:37:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:37:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:37:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:37:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:37:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:37:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:37:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:37:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:37:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:37:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:37:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:37:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:37:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:37:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:38:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:38:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:38:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:38:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:38:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:38:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:38:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:38:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:38:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:38:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:38:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:38:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:38:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:38:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:38:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:38:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:38:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:38:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:38:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:38:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:38:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:38:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:38:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:38:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:38:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:38:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:38:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:38:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:38:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:38:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:38:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:38:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:38:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:38:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:39:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:39:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:39:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:39:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:39:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:39:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:39:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:39:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:39:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:39:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:39:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:39:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:39:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:39:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:39:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:39:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:39:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:39:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:39:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:39:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:39:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:39:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:39:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:39:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:39:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:39:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:39:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:40:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:40:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:40:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:40:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:40:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:40:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:40:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:40:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:40:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:40:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:40:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:40:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:40:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:40:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:40:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:40:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:40:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:40:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:40:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:40:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:40:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:40:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:40:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:40:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:40:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:40:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:40:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:40:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:40:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:40:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:40:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:40:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:40:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:40:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:41:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:41:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:41:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:41:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:41:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:41:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:41:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:41:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:41:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:41:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:41:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:41:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:41:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:41:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:41:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:41:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:41:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:41:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:41:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:41:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:41:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:41:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:41:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:41:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:41:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:41:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:41:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:41:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:41:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:41:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:41:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:41:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:41:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:41:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:42:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:42:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:42:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:42:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:42:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:42:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:42:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:42:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:42:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:42:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:42:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:42:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:42:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:42:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:42:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:42:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:42:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:42:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:42:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:42:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:42:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:42:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:42:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:42:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:42:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:42:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:42:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:42:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:42:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:42:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:42:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:42:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:42:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:42:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:43:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:43:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:43:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:43:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:43:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:43:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:43:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:43:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:43:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:43:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:43:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:43:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:43:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:43:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:43:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:43:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:43:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:43:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:43:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:43:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:43:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:43:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:43:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:43:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:43:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:43:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:43:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:43:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:43:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:43:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:43:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:43:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:43:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:43:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:44:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:44:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:44:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:44:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:44:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:44:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:44:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:44:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:44:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:44:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:44:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:44:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:44:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:44:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:44:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:44:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:44:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:44:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:44:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:44:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:44:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:44:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:44:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:44:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:44:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:44:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:44:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:44:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:44:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:44:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:44:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:44:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:44:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:44:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:45:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:45:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:45:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:45:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:45:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:45:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:45:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:45:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:21 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:45:21 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:45:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:45:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:45:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:45:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:45:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:45:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:45:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:26 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:26 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:36 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:45:36 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:45:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:45:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:45:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:45:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:45:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:45:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:45:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:46 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:46 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:51 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:45:51 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:45:51 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:45:51 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:45:51 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:45:51 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:45:51 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:45:51 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:45:51 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:51 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:45:56 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:45:56 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:46:01 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:46:01 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:46:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 00:46:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 00:46:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 00:46:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 00:46:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 00:46:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 00:46:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 00:46:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 00:46:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:46:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:46:11 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:46:11 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:46:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:46:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:47:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:47:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:48:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:48:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:49:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:49:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 00:51:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 00:51:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:07:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:07:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:08:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:08:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:15:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:15:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:20:59 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 01:20:59 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 01:20:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 01:20:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 01:20:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 01:20:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 01:20:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 01:20:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 01:20:59 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:20:59 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:36:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:36:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:37:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:37:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 01:54:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 01:54:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:11:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:11:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:12:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:12:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:13:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:13:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:21:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:21:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:22:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:22:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:23:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:23:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:40:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:40:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:46:58 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:46:58 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:56:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:56:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:58:08 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:58:08 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 02:59:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 02:59:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:00:41 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 03:00:41 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 03:00:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 03:00:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 03:00:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 03:00:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 03:00:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 03:00:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 03:00:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:00:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:02:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:02:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:03:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:03:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:04:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:04:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:07:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:07:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:08:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:08:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:09:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:09:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:10:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:10:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:11:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:11:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:12:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:12:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:13:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:13:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:14:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:14:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:15:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:15:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:16:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:16:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:17:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:17:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:29:03 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 03:29:03 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 03:29:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 03:29:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 03:29:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 03:29:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 03:29:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 03:29:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 03:29:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:29:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:30:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:30:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:53:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:53:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:54:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:54:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:55:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:55:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 03:56:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 03:56:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 04:15:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 04:15:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 04:30:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 04:30:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 04:37:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 04:37:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 04:54:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 04:54:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 05:10:43 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 05:10:43 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 05:26:41 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 05:26:41 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 05:44:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 05:44:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 05:45:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 05:45:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 05:46:44 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 05:46:44 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:01:03 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 06:01:03 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 06:01:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 06:01:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 06:01:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 06:01:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 06:01:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 06:01:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 06:01:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:01:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:02:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:02:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:18:03 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:18:03 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:35:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:35:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:36:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:36:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:37:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:37:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:38:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:38:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:39:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:39:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:40:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:40:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 06:58:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 06:58:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:14:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:14:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:30:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:30:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:31:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:31:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:32:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:32:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:37:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:37:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:38:38 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:38:39 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:38:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:38:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:38:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:38:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:38:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:38:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:38:39 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:38:39 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:47:54 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:47:54 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:50:36 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:50:36 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:01 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:01 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:09 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:09 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:14 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:53:14 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:53:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:53:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:53:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:53:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:53:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:53:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:53:14 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:14 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /.well-known/appspecific/com.chrome.devtools.json (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - 🔍 解析路径: /.well-known/appspecific/com.chrome.devtools.json -> 前缀: /.well-known
+2026-04-28 07:53:19 - mcp_hub - WARNING - ❌ 未找到对应的服务器 (前缀: /.well-known)
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/config/servers (GET)
+2026-04-28 07:53:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/config/servers
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /.well-known/appspecific/com.chrome.devtools.json (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - 🔍 解析路径: /.well-known/appspecific/com.chrome.devtools.json -> 前缀: /.well-known
+2026-04-28 07:53:20 - mcp_hub - WARNING - ❌ 未找到对应的服务器 (前缀: /.well-known)
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:53:20 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:20 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/config/servers (GET)
+2026-04-28 07:53:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/config/servers
+2026-04-28 07:53:25 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:25 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:30 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:30 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:35 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:53:35 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:53:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:53:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:53:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:53:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:53:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:53:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:53:35 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:35 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:40 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:40 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:45 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:45 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:50 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:53:50 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:53:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:53:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:53:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:53:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:53:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:53:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:53:50 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:50 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:53:55 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:53:55 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:00 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:00 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:05 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:54:05 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:54:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:54:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:54:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:54:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:54:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:54:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:54:05 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:05 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:10 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:10 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /dashboard (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /dashboard
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /.well-known/appspecific/com.chrome.devtools.json (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - 🔍 解析路径: /.well-known/appspecific/com.chrome.devtools.json -> 前缀: /.well-known
+2026-04-28 07:54:18 - mcp_hub - WARNING - ❌ 未找到对应的服务器 (前缀: /.well-known)
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:54:18 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:18 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:19 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/config/servers (GET)
+2026-04-28 07:54:19 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/config/servers
+2026-04-28 07:54:23 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:23 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:28 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:28 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:33 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:54:33 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:54:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:54:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:54:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:54:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:54:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:54:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:54:33 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:33 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:38 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:38 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:43 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:43 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:48 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-28 07:54:48 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-28 07:54:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-28 07:54:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-28 07:54:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-28 07:54:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-28 07:54:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-28 07:54:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-28 07:54:48 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:48 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:53 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:53 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-28 07:54:58 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-28 07:54:58 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources

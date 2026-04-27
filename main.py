@@ -6,7 +6,8 @@ from typing import Dict
 
 import secrets
 import uvicorn
-from fastapi import FastAPI, HTTPException, Depends, Request
+from fastapi import FastAPI, HTTPException, Depends, Request, WebSocket
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBasic, HTTPBasicCredentials, HTTPBearer, HTTPAuthorizationCredentials
@@ -20,6 +21,7 @@ from middleware.proxy_middleware import ProxyMiddleware
 from api.system import router as system_router
 from api.config import router as config_router
 from utils.auth import router as auth_router
+from utils.progress_manager import progress_manager
 
 
 # 创建FastAPI应用（API网关）
@@ -226,6 +228,64 @@ async def system_info():
             "api_docs": "GET /docs"
         }
     }
+
+
+# ── 进度管理 API ─────────────────────────────────────
+@app.get("/api/v1/tasks/{task_id}/progress")
+async def get_task_progress(task_id: str):
+    """查询任务进度（REST API）"""
+    progress = progress_manager.get_progress(task_id)
+    if not progress:
+        raise HTTPException(status_code=404, detail="任务不存在")
+    return progress
+
+
+@app.get("/api/v1/tasks/active")
+async def get_active_tasks():
+    """获取所有活动任务"""
+    return {"tasks": progress_manager.get_all_active_tasks()}
+
+
+@app.get("/api/v1/tasks/stats")
+async def get_task_stats():
+    """获取任务统计"""
+    return progress_manager.get_task_stats()
+
+
+@app.websocket("/ws/progress/{task_id}")
+async def progress_websocket(websocket: WebSocket, task_id: str):
+    """WebSocket进度推送端点"""
+    await websocket.accept()
+
+    # 检查任务是否存在
+    progress = progress_manager.get_progress(task_id)
+    if not progress:
+        await websocket.send_json({"error": "任务不存在"})
+        await websocket.close()
+        return
+
+    try:
+        # 订阅任务进度
+        queue = await progress_manager.subscribe(task_id)
+
+        while True:
+            progress_data = await queue.get()
+
+            # 发送进度数据
+            await websocket.send_json(progress_data)
+
+            # 任务完成或失败后关闭连接
+            if progress_data["status"] in ["completed", "failed"]:
+                await websocket.close()
+                break
+
+    except Exception as e:
+        from utils.logger import logger
+        logger.error(f"WebSocket错误: {e}")
+        try:
+            await websocket.close()
+        except:
+            pass
 
 
 # 服务器列表

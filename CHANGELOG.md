@@ -9,6 +9,48 @@
 
 ## [Unreleased]
 
+### 🔄 最新实施 (2026-04-28 - 晚间)
+
+#### **WebSocket实时进度系统实施完成** ⭐⭐⭐
+- ✅ **进度管理器**: 通用任务进度跟踪系统
+- ✅ **WebSocket支持**: 实时进度推送功能
+- ✅ **REST API**: 进度查询和统计接口
+- ✅ **PDF进度**: PDF提取器支持进度反馈
+- ✅ **依赖管理**: 完整的requirements.txt配置
+
+**新增组件**:
+- `utils/progress_manager.py` - 进度管理器实现
+- WebSocket端点: `/ws/progress/{task_id}`
+- REST API: `/api/v1/tasks/*` 系列接口
+- 异步任务处理支持
+
+**技术特性**:
+- 任务状态管理 (pending, processing, completed, failed)
+- 实时进度更新 (0-100%)
+- WebSocket订阅机制
+- 自动任务清理 (24小时)
+- 任务统计和监控
+
+**使用方式**:
+```python
+# 同步模式 (默认)
+POST /pdf/extract {"url": "...", "return_task_id": false}
+
+# 异步模式 (启用进度)
+POST /pdf/extract {"url": "...", "return_task_id": true}
+# 返回: {"task_id": "...", "websocket_url": "/ws/progress/..."}
+
+# WebSocket监听进度
+WS /ws/progress/{task_id}
+# REST API查询进度
+GET /api/v1/tasks/{task_id}/progress
+```
+
+**新增文档**:
+- `docs/IMPLEMENTATION_COMPLETE.md` - 实施完成报告
+- `docs/IMPROVEMENT_SUGGESTIONS.md` - 改进建议总览
+- `docs/IMPLEMENTATION_ROADMAP.md` - 详细实施路线图
+
 ### 🎯 计划中
 - Docker 支持
 - 自动恢复机制
@@ -47,6 +89,15 @@
 - ✅ 自动清理所有相关MCP服务器进程
 - ✅ 解决端口冲突导致的启动失败问题
 - ✅ 提供详细的清理日志反馈
+
+**修复的脚本**:
+- `start_safe.sh` - 通用启动脚本（已修复）
+- `start_safe_Mac.sh` - Mac版本启动脚本（已修复）
+
+**问题解决**:
+- 之前只清理主端口，导致MCP服务器端口冲突
+- 现在清理所有可能的端口范围（MCP_PORT 到 MCP_PORT+10）
+- 两个启动脚本都已统一修复
 
 #### **API路径命名优化** ⭐⭐⭐
 - ✅ 二维码API重命名：`/read` → `/qrreader`
