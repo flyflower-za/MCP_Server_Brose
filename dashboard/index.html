@@ -1147,7 +1147,7 @@ const SERVICE_TESTERS = {
     icon: "📱",
     category: "image",
     api: {
-      endpoint: "/qrcode/read",
+      endpoint: "/qrcode/qrreader",
       method: "POST"
     },
     inputs: [
@@ -1155,13 +1155,15 @@ const SERVICE_TESTERS = {
         id: "image_url",
         type: "url",
         label: "二维码图片 URL",
-        placeholder: "https://example.com/qrcode.png"
+        placeholder: "https://example.com/qrcode.png",
+        hint: "使用 /qrcode/qrreader/url 接口"
       },
       {
         id: "image_base64",
         type: "textarea",
         label: "Base64 图片数据",
-        placeholder: "data:image/png;base64,iVBORw0KGgo...",
+        placeholder: "iVBORw0KGgo...",
+        hint: "使用 /qrcode/qrreader/base64 接口",
         rows: 3
       }
     ]
@@ -1830,20 +1832,36 @@ function generateApiEndpoints(id, config, status, currentPort) {
       active: isRunning
     });
   } else if (id === 'qrcode_reader' || prefix === '/qrcode') {
+    // 新API路径：专用接口优先显示
     endpoints.push({
       method: 'POST',
-      url: `${baseUrl}/read`,
-      active: isRunning
+      url: `${baseUrl}/qrreader/url ⭐`,
+      active: isRunning,
+      desc: 'URL专用接口'
     });
     endpoints.push({
       method: 'POST',
-      url: `${baseUrl}/read/batch`,
-      active: isRunning
+      url: `${baseUrl}/qrreader/base64 ⭐`,
+      active: isRunning,
+      desc: 'Base64专用接口'
+    });
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/qrreader`,
+      active: isRunning,
+      desc: '通用接口'
+    });
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/qrreader/batch`,
+      active: isRunning,
+      desc: '批量处理'
     });
     endpoints.push({
       method: 'GET',
       url: `${baseUrl}/health`,
-      active: isRunning
+      active: isRunning,
+      desc: '健康检查'
     });
   }
 
@@ -1866,11 +1884,11 @@ function generateApiEndpoints(id, config, status, currentPort) {
   return endpoints.map(ep => `
     <div class="api-endpoint-item">
       <span class="api-method ${ep.method.toLowerCase()}">${ep.method}</span>
-      <span class="api-url">${ep.url}</span>
+      <span class="api-url">${ep.url}${ep.desc ? ` <span style="color:var(--text-muted);font-size:10px;margin-left:4px;">(${ep.desc})</span>` : ''}</span>
       <span class="api-status-badge ${ep.active ? 'active' : 'inactive'}">
         ${ep.active ? '可用' : '离线'}
       </span>
-      <button class="api-copy-btn" onclick="copyToClipboard('${ep.url}', this)" title="复制URL">
+      <button class="api-copy-btn" onclick="copyToClipboard('${ep.url.replace(' ⭐', '').replace(/ \(.*?\)/, '')}', this)" title="复制URL">
         📋
       </button>
     </div>
@@ -2193,7 +2211,29 @@ async function submitServiceTest(serverId) {
   addLog(`测试 ${testConfig.name}: ${JSON.stringify(requestData).slice(0,50)}...`, 'INFO');
 
   try {
-    const d = await api(testConfig.api.endpoint, testConfig.api.method, requestData);
+    // 智能选择API endpoint（特别针对qrcode_reader）
+    let apiEndpoint = testConfig.api.endpoint;
+    let apiRequestData = {...requestData};
+
+    if (serverId === 'qrcode_reader') {
+      // 检查使用哪种输入方式
+      if (requestData.image_url && !requestData.image_base64) {
+        // 使用URL专用接口
+        apiEndpoint = '/qrcode/qrreader/url';
+        apiRequestData = {url: requestData.image_url};
+        addLog('使用URL专用接口', 'INFO');
+      } else if (requestData.image_base64 && !requestData.image_url) {
+        // 使用Base64专用接口
+        apiEndpoint = '/qrcode/qrreader/base64';
+        apiRequestData = {base64_data: requestData.image_base64};
+        addLog('使用Base64专用接口', 'INFO');
+      } else {
+        // 使用通用接口
+        addLog('使用通用接口', 'INFO');
+      }
+    }
+
+    const d = await api(apiEndpoint, testConfig.api.method, apiRequestData);
     displayTestResult(serverId, d);
   } catch(e) {
     displayTestError(serverId, e);
@@ -2420,7 +2460,7 @@ async function submitQRCode() {
   addLog(`二维码识别: ${url ? url.slice(0,60) : 'Base64数据'}…`, 'INFO');
 
   try {
-    const d = await api('/qrcode/read', 'POST', requestData);
+    const d = await api('/qrcode/qrreader', 'POST', requestData);
     if (d.success) {
       res.className = 'result-box visible success';
       const metadataStr = d.metadata

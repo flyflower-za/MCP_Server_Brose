@@ -14,6 +14,8 @@ from PIL import Image
 
 from mcp_servers.qrcode_reader.models import (
     QRCodeReadRequest,
+    QRCodeURLRequest,
+    QRCodeBase64Request,
     QRCodeReadResponse,
     BatchQRCodeReadRequest,
     BatchQRCodeReadResponse
@@ -203,21 +205,83 @@ def process_qrcode_request(request: QRCodeReadRequest) -> Dict[str, Any]:
         }
 
 
-@router.post("/read", response_model=QRCodeReadResponse)
+@router.post("/qrreader", response_model=QRCodeReadResponse)
 async def read_qrcode(request: QRCodeReadRequest):
     """
-    识别单个二维码
+    识别单个二维码（通用接口）
 
     支持三种输入方式：
-    1. 图片URL (image_url)
-    2. Base64编码的图片数据 (image_base64)
+    1. 图片URL (image_url) - 自动从URL下载图片
+    2. Base64编码的图片数据 (image_base64) - 直接解码base64数据
     3. 文本形式 (text_input) - 用于特殊格式的二维码描述
+
+    优先级: image_url > image_base64 > text_input
     """
     result = process_qrcode_request(request)
     return QRCodeReadResponse(**result)
 
 
-@router.post("/read/batch", response_model=BatchQRCodeReadResponse)
+@router.post("/qrreader/url", response_model=QRCodeReadResponse)
+async def read_qrcode_from_url(request: QRCodeURLRequest):
+    """
+    从URL识别二维码（专用接口）
+
+    专门用于处理图片URL输入的二维码识别
+
+    Args:
+        request: 包含url字段的请求体
+
+    Returns:
+        二维码识别结果
+    """
+    try:
+        logger.info(f"从URL识别二维码: {request.url}")
+        image = download_image_from_url(request.url)
+        result = read_qrcode_from_image(image)
+        logger.info(f"二维码识别{'成功' if result['success'] else '失败'}")
+        return QRCodeReadResponse(**result)
+    except Exception as e:
+        logger.error(f"URL二维码识别失败: {str(e)}")
+        return QRCodeReadResponse(
+            success=False,
+            qr_data=None,
+            format=None,
+            error=f"URL二维码识别失败: {str(e)}",
+            metadata=None
+        )
+
+
+@router.post("/qrreader/base64", response_model=QRCodeReadResponse)
+async def read_qrcode_from_base64(request: QRCodeBase64Request):
+    """
+    从Base64数据识别二维码（专用接口）
+
+    专门用于处理Base64编码图片数据的二维码识别
+
+    Args:
+        request: 包含base64_data字段的请求体
+
+    Returns:
+        二维码识别结果
+    """
+    try:
+        logger.info("从Base64数据识别二维码")
+        image = decode_base64_image(request.base64_data)
+        result = read_qrcode_from_image(image)
+        logger.info(f"二维码识别{'成功' if result['success'] else '失败'}")
+        return QRCodeReadResponse(**result)
+    except Exception as e:
+        logger.error(f"Base64二维码识别失败: {str(e)}")
+        return QRCodeReadResponse(
+            success=False,
+            qr_data=None,
+            format=None,
+            error=f"Base64二维码识别失败: {str(e)}",
+            metadata=None
+        )
+
+
+@router.post("/qrreader/batch", response_model=BatchQRCodeReadResponse)
 async def read_batch_qrcodes(request: BatchQRCodeReadRequest):
     """
     批量识别多个二维码
@@ -259,13 +323,16 @@ def get_info():
         "version": "1.0.0",
         "description": "从图片URL或Base64数据中识别二维码内容",
         "endpoints": [
-            {"path": "/qrcode/read", "method": "POST", "description": "识别单个二维码"},
-            {"path": "/qrcode/read/batch", "method": "POST", "description": "批量识别二维码"},
+            {"path": "/qrcode/qrreader", "method": "POST", "description": "识别单个二维码（通用接口）"},
+            {"path": "/qrcode/qrreader/url", "method": "POST", "description": "从URL识别二维码（专用接口）"},
+            {"path": "/qrcode/qrreader/base64", "method": "POST", "description": "从Base64数据识别二维码（专用接口）"},
+            {"path": "/qrcode/qrreader/batch", "method": "POST", "description": "批量识别二维码"},
             {"path": "/qrcode/health", "method": "GET", "description": "健康检查"}
         ],
         "capabilities": [
-            "支持图片URL输入",
-            "支持Base64图片数据输入",
+            "支持图片URL输入（专用接口）",
+            "支持Base64图片数据输入（专用接口）",
+            "支持通用接口（自动识别输入类型）",
             "支持文本形式输入",
             "批量处理",
             "返回二维码位置信息"

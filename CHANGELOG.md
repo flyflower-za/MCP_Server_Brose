@@ -17,6 +17,100 @@
 
 ---
 
+## [1.0.3] - 2026-04-28
+
+### ✨ 新增功能
+
+#### **Dashboard统一测试中心** ⭐⭐⭐
+- ✅ 配置驱动的测试面板架构，解决扩展性问题
+- ✅ 选项卡界面设计，支持无限MCP服务器扩展
+- ✅ 智能接口选择，自动选择最优API端点
+- ✅ 统一的结果显示和错误处理机制
+- ✅ 动态表单生成，支持多种输入类型
+
+#### **二维码扫描器专用API接口** ⭐⭐⭐
+- ✅ 新增URL专用接口：`POST /qrcode/qrreader/url`
+- ✅ 新增Base64专用接口：`POST /qrcode/qrreader/base64`
+- ✅ 保留通用接口向后兼容：`POST /qrcode/qrreader`
+- ✅ API语义更清晰，请求体更简洁
+
+#### **Dashboard认证开关配置** ⭐⭐
+- ✅ 新增`DASHBOARD_AUTH_ENABLED`环境变量配置
+- ✅ 支持启用/禁用密码认证模式
+- ✅ 系统API返回认证配置状态
+- ✅ Dashboard智能初始化流程
+
+### 🔧 改进优化
+
+#### **启动脚本端口管理** ⭐⭐⭐
+- ✅ 扩展端口清理范围：51234-51244
+- ✅ 自动清理所有相关MCP服务器进程
+- ✅ 解决端口冲突导致的启动失败问题
+- ✅ 提供详细的清理日志反馈
+
+#### **API路径命名优化** ⭐⭐⭐
+- ✅ 二维码API重命名：`/read` → `/qrreader`
+- ✅ 更直观的API路径命名规范
+- ✅ Dashboard显示完整API端点列表
+- ✅ 新增接口描述和使用提示
+
+#### **Dashboard健壮性提升** ⭐⭐
+- ✅ 修复DOM元素null访问错误
+- ✅ 添加全面的元素存在性检查
+- ✅ 优化认证流程的错误处理
+- ✅ 改进登录/登出逻辑
+
+#### **用户体验优化** ⭐⭐
+- ✅ API端点卡片显示功能描述
+- ✅ 推荐接口用⭐标记
+- ✅ 优化输入框提示信息
+- ✅ 改进复制地址功能
+
+### 🐛 Bug修复
+
+#### **关键问题修复** ⭐⭐⭐
+- ✅ 修复Dashboard无法加载状态的DOM访问错误
+- ✅ 解决JavaScript语法错误（多余的大括号）
+- ✅ 修复认证禁用时的初始化问题
+- ✅ 解决端口冲突导致的MCP服务器启动失败
+
+### 📝 文档更新
+
+#### **新增文档**
+- ✅ `docs/QR_API_IMPROVEMENTS.md` - 二维码API改进详解
+- ✅ `docs/DASHBOARD_API_UPDATE.md` - Dashboard更新说明
+- ✅ `docs/DASHBOARD_IMPROVEMENTS.md` - Dashboard优化建议
+- ✅ `docs/DASHBOARD_SCALABLE_DESIGN.md` - 可扩展架构设计
+
+#### **更新文档**
+- ✅ `CHANGELOG.md` - 完整记录所有变更
+- ✅ `docs/MCP_SERVER_DEVELOPMENT.md` - MCP服务器开发指南
+- ✅ `docs/QR_CODE_READER.md` - 二维码识别器文档
+
+### 🔄 迁移指南
+
+#### **从1.0.2升级到1.0.3**
+
+**无破坏性变更**:
+- 所有旧API路径仍然可用
+- Dashboard向后兼容
+- 现有配置无需修改
+
+**建议采用的改进**:
+1. 使用新的专用API接口（URL和Base64）
+2. 启用Dashboard统一测试中心
+3. 配置认证开关根据需求调整
+4. 使用更新后的启动脚本
+
+**可选优化**:
+```bash
+# 建议更新的配置项
+DASHBOARD_AUTH_ENABLED=true/false  # 根据需求设置
+DASHBOARD_PASSWORD=your_secure_password  # 修改默认密码
+```
+
+---
+
 ## [1.0.2] - 2026-04-27
 
 ### ✨ 新增功能
