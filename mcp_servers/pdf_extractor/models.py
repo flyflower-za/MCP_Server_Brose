@@ -9,6 +9,7 @@ class PDFExtractRequest(BaseModel):
     """PDF提取请求"""
     url: str = Field(..., description="PDF文件的URL地址")
     include_metadata: bool = Field(default=True, description="是否包含元数据")
+    return_task_id: bool = Field(default=False, description="是否返回任务ID以支持异步进度查询")
 
 
 class PDFExtractResponse(BaseModel):

@@ -66,6 +66,7 @@ class Settings:
     DASHBOARD_USERNAME: str = os.getenv("DASHBOARD_USERNAME", "admin")
     DASHBOARD_PASSWORD: str = os.getenv("DASHBOARD_PASSWORD", "brose123")  # 建议在.env中修改
     DASHBOARD_AUTH_ENABLED: bool = os.getenv("DASHBOARD_AUTH_ENABLED", "True").lower() == "true"  # 是否启用认证
+    DASHBOARD_REFRESH_INTERVAL: int = int(os.getenv("DASHBOARD_REFRESH_INTERVAL", "30"))  # 自动刷新间隔(秒)
 
     # JWT Token 配置
     JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "")

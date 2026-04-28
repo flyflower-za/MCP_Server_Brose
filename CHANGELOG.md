@@ -51,6 +51,66 @@ GET /api/v1/tasks/{task_id}/progress
 - `docs/IMPROVEMENT_SUGGESTIONS.md` - 改进建议总览
 - `docs/IMPLEMENTATION_ROADMAP.md` - 详细实施路线图
 
+#### **Dashboard测试模块Bug修复** ⭐⭐⭐
+- ✅ **QR Code测试结果持久化**: 修复测试结果在页面刷新时消失的问题
+- ✅ **PDF提取器模型修复**: 修复PDF测试模块无法使用的根本原因
+- ✅ **结果状态保存**: 实现测试结果的自动保存和恢复机制
+- ✅ **服务稳定性提升**: 确保所有测试模块功能正常可用
+
+**修复的问题**:
+1. **QR Code测试结果消失**
+   - 原因：每次页面刷新时，`generateTestPanels()`函数会清空所有测试内容
+   - 修复：添加结果保存和恢复机制，维持测试状态持久化
+   - 效果：测试结果现在会一直保留，直到用户手动清除
+
+2. **PDF测试模块无法使用**
+   - 原因：`PDFExtractRequest`模型缺少`return_task_id`字段属性
+   - 修复：在模型中添加`return_task_id: bool = Field(default=False)`字段
+   - 效果：PDF提取功能现在完全可用，支持同步和异步模式
+
+**技术改进**:
+- JavaScript状态管理：测试结果的序列化和反序列化
+- Pydantic模型完整性：补全缺失的请求字段定义
+- 用户体验优化：测试结果不再意外消失
+
+**验证结果**:
+- ✅ QR Code识别功能正常，结果持久化保存
+- ✅ PDF提取功能正常，成功提取PDF内容
+- ✅ 测试模块在页面刷新后保持状态
+- ✅ 所有MCP服务正常运行
+
+**修改的文件**:
+- `dashboard/index.html` - 添加测试结果持久化功能
+- `mcp_servers/pdf_extractor/models.py` - 补全缺失的模型字段
+
+#### **Dashboard自动刷新间隔配置** ⭐⭐
+- ✅ **环境变量控制**: 通过`DASHBOARD_REFRESH_INTERVAL`参数控制自动刷新间隔
+- ✅ **动态配置读取**: Dashboard启动时从API获取刷新间隔配置
+- ✅ **灵活配置**: 支持15-300秒间隔，默认30秒
+- ✅ **API扩展**: 新增`/api/v1/system/dashboard-config`端点
+
+**新增配置**:
+- `DASHBOARD_REFRESH_INTERVAL` - 自动刷新间隔（秒），默认30秒
+- 最小建议值：15秒
+- 最大建议值：300秒（5分钟）
+
+**技术改进**:
+- Dashboard配置动态化，不再硬编码刷新间隔
+- 系统API返回完整Dashboard配置信息
+- 支持运行时配置调整
+
+**修改的文件**:
+- `.env` - 添加刷新间隔配置（当前设置：120秒）
+- `.env.example` - 添加配置示例
+- `config/settings.py` - 添加配置项定义
+- `api/system.py` - 新增dashboard配置API
+- `dashboard/index.html` - 实现动态配置读取
+
+**当前配置**:
+- 自动刷新间隔：120秒（2分钟）
+- 认证状态：已启用
+- Dashboard用户：admin
+
 ### 🎯 计划中
 - Docker 支持
 - 自动恢复机制

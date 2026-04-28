@@ -1108,7 +1108,8 @@ let servers     = {};   // { [id]: { config, status, portConfig } }
 let pdfOnline   = false;
 let qrcodeOnline = false;
 let pageStart   = Date.now();
-let autoTimer   = 15;
+let autoTimer   = 30;  // 默认值，会从API配置覆盖
+  let refreshInterval = 30;  // 自动刷新间隔（秒），从API获取
 let authToken   = localStorage.getItem('mcp_hub_token') || null;
 let currentUsername = localStorage.getItem('mcp_hub_username') || null;
 let authEnabled = true;  // 认证是否启用，从系统API获取
@@ -1368,6 +1369,22 @@ function logout() {
 }
 
 // ── fetch ──────────────────────────────────────
+async function fetchDashboardConfig() {
+  try {
+    const d = await api('/api/v1/system/dashboard-config');
+    refreshInterval = d.refresh_interval || 30;
+    autoTimer = refreshInterval;
+    addLog(`自动刷新间隔: ${refreshInterval}秒`, 'INFO');
+    return d;
+  } catch(e) {
+    addLog(`获取Dashboard配置失败: ${e.message}`, 'ERROR');
+    // 使用默认值
+    refreshInterval = 30;
+    autoTimer = 30;
+    return null;
+  }
+}
+
 async function fetchHealth() {
   try {
     const d = await api('/health');
@@ -2047,6 +2064,17 @@ function generateTestPanels() {
     return;
   }
 
+  // 保存现有的测试结果
+  const savedResults = {};
+  document.querySelectorAll('[id$="-result"]').forEach(resultDiv => {
+    const serverId = resultDiv.id.replace('-result', '');
+    savedResults[serverId] = {
+      html: resultDiv.innerHTML,
+      className: resultDiv.className,
+      style: resultDiv.style.cssText
+    };
+  });
+
   tabsContainer.innerHTML = '';
   contentContainer.innerHTML = '';
 
@@ -2077,6 +2105,16 @@ function generateTestPanels() {
     if (firstTab) {
       currentTestTab = serverId;
       firstTab = false;
+    }
+  }
+
+  // 恢复测试结果
+  for (const [serverId, resultData] of Object.entries(savedResults)) {
+    const resultDiv = document.getElementById(`${serverId}-result`);
+    if (resultDiv && resultData.html) {
+      resultDiv.innerHTML = resultData.html;
+      resultDiv.className = resultData.className;
+      resultDiv.style.cssText = resultData.style;
     }
   }
 
@@ -2494,8 +2532,8 @@ async function refreshAll() {
   finally { btn.classList.remove('spinning'); resetCountdown(); }
 }
 function resetCountdown() {
-  autoTimer = 15;
-  document.getElementById('auto-refresh-countdown').textContent = '15s';
+  autoTimer = refreshInterval;
+  document.getElementById('auto-refresh-countdown').textContent = refreshInterval + 's';
 }
 
 // ── init ───────────────────────────────────────
@@ -2510,6 +2548,9 @@ function resetCountdown() {
   try {
     const systemInfo = await api('/api/v1/system');
     authEnabled = systemInfo.auth_enabled !== undefined ? systemInfo.auth_enabled : true;
+
+    // 获取Dashboard配置（包括自动刷新间隔）
+    await fetchDashboardConfig();
 
     if (!authEnabled) {
       addLog('认证已禁用，直接访问', 'INFO');

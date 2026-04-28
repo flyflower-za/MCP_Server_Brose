@@ -90,6 +90,26 @@ async def get_system_info() -> Dict[str, Any]:
         "host": settings.HOST,
         "port": settings.PORT,
         "log_level": settings.LOG_LEVEL,
+        "dashboard": {
+            "auth_enabled": settings.DASHBOARD_AUTH_ENABLED,
+            "refresh_interval": settings.DASHBOARD_REFRESH_INTERVAL,
+            "username": settings.DASHBOARD_USERNAME,
+        }
+    }
+
+
+@router.get("/dashboard-config")
+async def get_dashboard_config() -> Dict[str, Any]:
+    """
+    获取Dashboard配置
+
+    Returns:
+        Dashboard相关配置（认证、刷新间隔等）
+    """
+    return {
+        "auth_enabled": settings.DASHBOARD_AUTH_ENABLED,
+        "refresh_interval": settings.DASHBOARD_REFRESH_INTERVAL,
+        "username": settings.DASHBOARD_USERNAME,
     }
 
 
