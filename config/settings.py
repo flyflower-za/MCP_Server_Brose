@@ -73,6 +73,11 @@ class Settings:
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = os.getenv("JWT_ACCESS_TOKEN_EXPIRE_MINUTES", 1440)  # 24小时
 
+    # MCP服务器模块启用配置（通过环境变量控制）
+    ENABLE_PDF_EXTRACTOR: bool = os.getenv("ENABLE_PDF_EXTRACTOR", "True").lower() == "true"
+    ENABLE_QRCODE_READER: bool = os.getenv("ENABLE_QRCODE_READER", "True").lower() == "true"
+    ENABLE_PDF_SIGNATURE_VERIFIER: bool = os.getenv("ENABLE_PDF_SIGNATURE_VERIFIER", "False").lower() == "true"  # 默认禁用 - macOS兼容性问题
+
     @classmethod
     def setup(cls):
         """初始化配置"""
@@ -91,7 +96,7 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
     "pdf_extractor": {
         "name": "PDF Extractor",
         "description": "Get PDF content from URLs",
-        "enabled": True,
+        "enabled": settings.ENABLE_PDF_EXTRACTOR,
         "version": "1.0.0",
         "module": "mcp_servers.pdf_extractor.server",
         "prefix": "/pdf",
@@ -100,7 +105,7 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
     "qrcode_reader": {
         "name": "QR Code Reader",
         "description": "Extract content from QR codes in images",
-        "enabled": True,
+        "enabled": settings.ENABLE_QRCODE_READER,
         "version": "1.0.0",
         "module": "mcp_servers.qrcode_reader.server",
         "prefix": "/qrcode",
@@ -109,7 +114,7 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
     "pdf_signature_verifier": {
         "name": "PDF Signature Verifier",
         "description": "Verify digital signatures in PDF files",
-        "enabled": False,  # 临时禁用 - macOS 安全机制阻止启动
+        "enabled": settings.ENABLE_PDF_SIGNATURE_VERIFIER,  # 通过环境变量控制，默认禁用
         "version": "1.0.0",
         "module": "mcp_servers.pdf_signature_verifier.server",
         "prefix": "/signature",

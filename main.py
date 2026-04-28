@@ -146,25 +146,35 @@ class ServerActionResponse(BaseModel):
 
 # 启动所有服务器
 def start_all_servers():
-    """启动所有已启用的MCP服务器"""
+    """启动所有已启用的MCP服务器（异步启动，不阻塞API网关）"""
+    import threading
+
     enabled_servers = get_enabled_servers()
     logger.info(f"开始启动MCP服务器，共 {len(enabled_servers)} 个已启用")
 
-    started_count = 0
-    failed_servers = []
+    def start_servers_async():
+        """在后台线程中启动服务器"""
+        started_count = 0
+        failed_servers = []
 
-    for server_id, server_config in enabled_servers.items():
-        if process_manager.start_server(server_id, server_config):
-            started_count += 1
-        else:
-            failed_servers.append(server_id)
+        for server_id, server_config in enabled_servers.items():
+            if process_manager.start_server(server_id, server_config):
+                started_count += 1
+            else:
+                failed_servers.append(server_id)
 
-    logger.info(f"MCP服务器启动完成: {started_count}/{len(enabled_servers)} 成功")
+        logger.info(f"MCP服务器启动完成: {started_count}/{len(enabled_servers)} 成功")
 
-    if failed_servers:
-        logger.warning(f"启动失败的服务器: {', '.join(failed_servers)}")
+        if failed_servers:
+            logger.warning(f"启动失败的服务器: {', '.join(failed_servers)}")
 
-    return started_count, failed_servers
+    # 在后台线程中启动服务器，不阻塞API网关
+    thread = threading.Thread(target=start_servers_async, daemon=True)
+    thread.start()
+
+    logger.info("MCP服务器正在后台启动...")
+
+    return len(enabled_servers), []  # 返回预计启动数量，空失败列表（因为异步）
 
 
 # Dashboard 控制台

@@ -54,3 +54,6 @@ archive/
 config/*.json
 !config/*.example
 config/backups/*.bak
+
+# Backup config files
+config.env.bak
