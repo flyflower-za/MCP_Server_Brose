@@ -111,6 +111,74 @@ GET /api/v1/tasks/{task_id}/progress
 - 认证状态：已启用
 - Dashboard用户：admin
 
+#### **PDF签章验证器MCP服务器** ⭐⭐⭐
+- ✅ **数字签章检测**: 自动识别PDF文件中的数字签章和电子签名
+- ✅ **签名验证**: 验证PDF结构完整性和签章存在性
+- ✅ **详细报告**: 提供全面的签章验证报告和检查项
+- ✅ **批量处理**: 支持同时验证多个PDF文件的签章
+
+**新增模块**:
+- `mcp_servers/pdf_signature_verifier/` - PDF签章验证器模块
+- API端点: `/signature/verify`, `/signature/verify/url`, `/signature/verify/batch`
+
+**核心功能**:
+- 检测PDF中的数字签章字段和签注
+- 验证PDF结构完整性和一致性
+- 检查元数据和签章详细信息
+- 支持加密PDF文件的签章验证
+- 返回验证检查报告和摘要统计
+
+**验证检查项**:
+- 签章存在性检查 (Signature Presence)
+- PDF完整性验证 (PDF Integrity)
+- 元数据一致性检查 (Metadata Consistency)
+- 表单结构检查 (Form Structure)
+- 加密状态检查 (Encryption Status)
+
+**API接口**:
+```bash
+# 验证PDF签章
+POST /signature/verify
+{
+  "url": "PDF文件URL",
+  "detailed_report": true
+}
+
+# 返回结果
+{
+  "success": true,
+  "has_signature": true,
+  "signature_count": 1,
+  "validation_result": {
+    "signature_fields": [...],
+    "validation_checks": [...],
+    "validation_summary": {...}
+  }
+}
+```
+
+**新增依赖**:
+- `endesive>=2.19.0` - PDF数字签名验证
+- `cryptography>=47.0.0` - 加密库支持
+- `paramiko>=4.0.0` - SSH协议支持
+- `asn1crypto>=1.5.1` - ASN.1解析
+- `pykcs11>=1.5.18` - PKCS#11接口
+- `bcrypt>=5.0.0` - 密码哈希
+
+**实际测试**:
+- ✅ 成功检测SGS测试报告中的数字签章
+- ✅ 识别签章详细信息：签名者、原因、位置、日期
+- ✅ 验证PDF结构完整性和加密状态
+- ✅ 生成详细的验证报告和摘要
+
+**修改的文件**:
+- `mcp_servers/pdf_signature_verifier/__init__.py` - 模块初始化
+- `mcp_servers/pdf_signature_verifier/models.py` - 数据模型定义
+- `mcp_servers/pdf_signature_verifier/server.py` - 服务实现
+- `config/settings.py` - 添加新模块配置
+- `dashboard/index.html` - 添加签章验证测试面板
+- `requirements.txt` - 添加新依赖库
+
 ### 🎯 计划中
 - Docker 支持
 - 自动恢复机制

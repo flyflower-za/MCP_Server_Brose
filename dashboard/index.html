@@ -915,7 +915,7 @@
         <div class="panel-header" onclick="togglePanel('panel-test-center')">
           <div class="panel-title"><span>🧪</span> 测试中心</div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span id="test-services-count" style="font-size:10px;padding:3px 8px;border-radius:999px;background:var(--accent-blue);color:white;">2服务</span>
+            <span id="test-services-count" style="font-size:10px;padding:3px 8px;border-radius:999px;background:var(--accent-blue);color:white;">3服务</span>
             <div class="panel-collapse-indicator" title="点击展开/折叠">▼</div>
           </div>
         </div>
@@ -1166,6 +1166,31 @@ const SERVICE_TESTERS = {
         placeholder: "iVBORw0KGgo...",
         hint: "使用 /qrcode/qrreader/base64 接口",
         rows: 3
+      }
+    ]
+  }
+  ,
+  pdf_signature_verifier: {
+    name: "PDF签章验证测试",
+    icon: "🔐",
+    category: "security",
+    api: {
+      endpoint: "/signature/verify",
+      method: "POST"
+    },
+    inputs: [
+      {
+        id: "url",
+        type: "url",
+        label: "PDF文件URL",
+        placeholder: "https://example.com/signed_document.pdf",
+        required: true
+      },
+      {
+        id: "detailed_report",
+        type: "checkbox",
+        label: "详细报告",
+        default: true
       }
     ]
   }
@@ -1518,6 +1543,7 @@ function renderServers() {
   updateStats(running, total);
   updatePDFBadge();
   updateQRCodeBadge();
+  updateSignatureBadge();
 
   // 恢复折叠状态（延迟执行以确保DOM已更新）
   setTimeout(restoreCollapseState, 50);
@@ -1825,6 +1851,16 @@ function updateQRCodeBadge() {
   b.textContent = qrcodeOnline ? '在线' : '离线';
 }
 
+function updateSignatureBadge() {
+  const b = document.getElementById('signature-server-badge');
+  if (!b) return; // 如果元素不存在则跳过
+  const signatureOnline = servers.pdf_signature_verifier?.status?.status === 'running';
+  b.style.cssText = signatureOnline
+    ? 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);color:var(--accent-green)'
+    : 'font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--accent-red)';
+  b.textContent = signatureOnline ? '在线' : '离线';
+}
+
 // ── generate api endpoints ──────────────────────
 function generateApiEndpoints(id, config, status, currentPort) {
   const isRunning = status?.status === 'running';
@@ -1873,6 +1909,32 @@ function generateApiEndpoints(id, config, status, currentPort) {
       url: `${baseUrl}/qrreader/batch`,
       active: isRunning,
       desc: '批量处理'
+    });
+    endpoints.push({
+      method: 'GET',
+      url: `${baseUrl}/health`,
+      active: isRunning,
+      desc: '健康检查'
+    });
+  } else if (id === 'pdf_signature_verifier' || prefix === '/signature') {
+    // PDF签章验证器API端点
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/verify`,
+      active: isRunning,
+      desc: '验证PDF签章'
+    });
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/verify/url`,
+      active: isRunning,
+      desc: 'URL专用接口'
+    });
+    endpoints.push({
+      method: 'POST',
+      url: `${baseUrl}/verify/batch`,
+      active: isRunning,
+      desc: '批量验证'
     });
     endpoints.push({
       method: 'GET',

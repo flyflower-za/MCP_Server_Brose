@@ -106,6 +106,15 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
         "prefix": "/qrcode",
         "tags": ["qrcode", "image", "reader", "barcode"]
     },
+    "pdf_signature_verifier": {
+        "name": "PDF Signature Verifier",
+        "description": "Verify digital signatures in PDF files",
+        "enabled": True,
+        "version": "1.0.0",
+        "module": "mcp_servers.pdf_signature_verifier.server",
+        "prefix": "/signature",
+        "tags": ["pdf", "signature", "verification", "security"]
+    },
     # 可以在这里添加更多的MCP服务器
     # "web_scraper": {
     #     "name": "Web Scraper",

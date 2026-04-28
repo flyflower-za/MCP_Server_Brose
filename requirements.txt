@@ -53,3 +53,11 @@ python-multipart>=0.0.6    # 支持表单数据上传（FastAPI需要）
 # 安全和认证
 # ───────────────────────────────────────
 PyJWT>=2.8.0               # JWT Token 支持
+
+# PDF数字签章验证依赖
+endesive>=2.19.0          # PDF数字签名验证
+cryptography>=47.0.0      # 加密库支持
+paramiko>=4.0.0          # SSH协议支持
+asn1crypto>=1.5.1         # ASN.1解析
+pykcs11>=1.5.18          # PKCS#11接口
+bcrypt>=5.0.0             # 密码哈希
