@@ -1243,10 +1243,15 @@ async function api(path, method = 'GET', body = null) {
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(`${HUB_BASE}${path}`, opts);
 
-  // 处理 401 未授权
+  // 处理 401 未授权 - 但在认证禁用时不自动登出
   if (res.status === 401) {
-    logout();
-    throw new Error('未授权，请重新登录');
+    // 只有在认证启用且已登录时才自动登出
+    if (authEnabled && authToken) {
+      logout();
+      throw new Error('登录已过期，请重新登录');
+    } else {
+      throw new Error('未授权，请先登录');
+    }
   }
 
   if (!res.ok) {
@@ -1358,8 +1363,10 @@ async function performLogin() {
     addLog(`用户 ${username} 已登录`, 'SUCCESS');
     toast('登录成功', 'success');
 
-    // 开始加载数据
-    refreshAll();
+    // 延迟加载数据，确保 token 完全生效
+    setTimeout(() => {
+      refreshAll();
+    }, 500);
   } catch(e) {
     if (errorDiv) {
       errorDiv.textContent = e.message;
@@ -2619,16 +2626,37 @@ function resetCountdown() {
       // 隐藏登录模态框（如果存在）
       document.getElementById('login-modal').classList.remove('active');
     } else {
-      // 检查认证状态
-      if (!checkAuth()) {
-        // 未登录，等待用户登录
-        return;
+      // 检查是否已有有效的认证信息
+      if (authToken && currentUsername) {
+        // 已登录，直接更新UI并加载数据
+        addLog(`检测到已登录用户: ${currentUsername}`, 'INFO');
+        const userInfoEl = document.getElementById('user-info');
+        if (userInfoEl) {
+          userInfoEl.style.display = 'flex';
+        }
+        const usernameDisplayEl = document.getElementById('username-display');
+        if (usernameDisplayEl) {
+          usernameDisplayEl.textContent = currentUsername;
+        }
+        // 隐藏登录框
+        const loginModalEl = document.getElementById('login-modal');
+        if (loginModalEl) {
+          loginModalEl.classList.remove('active');
+        }
+      } else {
+        // 未登录，显示登录框
+        addLog('需要登录才能访问', 'INFO');
+        checkAuth();
+        return; // 等待用户登录
       }
     }
   } catch(e) {
     addLog(`获取系统配置失败: ${e.message}`, 'ERROR');
-    // 默认需要认证
-    if (!checkAuth()) {
+    // 出错时，如果已有认证信息则继续，否则显示登录
+    if (authToken && currentUsername) {
+      addLog('使用缓存的认证信息', 'INFO');
+    } else if (authEnabled) {
+      checkAuth();
       return;
     }
   }

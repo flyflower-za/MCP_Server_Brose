@@ -47,23 +47,27 @@ class ProcessManager:
         self.port_allocator = get_port_allocator()
         self.max_restart = 3  # 最大重启次数
 
-    def start_server(self, server_id: str, server_config: dict) -> bool:
+    def start_server(self, server_id: str, server_config: dict, retry_count: int = 0) -> bool:
         """
-        启动服务器进程
+        启动服务器进程（支持重试）
 
         Args:
             server_id: 服务器ID
             server_config: 服务器配置
+            retry_count: 当前重试次数（内部使用）
 
         Returns:
             是否成功启动
         """
+        max_retries = settings.PROCESS_MAX_RESTART
+        retry_delay = settings.PROCESS_START_TIMEOUT
+
         try:
             # 检查是否已经在运行
             if server_id in self.processes:
                 if self._is_process_running(self.processes[server_id].pid):
                     logger.warning(f"服务器 {server_id} 已在运行中")
-                    return False
+                    return True  # 已运行也算成功
 
             # 分配端口（优先使用固定端口配置）
             fixed_port = get_fixed_port(server_id)
@@ -76,17 +80,47 @@ class ProcessManager:
                     )
                     if port:
                         self.port_allocator.release_port(port)
+
+                    # 端口分配失败，尝试重试
+                    if retry_count < max_retries:
+                        logger.info(f"重试启动服务器 {server_id} ({retry_count + 1}/{max_retries})")
+                        time.sleep(retry_delay)
+                        return self.start_server(server_id, server_config, retry_count + 1)
                     return False
             else:
                 port = self.port_allocator.allocate_port()
             if port is None:
                 logger.error(f"无法为服务器 {server_id} 分配端口")
+
+                # 端口分配失败，尝试重试
+                if retry_count < max_retries:
+                    logger.info(f"重试启动服务器 {server_id} ({retry_count + 1}/{max_retries})")
+                    time.sleep(retry_delay)
+                    return self.start_server(server_id, server_config, retry_count + 1)
                 return False
 
             # 启动进程
             pid = self._start_process(server_id, server_config, port)
             if pid is None:
                 self.port_allocator.release_port(port)
+
+                # 进程启动失败，尝试重试
+                if retry_count < max_retries:
+                    logger.info(f"重试启动服务器 {server_id} ({retry_count + 1}/{max_retries})")
+                    time.sleep(retry_delay)
+                    return self.start_server(server_id, server_config, retry_count + 1)
+                return False
+
+            # 验证进程是否真正启动
+            if not self._is_process_running(pid):
+                logger.error(f"服务器 {server_id} 进程启动后立即退出 (PID: {pid})")
+                self.port_allocator.release_port(port)
+
+                # 进程启动失败，尝试重试
+                if retry_count < max_retries:
+                    logger.info(f"重试启动服务器 {server_id} ({retry_count + 1}/{max_retries})")
+                    time.sleep(retry_delay)
+                    return self.start_server(server_id, server_config, retry_count + 1)
                 return False
 
             # 记录进程信息
@@ -102,6 +136,12 @@ class ProcessManager:
 
         except Exception as e:
             logger.error(f"启动服务器 {server_id} 失败: {str(e)}")
+
+            # 发生异常，尝试重试
+            if retry_count < max_retries:
+                logger.info(f"重试启动服务器 {server_id} ({retry_count + 1}/{max_retries})")
+                time.sleep(retry_delay)
+                return self.start_server(server_id, server_config, retry_count + 1)
             return False
 
     def stop_server(self, server_id: str, force: bool = False) -> bool:
@@ -368,6 +408,122 @@ class ProcessManager:
             return psutil.pid_exists(pid) and psutil.Process(pid).is_running()
         except Exception:
             return False
+
+    def health_check(self, server_id: str) -> dict:
+        """
+        执行服务器健康检查
+
+        Args:
+            server_id: 服务器ID
+
+        Returns:
+            健康检查结果
+        """
+        if server_id not in self.processes:
+            return {
+                "server_id": server_id,
+                "status": "not_running",
+                "healthy": False,
+                "message": "服务器未运行"
+            }
+
+        process_info = self.processes[server_id]
+        is_running = self._is_process_running(process_info.pid)
+
+        if not is_running:
+            return {
+                "server_id": server_id,
+                "status": "dead",
+                "healthy": False,
+                "message": f"进程已停止 (PID: {process_info.pid})",
+                "pid": process_info.pid,
+                "port": process_info.port
+            }
+
+        # 检查进程是否可访问（可选：尝试连接端口）
+        try:
+            import socket
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.settimeout(1)
+            result = sock.connect_ex(('localhost', process_info.port))
+            sock.close()
+
+            port_accessible = (result == 0)
+        except Exception:
+            port_accessible = False
+
+        if not port_accessible:
+            return {
+                "server_id": server_id,
+                "status": "unhealthy",
+                "healthy": False,
+                "message": f"进程运行但端口不可访问 (Port: {process_info.port})",
+                "pid": process_info.pid,
+                "port": process_info.port
+            }
+
+        return {
+            "server_id": server_id,
+            "status": "healthy",
+            "healthy": True,
+            "message": "服务器运行正常",
+            "pid": process_info.pid,
+            "port": process_info.port,
+            "uptime_seconds": (datetime.now() - process_info.start_time).total_seconds()
+        }
+
+    def auto_restart_failed_servers(self, server_configs: dict) -> dict:
+        """
+        自动重启失败的服务器
+
+        Args:
+            server_configs: 服务器配置字典
+
+        Returns:
+            重启结果统计
+        """
+        if not settings.PROCESS_AUTO_RESTART:
+            logger.info("自动重启功能已禁用")
+            return {"enabled": False, "restarted": [], "failed": []}
+
+        restarted = []
+        failed = []
+
+        for server_id in list(self.processes.keys()):
+            health = self.health_check(server_id)
+
+            if not health["healthy"]:
+                # 检查是否应该重启
+                if server_id in server_configs:
+                    logger.warning(f"检测到服务器 {server_id} 不健康，尝试重启...")
+
+                    if self.restart_server(server_id, server_configs[server_id]):
+                        restarted.append(server_id)
+                        logger.info(f"✅ 自动重启成功: {server_id}")
+                    else:
+                        failed.append(server_id)
+                        logger.error(f"❌ 自动重启失败: {server_id}")
+
+        return {
+            "enabled": True,
+            "restarted": restarted,
+            "failed": failed,
+            "total_checked": len(self.processes)
+        }
+
+    def get_failed_servers(self) -> list:
+        """
+        获取所有失败的服务器列表
+
+        Returns:
+            失败的服务器ID列表
+        """
+        failed = []
+        for server_id in list(self.processes.keys()):
+            health = self.health_check(server_id)
+            if not health["healthy"]:
+                failed.append(server_id)
+        return failed
 
 
 # 全局进程管理器实例

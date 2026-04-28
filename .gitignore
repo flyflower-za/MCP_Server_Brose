@@ -7,6 +7,9 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Virtual Environment
 .venv/
@@ -19,44 +22,35 @@ env/
 .idea/
 *.swp
 *.swo
-*~
 
 # Logs
-logs/*.*
+logs/*.log.*
+logs/*.log.[0-9]
 *.log
+!logs/.gitkeep
 
 # Environment variables
 .env
+.env.local
 
-# Config files (keep examples)
-config/*.json
-!config/*.example
-config/backups/
+# Config backups
+*.backup
+*.bak
+*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Archives
-archive/
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
 # Temporary files
 *.tmp
 *.temp
-~*
+install_deps_fast.sh
 
-*/__pycache__
-logs/mcp_server.log
+# Archives
+archive/
 
-mcp_servers/__pycache__
-
-
-mcp_servers/__pycache__/*
-logs/mcp_server.log
-logs/mcp_server.log
-logs/mcp_server.log
+# Keep examples but ignore generated config
+config/*.json
+!config/*.example
+config/backups/*.bak

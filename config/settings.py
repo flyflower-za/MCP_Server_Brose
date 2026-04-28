@@ -109,7 +109,7 @@ MCP_SERVERS_CONFIG: Dict[str, Dict[str, Any]] = {
     "pdf_signature_verifier": {
         "name": "PDF Signature Verifier",
         "description": "Verify digital signatures in PDF files",
-        "enabled": True,
+        "enabled": False,  # 临时禁用 - macOS 安全机制阻止启动
         "version": "1.0.0",
         "module": "mcp_servers.pdf_signature_verifier.server",
         "prefix": "/signature",

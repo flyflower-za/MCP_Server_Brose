@@ -22,6 +22,7 @@ from api.system import router as system_router
 from api.config import router as config_router
 from utils.auth import router as auth_router
 from utils.progress_manager import progress_manager
+from utils.error_handlers import setup_error_handlers
 
 
 # 创建FastAPI应用（API网关）
@@ -33,6 +34,9 @@ app = FastAPI(
     redoc_url="/redoc",
     openapi_url="/openapi.json"
 )
+
+# 设置统一错误处理器
+setup_error_handlers(app)
 
 # 配置CORS
 app.add_middleware(
@@ -184,17 +188,93 @@ async def root():
 # 健康检查
 @app.get("/health")
 async def health_check():
-    """系统健康检查"""
-    all_statuses = process_manager.get_all_statuses()
+    """
+    系统健康检查 - 增强版
 
+    Returns:
+        健康状态信息，包括API网关、后端服务、系统资源等
+    """
+    import psutil
+    import time
+    from datetime import datetime, timezone
+
+    # 获取进程状态
+    all_statuses = process_manager.get_all_statuses()
     running_count = sum(1 for s in all_statuses.values() if s.get("status") == "running")
+    total_count = len(process_manager.processes)
+
+    # 获取系统资源信息
+    try:
+        cpu_percent = psutil.cpu_percent(interval=0.1)
+        memory = psutil.virtual_memory()
+        disk = psutil.disk_usage('/')
+    except Exception:
+        cpu_percent = 0
+        memory = type('obj', (object,), {'percent': 0, 'available': 0})()
+        disk = type('obj', (object,), {'percent': 0, 'free': 0})()
+
+    # 判断整体健康状态
+    # 如果所有服务都在运行，则状态为 healthy
+    # 如果有任何服务未运行，则状态为 degraded
+    # 如果API网关本身有问题，则状态为 unhealthy
+    if total_count > 0 and running_count == total_count:
+        health_status = "healthy"
+    elif running_count > 0:
+        health_status = "degraded"
+    else:
+        health_status = "unhealthy"
 
     return {
-        "status": "healthy",
+        "status": health_status,
+        "timestamp": datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+        "version": settings.VERSION,
         "architecture": "process_isolation",
-        "loaded_servers": len(process_manager.processes),
-        "running_servers": running_count,
-        "servers": list(process_manager.processes.keys())
+
+        # API网关信息
+        "api_gateway": {
+            "status": "running",
+            "host": settings.HOST,
+            "port": settings.PORT,
+            "pid": psutil.Process().pid if psutil.Process().is_running() else None
+        },
+
+        # 后端服务信息
+        "backend_services": {
+            "total": total_count,
+            "running": running_count,
+            "failed": total_count - running_count,
+            "servers": [
+                {
+                    "name": server_id,
+                    "status": status.get("status", "unknown"),
+                    "port": status.get("port"),
+                    "pid": status.get("pid"),
+                    "uptime": status.get("uptime"),
+                    "restart_count": status.get("restart_count", 0)
+                }
+                for server_id, status in all_statuses.items()
+            ]
+        },
+
+        # 系统资源信息
+        "system_resources": {
+            "cpu_percent": round(cpu_percent, 2),
+            "memory": {
+                "percent": round(memory.percent, 2),
+                "available_mb": round(memory.available / 1024 / 1024, 2)
+            },
+            "disk": {
+                "percent": round(disk.percent, 2),
+                "free_gb": round(disk.free / 1024 / 1024 / 1024, 2)
+            }
+        },
+
+        # 配置信息
+        "configuration": {
+            "auth_enabled": settings.DASHBOARD_AUTH_ENABLED,
+            "dashboard_refresh_interval": settings.DASHBOARD_REFRESH_INTERVAL,
+            "auto_restart_enabled": settings.PROCESS_AUTO_RESTART
+        }
     }
 
 

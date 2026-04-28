@@ -6,7 +6,7 @@ import os
 import hashlib
 import hmac
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional, Dict, Any
 
 
@@ -91,7 +91,7 @@ class TokenManager:
         to_encode = data.copy()
 
         # 设置过期时间
-        expire = datetime.utcnow() + timedelta(minutes=self.access_token_expire_minutes)
+        expire = datetime.now(timezone.utc) + timedelta(minutes=self.access_token_expire_minutes)
         to_encode.update({"exp": expire})
 
         # 生成 Token
