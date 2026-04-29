@@ -126,4 +126,6 @@ wheels/
 pip-wheel-metadata/
 
 # Old startup scripts (use start_safe_Mac_v2.sh instead)
-logs/mcp_server.log
+logs/*.log
+# Test config files
+.test_config
