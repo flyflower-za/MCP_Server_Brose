@@ -88,7 +88,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
 
             elif auth_header.startswith("ApiKey "):
                 # API Key 认证（永久有效，用于插件集成）
-                api_key = auth_header[8:]  # 移除 "ApiKey " 前缀
+                api_key = auth_header[7:]  # 移除 "ApiKey " 前缀（7个字符）
 
                 # 验证 API Key
                 if self._validate_api_key(api_key):
