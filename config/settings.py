@@ -73,6 +73,9 @@ class Settings:
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = os.getenv("JWT_ACCESS_TOKEN_EXPIRE_MINUTES", 1440)  # 24小时
 
+    # API Key配置（永久有效，用于插件集成）
+    API_KEY: str = os.getenv("API_KEY", "your-permanent-api-key-change-this")
+
     # MCP服务器模块启用配置（通过环境变量控制）
     ENABLE_PDF_EXTRACTOR: bool = os.getenv("ENABLE_PDF_EXTRACTOR", "True").lower() == "true"
     ENABLE_QRCODE_READER: bool = os.getenv("ENABLE_QRCODE_READER", "True").lower() == "true"

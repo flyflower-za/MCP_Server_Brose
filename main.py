@@ -48,11 +48,11 @@ app.add_middleware(
     allow_headers=settings.CORS_ALLOW_HEADERS,
 )
 
+# 添加认证中间件（保护敏感端点）- 放在ProxyMiddleware之前
+app.add_middleware(AuthMiddleware)
+
 # 添加请求转发中间件（不传递参数）
 app.add_middleware(ProxyMiddleware)
-
-# 添加认证中间件（保护敏感端点）
-app.add_middleware(AuthMiddleware)
 
 # 获取进程管理器
 process_manager = get_process_manager()
