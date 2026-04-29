@@ -27,11 +27,12 @@ class AuthMiddleware(BaseHTTPMiddleware):
         "/api/v1/auth/login",
         "/favicon.ico",
         "/static",
+        "/dashboard",  # 允许访问Dashboard HTML，登录由前端控制
     }
 
     # 需要认证的路径前缀
     PROTECTED_PREFIXES = {
-        "/dashboard",
+        # "/dashboard",  # 移除：Dashboard HTML可以访问，API由前端控制
         "/api/v1/servers",
         "/api/v1/system",
         "/api/v1/config",
