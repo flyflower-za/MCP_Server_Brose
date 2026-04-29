@@ -3292,3 +3292,17 @@ INFO:     Application shutdown complete.
 2026-04-29 19:57:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
 2026-04-29 19:58:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
 2026-04-29 19:58:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 19:59:21 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 19:59:21 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 19:59:26 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 19:59:26 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 19:59:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 19:59:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 19:59:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 19:59:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 20:00:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 20:00:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 20:01:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 20:01:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 20:02:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 20:02:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
