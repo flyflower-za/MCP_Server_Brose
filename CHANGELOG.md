@@ -7,6 +7,194 @@
 
 ---
 
+## [1.1.0] - 2026-04-29
+
+### ✨ 新增功能
+
+#### **API Key认证系统** 🔑⭐⭐⭐
+- ✅ **永久有效认证**: 新增API Key认证方式，适用于插件集成
+- ✅ **双重认证支持**: 同时支持JWT Token（24小时）和API Key（永久）
+- ✅ **安全密钥生成**: 使用`secrets.token_urlsafe(32)`生成安全密钥
+- ✅ **灵活配置**: 通过`API_KEY`环境变量配置
+
+**技术实现**:
+- 中间件扩展：`AuthMiddleware`支持`ApiKey`前缀认证
+- 恒定时间比较：使用`hmac.compare_digest()`防止时序攻击
+- 用户标识：API Key用户标识为`{"username": "api_user", "type": "api_key"}`
+
+**使用方式**:
+```bash
+# JWT Token（Dashboard登录）
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+# API Key（插件集成）
+Authorization: ApiKey q0X-8xtX7XwCkSYUtR2uSQmWx6f-eRE2DervK-mgiqE
+```
+
+#### **配置验证系统** ✅⭐⭐
+- ✅ **启动前验证**: 系统启动时自动验证关键配置
+- ✅ **错误预防**: 防止配置错误导致运行时问题
+- ✅ **友好提示**: 提供详细的错误和警告信息
+
+**验证项目**:
+- JWT密钥和API Key配置
+- 端口有效性（1024-65535）
+- 进程管理配置合理性
+- CORS安全配置警告
+- 默认凭据安全警告
+
+#### **可配置日志轮转** 📝⭐
+- ✅ **环境变量控制**: 新增3个日志轮转配置参数
+- ✅ **灵活配置**: 支持自定义日志大小和保留数量
+- ✅ **自动清理**: 支持按天数清理旧日志
+
+**新增配置**:
+```bash
+LOG_MAX_BYTES=10485760      # 单个文件最大10MB
+LOG_BACKUP_COUNT=5          # 保留5个备份
+LOG_KEEP_DAYS=7            # 清理7天前的日志
+```
+
+#### **完整使用文档** 📚⭐⭐⭐
+- ✅ **使用指南**: 创建`docs/USAGE_GUIDE.md`完整文档
+- ✅ **API文档**: 所有MCP服务器API的详细说明
+- ✅ **集成指南**: 云平台集成配置示例（百炼云）
+- ✅ **故障排查**: 常见问题和解决方案
+
+**文档内容**:
+- 快速开始指南
+- 认证方式详解（API Key + JWT Token）
+- API端点完整文档
+- 云平台集成配置
+- 故障排查指南
+- 安全建议和最佳实践
+
+### 🐛 Bug修复
+
+#### **API Key截取错误修复** 🔧⭐⭐⭐
+- 🐛 **问题**: API Key认证卡住，返回401错误
+- 🔍 **根本原因**: off-by-one错误，使用`[8:]`截取8个字符（应该是7个）
+- ✅ **修复**: 修改为`auth_header[7:]`，正确截取"ApiKey "前缀
+- 📊 **影响**: API Key从`q0X-8xtX7Xw...`变成`0X-8xtX7Xw...`，验证永远失败
+
+**技术细节**:
+```python
+# 错误代码
+api_key = auth_header[8:]  # 截取8个字符，丢失第一个字符"q"
+
+# 正确代码
+api_key = auth_header[7:]  # 截取7个字符("ApiKey ")
+```
+
+#### **双重登录问题修复** 🔧⭐⭐
+- 🐛 **问题**: Dashboard需要两次登录才能进入
+- 🔍 **根本原因**: `init()`和`performLogin()`都调用`checkAuth()`
+- ✅ **修复**: 优化初始化流程，避免重复认证检查
+- 📊 **效果**: 登录现在一次成功，用户体验改善
+
+#### **服务器启动阻塞修复** 🔧⭐⭐⭐
+- 🐛 **问题**: API网关启动卡住，`pdf_signature_verifier`阻塞
+- 🔍 **根本原因**: `start_all_servers()`同步等待所有服务器启动
+- ✅ **修复**: 实现异步服务器启动，使用后台线程
+- 📊 **效果**: API网关立即启动，服务器后台异步启动
+
+**技术实现**:
+```python
+def start_all_servers():
+    def start_servers_async():
+        # 服务器启动逻辑
+        thread = threading.Thread(target=start_servers_async, daemon=True)
+        thread.start()  # 后台启动，不阻塞API网关
+```
+
+### 🔒 安全改进
+
+#### **后端认证保护** 🛡️⭐⭐⭐
+- ✅ **中间件保护**: 所有敏感API端点受认证中间件保护
+- ✅ **防止绕过**: 修复前端CSS隐藏可被浏览器DevTools绕过的问题
+- ✅ **Dashboard访问**: 允许HTML页面访问，API保持认证保护
+
+**受保护的端点**:
+- `/api/v1/servers/*` - 服务器管理API
+- `/api/v1/system` - 系统信息API
+- `/api/v1/config` - 配置管理API
+- `/api/v1/tasks` - 任务管理API
+
+### ⚙️ 配置优化
+
+#### **模块启用配置** 🔧⭐⭐
+- ✅ **环境变量控制**: 通过环境变量控制模块启用/禁用
+- ✅ **灵活配置**: 支持选择性启用MCP服务器模块
+- ✅ **兼容性处理**: macOS兼容性问题模块默认禁用
+
+**新增配置**:
+```bash
+ENABLE_PDF_EXTRACTOR=true           # PDF内容提取
+ENABLE_QRCODE_READER=true            # 二维码识别
+ENABLE_PDF_SIGNATURE_VERIFIER=false  # PDF签章验证（macOS兼容性问题）
+```
+
+### 📚 文档更新
+
+- ✅ 更新`docs/USAGE_GUIDE.md` - 完整使用指南
+- ✅ 更新`CHANGELOG.md` - 版本变更记录
+- ✅ 更新`.env.example` - 配置模板和说明
+
+### 🔄 升级指南
+
+**从1.0.0升级到1.1.0**:
+
+1. **更新配置文件**:
+```bash
+# 添加新的环境变量到.env
+API_KEY=q0X-8xtX7XwCkSYUtR2uSQmWx6f-eRE2DervK-mgiqE
+LOG_MAX_BYTES=10485760
+LOG_BACKUP_COUNT=5
+LOG_KEEP_DAYS=7
+ENABLE_PDF_EXTRACTOR=true
+ENABLE_QRCODE_READER=true
+ENABLE_PDF_SIGNATURE_VERIFIER=false
+```
+
+2. **同步代码到服务器**:
+```bash
+scp middleware/auth_middleware.py root@your-server:/path/to/middleware/
+scp config/settings.py root@your-server:/path/to/config/
+scp utils/logger.py root@your-server:/path/to/utils/
+```
+
+3. **重启服务**:
+```bash
+pm2 restart mcp-server-hub
+# 或
+./start_safe.sh
+```
+
+4. **验证升级**:
+```bash
+# 测试API Key认证
+curl http://your-server:51234/api/v1/servers/statuses \
+  -H "Authorization: ApiKey YOUR_API_KEY"
+
+# 测试JWT Token认证（Dashboard登录）
+```
+
+### 🎯 版本亮点
+
+**主要改进**:
+- 🔑 **永久认证**: API Key解决Token过期问题，插件集成更便捷
+- 🛡️ **安全加固**: 后端认证保护，防止前端绕过攻击
+- ⚡ **性能优化**: 异步服务器启动，API网关响应更快
+- 📝 **运维友好**: 配置验证、日志轮转、完整文档
+
+**适用场景**:
+- 云平台集成（百炼云等）
+- 自动化脚本调用
+- 长期运行的服务集成
+- 需要稳定认证的插件
+
+---
+
 ## [Unreleased]
 
 ### 🔄 最新实施 (2026-04-28 - 晚间)

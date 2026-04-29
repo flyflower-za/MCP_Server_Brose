@@ -3,6 +3,7 @@
 MCP服务器管理系统 - 主入口（进程隔离架构）
 """
 from typing import Dict
+import sys
 
 import secrets
 import uvicorn
@@ -146,6 +147,66 @@ class ServerActionResponse(BaseModel):
     message: str
     server_id: str
     status: dict
+
+
+def validate_config():
+    """
+    验证关键配置 - 启动前检查配置有效性
+
+    在系统启动时验证关键配置项，防止配置错误导致运行时问题
+    """
+    errors = []
+    warnings = []
+
+    # 验证认证配置
+    if settings.DASHBOARD_AUTH_ENABLED:
+        # 检查JWT密钥
+        if not settings.JWT_SECRET_KEY or settings.JWT_SECRET_KEY == "your-secret-key-change-in-production":
+            errors.append("❌ JWT_SECRET_KEY未配置或使用默认值，认证无法启用！")
+
+        # 检查API Key
+        if not settings.API_KEY or settings.API_KEY == "your-permanent-api-key-change-this":
+            warnings.append("⚠️  API_KEY使用默认值，生产环境建议修改")
+
+        # 检查用户名密码
+        if settings.DASHBOARD_USERNAME == "admin" and settings.DASHBOARD_PASSWORD == "mcp12345":
+            warnings.append("⚠️  使用默认登录凭据（admin/mcp12345），生产环境建议修改")
+
+    # 验证端口配置
+    if settings.PORT < 1024 or settings.PORT > 65535:
+        errors.append(f"❌ 无效的端口号: {settings.PORT}（范围：1024-65535）")
+
+    if settings.PROCESS_BASE_PORT < 1024 or settings.PROCESS_BASE_PORT > 65535:
+        errors.append(f"❌ 无效的进程基础端口: {settings.PROCESS_BASE_PORT}（范围：1024-65535）")
+
+    # 验证进程配置
+    if settings.PROCESS_START_TIMEOUT < 1:
+        errors.append(f"❌ 进程启动超时时间无效: {settings.PROCESS_START_TIMEOUT}秒")
+
+    if settings.PROCESS_MAX_RESTART < 0:
+        errors.append(f"❌ 最大重启次数无效: {settings.PROCESS_MAX_RESTART}")
+
+    # 验证日志配置
+    if settings.LOG_LEVEL not in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        warnings.append(f"⚠️  无效的日志级别: {settings.LOG_LEVEL}，将使用默认值")
+
+    # 验证CORS配置
+    if settings.CORS_ORIGINS == ["*"]:
+        warnings.append("⚠️  CORS配置为允许所有来源(*)，生产环境建议限制具体域名")
+
+    # 显示验证结果
+    if warnings:
+        logger.info("🔍 配置验证警告：")
+        for warning in warnings:
+            logger.warning(warning)
+
+    if errors:
+        logger.error("❌ 配置验证失败：")
+        for error in errors:
+            logger.error(error)
+        sys.exit(1)
+    else:
+        logger.info("✅ 配置验证通过")
 
 
 # 启动所有服务器
@@ -596,6 +657,9 @@ async def delete_port_config(server_id: str):
 
 def main():
     """启动服务器"""
+    # 启动前验证配置
+    validate_config()
+
     logger.info("=" * 60)
     logger.info(f"启动 {settings.TITLE} v{settings.VERSION}")
     logger.info("架构: 进程隔离模式")

@@ -30,14 +30,28 @@ class AuthMiddleware(BaseHTTPMiddleware):
         "/dashboard",  # 允许访问Dashboard HTML，登录由前端控制
     }
 
-    # 需要认证的路径前缀
+    # 需要认证的路径前缀（管理操作）
     PROTECTED_PREFIXES = {
-        # "/dashboard",  # 移除：Dashboard HTML可以访问，API由前端控制
+        "/api/v1/servers",    # 服务器管理（除只读端点外）
+        "/api/v1/system",     # 系统管理（除只读端点外）
+        "/api/v1/config",     # 配置管理
+        "/api/v1/tasks",      # 任务管理
+        "/api/v1/proxy",      # 代理管理
+    }
+
+    # 只读端点（不需要认证的子路径）
+    READ_ONLY_ENDPOINTS = {
         "/api/v1/servers",
+        "/api/v1/servers/statuses",
+        "/api/v1/servers/port-configs",
         "/api/v1/system",
-        "/api/v1/config",
-        "/api/v1/tasks",
-        "/api/v1/proxy",
+        "/api/v1/system/resources",
+    }
+
+    # 只读路径前缀（GET请求不需要认证）
+    READ_ONLY_PREFIXES = {
+        "/api/v1/servers/port-config",  # GET请求：查看端口配置
+        "/api/v1/servers/",             # GET请求：查看服务器详情
     }
 
     async def dispatch(self, request: Request, call_next):
@@ -56,7 +70,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
             return await call_next(request)
 
         # 检查是否是受保护路径
-        if self._is_protected_path(path):
+        if self._is_protected_path(request):
             logger.info(f"🔒 受保护路径需要认证: {path}")
 
             # 验证认证
@@ -119,8 +133,23 @@ class AuthMiddleware(BaseHTTPMiddleware):
 
         return False
 
-    def _is_protected_path(self, path: str) -> bool:
+    def _is_protected_path(self, request: Request) -> bool:
         """检查是否是受保护路径"""
+        path = request.url.path
+        method = request.method
+
+        # 先检查是否是只读端点（不需要认证）
+        for read_only in self.READ_ONLY_ENDPOINTS:
+            if path == read_only:
+                return False
+
+        # 检查是否是只读路径的GET请求（不需要认证）
+        if method == "GET":
+            for prefix in self.READ_ONLY_PREFIXES:
+                if path.startswith(prefix):
+                    return False
+
+        # 检查是否是受保护路径的管理操作
         for prefix in self.PROTECTED_PREFIXES:
             if path.startswith(prefix):
                 return True

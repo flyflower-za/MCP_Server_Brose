@@ -11596,3 +11596,1449 @@ INFO:     Application shutdown complete.
 2026-04-29 22:54:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
 2026-04-29 22:54:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
 2026-04-29 22:54:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:31 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 22:54:31 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 22:54:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 22:54:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 22:54:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 22:54:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 22:54:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 22:54:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 22:54:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 22:54:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 22:54:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 22:54:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 22:54:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 22:54:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 22:54:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:54:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:54:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:54:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:54:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 22:55:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 22:55:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 22:55:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 22:55:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 22:55:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 22:55:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 22:55:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 22:55:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 22:55:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 22:55:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 22:55:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 22:55:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 22:55:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 22:55:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:55:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:55:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:55:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:55:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:56:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:56:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:56:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:56:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 22:57:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 22:57:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 22:57:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 22:57:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 22:57:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 22:57:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 22:57:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 22:57:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 22:57:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 22:57:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 22:57:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 22:57:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 22:57:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 22:57:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:57:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:57:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:57:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:57:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:58:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:58:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:58:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:58:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 22:59:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 22:59:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 22:59:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 22:59:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 22:59:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 22:59:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 22:59:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 22:59:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 22:59:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 22:59:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 22:59:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 22:59:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 22:59:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 22:59:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 22:59:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 22:59:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 22:59:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 22:59:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:00:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:00:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:00:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:00:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:01:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:01:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:01:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:01:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:01:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:01:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:01:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:01:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:01:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:01:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:01:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:01:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:01:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:01:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:01:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:01:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:01:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:01:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:02:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:02:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:02:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:02:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:03:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:03:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:03:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:03:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:03:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:03:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:03:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:03:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:03:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:03:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:03:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:03:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:03:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:03:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:03:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:03:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:03:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:03:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:04:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:04:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:04:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:04:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:05:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:05:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:05:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:05:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:05:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:05:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:05:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:05:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:05:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:05:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:05:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:05:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:05:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:05:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:05:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:05:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:05:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:05:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:06:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:06:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:06:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:06:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:07:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:07:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:07:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:07:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:07:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:07:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:07:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:07:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:07:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:07:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:07:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:07:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:07:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:07:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:07:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:07:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:07:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:07:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:08:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:08:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:08:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:08:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:07 - mcp_hub - INFO - 🔍 配置验证警告：
+2026-04-29 23:09:07 - mcp_hub - WARNING - ⚠️  使用默认登录凭据（admin/mcp12345），生产环境建议修改
+2026-04-29 23:09:07 - mcp_hub - WARNING - ⚠️  CORS配置为允许所有来源(*)，生产环境建议限制具体域名
+2026-04-29 23:09:07 - mcp_hub - INFO - ✅ 配置验证通过
+2026-04-29 23:09:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:07 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-29 23:09:07 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-29 23:09:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:07 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-29 23:09:07 - mcp_hub - INFO - 开始启动MCP服务器，共 3 个已启用
+2026-04-29 23:09:07 - mcp_hub - INFO - MCP服务器正在后台启动...
+2026-04-29 23:09:07 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-29 23:09:07 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-29 23:09:07 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-29 23:09:07 - mcp_hub - INFO - 
+2026-04-29 23:09:07 - mcp_hub - INFO - 服务器管理API:
+2026-04-29 23:09:07 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-29 23:09:07 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-29 23:09:07 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-29 23:09:07 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-29 23:09:07 - mcp_hub - INFO - 
+2026-04-29 23:09:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:07 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-29 23:09:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:07 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:09:07 - mcp_hub - INFO - 地址: 0.0.0.0:51235
+2026-04-29 23:09:07 - mcp_hub - INFO - 
+2026-04-29 23:09:08 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:09:09 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-29 23:09:09 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 44945, Port: 51235)
+2026-04-29 23:09:10 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:10 - mcp_hub - INFO - 启动MCP服务器进程: qrcode_reader
+2026-04-29 23:09:10 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:10 - mcp_hub - INFO - 模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:09:10 - mcp_hub - INFO - 地址: 0.0.0.0:51236
+2026-04-29 23:09:10 - mcp_hub - INFO - 
+2026-04-29 23:09:10 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:09:11 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/qrcode_reader_process.log
+2026-04-29 23:09:11 - mcp_hub - INFO - ✅ 成功启动服务器 qrcode_reader (PID: 44970, Port: 51236)
+2026-04-29 23:09:12 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:12 - mcp_hub - INFO - 启动MCP服务器进程: pdf_signature_verifier
+2026-04-29 23:09:12 - mcp_hub - INFO - ============================================================
+2026-04-29 23:09:12 - mcp_hub - INFO - 模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:09:12 - mcp_hub - INFO - 地址: 0.0.0.0:51237
+2026-04-29 23:09:12 - mcp_hub - INFO - 
+2026-04-29 23:09:12 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:09:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:12 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:09:12 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:09:13 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_signature_verifier_process.log
+2026-04-29 23:09:13 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_signature_verifier (PID: 44997, Port: 51237)
+2026-04-29 23:09:13 - mcp_hub - INFO - MCP服务器启动完成: 3/3 成功
+2026-04-29 23:09:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:09:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:09:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:09:57 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:09:57 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:02 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:02 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:07 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:07 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:12 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:12 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:17 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:17 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:22 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:22 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:27 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:27 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:31 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:31 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:32 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:32 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:37 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:37 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:42 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:42 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:47 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:47 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:10:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:10:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:10:52 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/system/resources
+2026-04-29 23:10:52 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/system/resources
+2026-04-29 23:11:04 - mcp_hub - INFO - 🔍 配置验证警告：
+2026-04-29 23:11:04 - mcp_hub - WARNING - ⚠️  使用默认登录凭据（admin/mcp12345），生产环境建议修改
+2026-04-29 23:11:04 - mcp_hub - WARNING - ⚠️  CORS配置为允许所有来源(*)，生产环境建议限制具体域名
+2026-04-29 23:11:04 - mcp_hub - INFO - ✅ 配置验证通过
+2026-04-29 23:11:04 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:04 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-29 23:11:04 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-29 23:11:04 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:04 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-29 23:11:04 - mcp_hub - INFO - 开始启动MCP服务器，共 3 个已启用
+2026-04-29 23:11:04 - mcp_hub - INFO - MCP服务器正在后台启动...
+2026-04-29 23:11:04 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-29 23:11:04 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-29 23:11:04 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-29 23:11:04 - mcp_hub - INFO - 
+2026-04-29 23:11:04 - mcp_hub - INFO - 服务器管理API:
+2026-04-29 23:11:04 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-29 23:11:04 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-29 23:11:04 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-29 23:11:04 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-29 23:11:04 - mcp_hub - INFO - 
+2026-04-29 23:11:05 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:05 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-29 23:11:05 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:05 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:11:05 - mcp_hub - INFO - 地址: 0.0.0.0:51235
+2026-04-29 23:11:05 - mcp_hub - INFO - 
+2026-04-29 23:11:05 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:11:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:11:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:11:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:11:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:11:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:11:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:11:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:11:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:11:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:11:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:11:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:11:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:11:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:11:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:11:06 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-29 23:11:06 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 46522, Port: 51235)
+2026-04-29 23:11:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:07 - mcp_hub - INFO - 启动MCP服务器进程: qrcode_reader
+2026-04-29 23:11:07 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:07 - mcp_hub - INFO - 模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:11:07 - mcp_hub - INFO - 地址: 0.0.0.0:51236
+2026-04-29 23:11:07 - mcp_hub - INFO - 
+2026-04-29 23:11:07 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:11:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:08 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/qrcode_reader_process.log
+2026-04-29 23:11:08 - mcp_hub - INFO - ✅ 成功启动服务器 qrcode_reader (PID: 46551, Port: 51236)
+2026-04-29 23:11:09 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:09 - mcp_hub - INFO - 启动MCP服务器进程: pdf_signature_verifier
+2026-04-29 23:11:09 - mcp_hub - INFO - ============================================================
+2026-04-29 23:11:09 - mcp_hub - INFO - 模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:11:09 - mcp_hub - INFO - 地址: 0.0.0.0:51237
+2026-04-29 23:11:09 - mcp_hub - INFO - 
+2026-04-29 23:11:09 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:11:09 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:11:09 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:11:10 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_signature_verifier_process.log
+2026-04-29 23:11:10 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_signature_verifier (PID: 46572, Port: 51237)
+2026-04-29 23:11:10 - mcp_hub - INFO - MCP服务器启动完成: 3/3 成功
+2026-04-29 23:11:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:11:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:11:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:12:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:12:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:13:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:13:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:13:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:13:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers
+2026-04-29 23:13:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers
+2026-04-29 23:13:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:13:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:13:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/statuses
+2026-04-29 23:13:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/statuses
+2026-04-29 23:13:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:13:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:13:06 - mcp_hub - INFO - 🔒 受保护路径需要认证: /api/v1/servers/port-configs
+2026-04-29 23:13:06 - mcp_hub - WARNING - ❌ 缺少认证头: /api/v1/servers/port-configs
+2026-04-29 23:13:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:13:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:13:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:29 - mcp_hub - INFO - 🔍 配置验证警告：
+2026-04-29 23:14:29 - mcp_hub - WARNING - ⚠️  使用默认登录凭据（admin/mcp12345），生产环境建议修改
+2026-04-29 23:14:29 - mcp_hub - WARNING - ⚠️  CORS配置为允许所有来源(*)，生产环境建议限制具体域名
+2026-04-29 23:14:29 - mcp_hub - INFO - ✅ 配置验证通过
+2026-04-29 23:14:29 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:29 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-29 23:14:29 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-29 23:14:29 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:29 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-29 23:14:29 - mcp_hub - INFO - 开始启动MCP服务器，共 3 个已启用
+2026-04-29 23:14:29 - mcp_hub - INFO - MCP服务器正在后台启动...
+2026-04-29 23:14:29 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-29 23:14:29 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-29 23:14:29 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-29 23:14:29 - mcp_hub - INFO - 
+2026-04-29 23:14:29 - mcp_hub - INFO - 服务器管理API:
+2026-04-29 23:14:29 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-29 23:14:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-29 23:14:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-29 23:14:29 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-29 23:14:29 - mcp_hub - INFO - 
+2026-04-29 23:14:30 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:30 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-29 23:14:30 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:30 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:14:30 - mcp_hub - INFO - 地址: 0.0.0.0:51235
+2026-04-29 23:14:30 - mcp_hub - INFO - 
+2026-04-29 23:14:30 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:14:31 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-29 23:14:31 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 49146, Port: 51235)
+2026-04-29 23:14:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:32 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:32 - mcp_hub - INFO - 启动MCP服务器进程: qrcode_reader
+2026-04-29 23:14:32 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:32 - mcp_hub - INFO - 模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:14:32 - mcp_hub - INFO - 地址: 0.0.0.0:51236
+2026-04-29 23:14:32 - mcp_hub - INFO - 
+2026-04-29 23:14:32 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:14:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:33 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/qrcode_reader_process.log
+2026-04-29 23:14:33 - mcp_hub - INFO - ✅ 成功启动服务器 qrcode_reader (PID: 49174, Port: 51236)
+2026-04-29 23:14:34 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:34 - mcp_hub - INFO - 启动MCP服务器进程: pdf_signature_verifier
+2026-04-29 23:14:34 - mcp_hub - INFO - ============================================================
+2026-04-29 23:14:34 - mcp_hub - INFO - 模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:14:34 - mcp_hub - INFO - 地址: 0.0.0.0:51237
+2026-04-29 23:14:34 - mcp_hub - INFO - 
+2026-04-29 23:14:34 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:14:34 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:14:34 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:14:35 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_signature_verifier_process.log
+2026-04-29 23:14:35 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_signature_verifier (PID: 49197, Port: 51237)
+2026-04-29 23:14:35 - mcp_hub - INFO - MCP服务器启动完成: 3/3 成功
+2026-04-29 23:14:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:14:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:14:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:15:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:15:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:15:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:15:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:15:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:15:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:15:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:15:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:15:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:15:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:16:57 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:16:57 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:02 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:02 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:06 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:17:06 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:17:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:17:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:17:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:17:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:17:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:17:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:17:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:09 - mcp_hub - INFO - 开始提取PDF: https://example.com/document.pdf
+2026-04-29 23:17:09 - mcp_hub - INFO - Fetching URL: https://example.com/document.pdf
+2026-04-29 23:17:10 - mcp_hub - ERROR - Error fetching URL https://example.com/document.pdf: 404 Client Error: Not Found for url: https://example.com/document.pdf
+2026-04-29 23:17:10 - mcp_hub - ERROR - 下载PDF失败: https://example.com/document.pdf, 错误: 404 Client Error: Not Found for url: https://example.com/document.pdf
+2026-04-29 23:17:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:17:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:17:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:18:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:18:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:18:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:18:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:18:39 - mcp_hub - INFO - 开始提取PDF: https://example.com/document.pdf
+2026-04-29 23:18:39 - mcp_hub - INFO - Fetching URL: https://example.com/document.pdf
+2026-04-29 23:18:41 - mcp_hub - ERROR - Error fetching URL https://example.com/document.pdf: 404 Client Error: Not Found for url: https://example.com/document.pdf
+2026-04-29 23:18:41 - mcp_hub - ERROR - 下载PDF失败: https://example.com/document.pdf, 错误: 404 Client Error: Not Found for url: https://example.com/document.pdf
+2026-04-29 23:19:40 - mcp_hub - INFO - 🔍 配置验证警告：
+2026-04-29 23:19:40 - mcp_hub - WARNING - ⚠️  使用默认登录凭据（admin/mcp12345），生产环境建议修改
+2026-04-29 23:19:40 - mcp_hub - WARNING - ⚠️  CORS配置为允许所有来源(*)，生产环境建议限制具体域名
+2026-04-29 23:19:40 - mcp_hub - INFO - ✅ 配置验证通过
+2026-04-29 23:19:40 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:40 - mcp_hub - INFO - 启动 MCP Servers Hub v1.0.0
+2026-04-29 23:19:40 - mcp_hub - INFO - 架构: 进程隔离模式
+2026-04-29 23:19:40 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:40 - mcp_hub - INFO - 正在启动所有MCP服务器进程...
+2026-04-29 23:19:40 - mcp_hub - INFO - 开始启动MCP服务器，共 3 个已启用
+2026-04-29 23:19:40 - mcp_hub - INFO - MCP服务器正在后台启动...
+2026-04-29 23:19:40 - mcp_hub - INFO - API网关将在 0.0.0.0:51234 启动
+2026-04-29 23:19:40 - mcp_hub - INFO - API文档: http://0.0.0.0:51234/docs
+2026-04-29 23:19:40 - mcp_hub - INFO - 🌟 Dashboard 控制台: http://0.0.0.0:51234/dashboard
+2026-04-29 23:19:40 - mcp_hub - INFO - 
+2026-04-29 23:19:40 - mcp_hub - INFO - 服务器管理API:
+2026-04-29 23:19:40 - mcp_hub - INFO -   - GET  /api/v1/servers/statuses     # 查看所有服务器状态
+2026-04-29 23:19:40 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/restart # 重启单个服务器
+2026-04-29 23:19:40 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/stop    # 停止单个服务器
+2026-04-29 23:19:40 - mcp_hub - INFO -   - POST /api/v1/servers/{id}/start   # 启动单个服务器
+2026-04-29 23:19:40 - mcp_hub - INFO - 
+2026-04-29 23:19:40 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:40 - mcp_hub - INFO - 启动MCP服务器进程: pdf_extractor
+2026-04-29 23:19:40 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:40 - mcp_hub - INFO - 模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:19:40 - mcp_hub - INFO - 地址: 0.0.0.0:51235
+2026-04-29 23:19:40 - mcp_hub - INFO - 
+2026-04-29 23:19:40 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_extractor.server
+2026-04-29 23:19:42 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_extractor_process.log
+2026-04-29 23:19:42 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_extractor (PID: 52865, Port: 51235)
+2026-04-29 23:19:42 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:42 - mcp_hub - INFO - 启动MCP服务器进程: qrcode_reader
+2026-04-29 23:19:42 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:42 - mcp_hub - INFO - 模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:19:42 - mcp_hub - INFO - 地址: 0.0.0.0:51236
+2026-04-29 23:19:42 - mcp_hub - INFO - 
+2026-04-29 23:19:42 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.qrcode_reader.server
+2026-04-29 23:19:44 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/qrcode_reader_process.log
+2026-04-29 23:19:44 - mcp_hub - INFO - ✅ 成功启动服务器 qrcode_reader (PID: 52894, Port: 51236)
+2026-04-29 23:19:44 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:44 - mcp_hub - INFO - 启动MCP服务器进程: pdf_signature_verifier
+2026-04-29 23:19:44 - mcp_hub - INFO - ============================================================
+2026-04-29 23:19:44 - mcp_hub - INFO - 模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:19:44 - mcp_hub - INFO - 地址: 0.0.0.0:51237
+2026-04-29 23:19:44 - mcp_hub - INFO - 
+2026-04-29 23:19:44 - mcp_hub - INFO - ✅ 成功加载服务器模块: mcp_servers.pdf_signature_verifier.server
+2026-04-29 23:19:45 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:19:45 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:19:46 - mcp_hub - INFO - ✓ 进程启动成功，日志: /Users/zhouao/Documents/GitHub/MCP_Server_Brose/logs/pdf_signature_verifier_process.log
+2026-04-29 23:19:46 - mcp_hub - INFO - ✅ 成功启动服务器 pdf_signature_verifier (PID: 52919, Port: 51237)
+2026-04-29 23:19:46 - mcp_hub - INFO - MCP服务器启动完成: 3/3 成功
+2026-04-29 23:20:06 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:06 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:07 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:07 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:12 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:12 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:15 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/auth/login (POST)
+2026-04-29 23:20:15 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/auth/login
+2026-04-29 23:20:16 - mcp_hub - INFO - 📨 代理收到请求: /health (GET)
+2026-04-29 23:20:16 - mcp_hub - INFO - ⏭️  跳过转发: /health
+2026-04-29 23:20:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers (GET)
+2026-04-29 23:20:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers
+2026-04-29 23:20:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/statuses (GET)
+2026-04-29 23:20:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/statuses
+2026-04-29 23:20:16 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/servers/port-configs (GET)
+2026-04-29 23:20:16 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/servers/port-configs
+2026-04-29 23:20:17 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:17 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:22 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:22 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:27 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:27 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:31 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:31 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:32 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:32 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:37 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:37 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:42 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:42 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:47 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:47 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources
+2026-04-29 23:20:52 - mcp_hub - INFO - 📨 代理收到请求: /api/v1/system/resources (GET)
+2026-04-29 23:20:52 - mcp_hub - INFO - ⏭️  跳过转发: /api/v1/system/resources

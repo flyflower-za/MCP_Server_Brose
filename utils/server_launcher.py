@@ -7,10 +7,66 @@ import argparse
 import sys
 import importlib
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import JSONResponse
 from config import settings
 from utils.logger import logger
+
+
+class ServerAuthMiddleware(BaseHTTPMiddleware):
+    """
+    MCP服务器认证中间件
+    验证API Key或JWT Token
+    """
+
+    async def dispatch(self, request: Request, call_next):
+        """处理请求，进行认证检查"""
+
+        # 如果认证被禁用，直接放行
+        if not settings.DASHBOARD_AUTH_ENABLED:
+            return await call_next(request)
+
+        # 健康检查端点不需要认证
+        if request.url.path in ["/health", "/", "/docs", "/redoc", "/openapi.json"]:
+            return await call_next(request)
+
+        # 验证认证
+        auth_header = request.headers.get("Authorization")
+
+        if not auth_header:
+            return JSONResponse(
+                status_code=401,
+                content={"detail": "Authentication required", "message": "请提供API Key或Token"},
+            )
+
+        # 支持两种认证方式
+        if auth_header.startswith("Bearer "):
+            # JWT Token 认证
+            from utils.security import token_manager
+            token = auth_header[7:]
+            payload = token_manager.verify_token(token)
+            if payload is not None:
+                return await call_next(request)
+            else:
+                return JSONResponse(status_code=401, content={"detail": "Invalid token"})
+
+        elif auth_header.startswith("ApiKey "):
+            # API Key 认证
+            import hmac
+            api_key = auth_header[7:]
+            configured_key = settings.API_KEY
+
+            if not configured_key or configured_key == "your-permanent-api-key-change-this":
+                return JSONResponse(status_code=401, content={"detail": "API Key not configured"})
+
+            if hmac.compare_digest(api_key, configured_key):
+                return await call_next(request)
+            else:
+                return JSONResponse(status_code=401, content={"detail": "Invalid API Key"})
+
+        return JSONResponse(status_code=401, content={"detail": "Unsupported authentication type"})
 
 
 def create_server_app(module_path: str, server_id: str) -> FastAPI:
@@ -32,6 +88,10 @@ def create_server_app(module_path: str, server_id: str) -> FastAPI:
         redoc_url="/redoc",
         openapi_url="/openapi.json"
     )
+
+    # 添加认证中间件
+    if settings.DASHBOARD_AUTH_ENABLED:
+        app.add_middleware(ServerAuthMiddleware)
 
     # 配置CORS
     app.add_middleware(

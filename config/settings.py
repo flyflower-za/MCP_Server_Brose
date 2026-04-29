@@ -38,6 +38,9 @@ class Settings:
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
     LOG_DIR: Path = BASE_DIR / "logs"
     LOG_FILE: Path = LOG_DIR / "mcp_server.log"
+    LOG_MAX_BYTES: int = int(os.getenv("LOG_MAX_BYTES", str(10 * 1024 * 1024)))  # 单个日志文件最大10MB
+    LOG_BACKUP_COUNT: int = int(os.getenv("LOG_BACKUP_COUNT", "5"))  # 保留5个备份文件
+    LOG_KEEP_DAYS: int = int(os.getenv("LOG_KEEP_DAYS", "7"))  # 清理7天前的日志
 
     # CORS配置（生产环境应该限制允许的来源）
     CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "*").split(",")

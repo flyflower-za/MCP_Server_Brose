@@ -53,8 +53,8 @@ def setup_logger(name: str = "mcp_hub", structured: bool = False) -> logging.Log
 
         file_handler = RotatingFileHandler(
             settings.LOG_FILE,
-            maxBytes=10 * 1024 * 1024,  # 10MB
-            backupCount=5,
+            maxBytes=settings.LOG_MAX_BYTES,  # 从配置读取
+            backupCount=settings.LOG_BACKUP_COUNT,  # 从配置读取
             encoding='utf-8'
         )
         file_handler.setLevel(logging.DEBUG)
