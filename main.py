@@ -18,6 +18,7 @@ from config.port_config import get_fixed_port, set_fixed_port, remove_fixed_port
 from utils.logger import logger
 from utils.process_manager import get_process_manager
 from middleware.proxy_middleware import ProxyMiddleware
+from middleware.auth_middleware import AuthMiddleware
 from api.system import router as system_router
 from api.config import router as config_router
 from utils.auth import router as auth_router
@@ -49,6 +50,9 @@ app.add_middleware(
 
 # 添加请求转发中间件（不传递参数）
 app.add_middleware(ProxyMiddleware)
+
+# 添加认证中间件（保护敏感端点）
+app.add_middleware(AuthMiddleware)
 
 # 获取进程管理器
 process_manager = get_process_manager()
